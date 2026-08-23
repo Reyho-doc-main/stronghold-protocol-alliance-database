@@ -23,14 +23,14 @@
     },
     {
       "iconLink": "trap_1124_acarm124",
-      "itemName": "Personal ID Card",
+      "itemName": "Identification Device",
       "effectDesc": "Destroyed when equipped; <span class='blue'>+3</span>/<span class='green'>+6</span> stacks to equipped Operator's Alliance(s) (Alliance(s) does not need to be active)",
       "cost": 1,
       "tier": 1
     },
     {
       "iconLink": "trap_1125_acarm125",
-      "itemName": "Originium Solution",
+      "itemName": "Originium Solvent",
       "effectDesc": "Equipped Operator takes 60 True damage per second, <span class='blue'>+40%</span>/<span class='green'>+60%</span> ATK",
       "cost": 1,
       "tier": 1
@@ -44,7 +44,7 @@
     },
     {
       "iconLink": "trap_1115_acarm115",
-      "itemName": "Emergency Dispatch Voucher",
+      "itemName": "Emergency Dispatch Ticket",
       "effectDesc": "Destroyed when equipped; gain <span class='blue'>1</span>/<span class='green'>2</span> Operator(s) currently in the Dispatch Center (corresponding Operator in Dispatch Center will disappear)",
       "cost": 2,
       "tier": 2
@@ -65,21 +65,21 @@
     },
     {
       "iconLink": "trap_1113_acarm113",
-      "itemName": "Economical Plush",
+      "itemName": "Budget-savvy Doll",
       "effectDesc": "Destroyed when equipped; gains (an) extra <span class='blue'>1</span>/<span class='green'>2</span> Fund(s) at the start of each subsequent round.",
       "cost": 3,
       "tier": 2
     },
     {
       "iconLink": "trap_1114_acarm114",
-      "itemName": "Simple Comms Device",
+      "itemName": "Simple Communicator",
       "effectDesc": "Destroyed when equipped; gain <span class='blue'>1</span>/<span class='green'>2</span> random Operator(s) from the same Alliance as the equipped Operator",
       "cost": 2,
       "tier": 2
     },
     {
       "iconLink": "trap_1116_acarm116",
-      "itemName": "Money-hungry Plush",
+      "itemName": "Money-grubbing Doll",
       "effectDesc": "Destroyed when equipped; grants <span class='blue'>2</span>/<span class='green'>4</span> additional Fund(s) next round.",
       "cost": 1,
       "tier": 2
@@ -213,7 +213,7 @@
     },
     {
       "iconLink": "trap_1119_acarm119",
-      "itemName": "Kazimierz Knightclud Pennant",
+      "itemName": "Kazimierz Knightclub Pennant",
       "effectDesc": "Damage dealt for 15 seconds after deployment is increased to <span class='blue'>135%</span>/<span class='green'>160%</span>, effect gradually decays",
       "cost": 1,
       "tier": 4
@@ -383,7 +383,7 @@
     {
       "iconLink": "trap_1120_acarm120",
       "itemName": "Chivalric Commandments",
-      "effectDesc": "Redeployment Time <span class='blue'>-40%</span>/<span class='green'>-60%</span>; If equipped by a [Kazimierz] Operator, enemies within Attack Range have -35% ASPD and -35% Movement Speedfor 20s after skill activation\n<span class='text-yellow-500'>If \"Kazimierz Knightclud Pennant\" is also equipped by the [Kazimierz] Operator, while skill is active, Operator has +100% ATK, and will not retreat when receiving lethal damage, instead retreating once skill ends.</span>",
+      "effectDesc": "Redeployment Time <span class='blue'>-40%</span>/<span class='green'>-60%</span>; If equipped by a [Kazimierz] Operator, enemies within Attack Range have -35% ASPD and -35% Movement Speedfor 20s after skill activation\n<span class='text-yellow-500'>If \"Kazimierz Knightclub Pennant\" is also equipped by the [Kazimierz] Operator, while skill is active, Operator has +100% ATK, and will not retreat when receiving lethal damage, instead retreating once skill ends.</span>",
       "cost": 4,
       "tier": 6
     },
