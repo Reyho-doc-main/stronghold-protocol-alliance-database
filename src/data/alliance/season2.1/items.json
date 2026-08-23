@@ -16,7 +16,7 @@
     },
     {
       "iconLink": "trap_1066_acarm066",
-      "itemName": "Lucky Coin",
+      "itemName": "Alliance Coin",
       "effectDesc": "Destroyed when equipped and grants <span class='blue'>1</span>/<span class='green'>2</span> Funds",
       "cost": 1,
       "tier": 1
@@ -24,14 +24,14 @@
     {
       "iconLink": "trap_1124_acarm124",
       "itemName": "Personal ID Card",
-      "effectDesc": "Destroyed when equipped and grants <span class='blue'>+3</span>/<span class='green'>+6</span> stacks to the Operator's own Alliance(s) (Alliance(s) does not need to be active)",
+      "effectDesc": "Destroyed when equipped; <span class='blue'>+3</span>/<span class='green'>+6</span> stacks to equipped Operator's Alliance(s) (Alliance(s) does not need to be active)",
       "cost": 1,
       "tier": 1
     },
     {
       "iconLink": "trap_1125_acarm125",
       "itemName": "Originium Solution",
-      "effectDesc": "Loses 60 HP per second, <span class='blue'>+40%</span>/<span class='green'>+60%</span> ATK",
+      "effectDesc": "Equipped Operator takes 60 True damage per second, <span class='blue'>+40%</span>/<span class='green'>+60%</span> ATK",
       "cost": 1,
       "tier": 1
     },
@@ -45,7 +45,7 @@
     {
       "iconLink": "trap_1115_acarm115",
       "itemName": "Emergency Dispatch Voucher",
-      "effectDesc": "Destroyed when equipped and obtain <span class='blue'>1</span>/<span class='green'>2</span> Operator(s) in the Dispatch Center (that Operator is removed from the Dispatch Center)",
+      "effectDesc": "Destroyed when equipped; gain <span class='blue'>1</span>/<span class='green'>2</span> Operator(s) currently in the Dispatch Center (corresponding Operator in Dispatch Center will disappear)",
       "cost": 2,
       "tier": 2
     },
@@ -66,28 +66,28 @@
     {
       "iconLink": "trap_1113_acarm113",
       "itemName": "Economical Plush",
-      "effectDesc": "Destroyed when equipped and gain <span class='blue'>1</span>/<span class='green'>2</span> additional Fund(s) at the start of each round.",
+      "effectDesc": "Destroyed when equipped; gains (an) extra <span class='blue'>1</span>/<span class='green'>2</span> Fund(s) at the start of each subsequent round.",
       "cost": 3,
       "tier": 2
     },
     {
       "iconLink": "trap_1114_acarm114",
       "itemName": "Simple Comms Device",
-      "effectDesc": "Destroyed when equipped and obtain <span class='blue'>1</span>/<span class='green'>2</span> random Operator(s) from the same Alliance",
+      "effectDesc": "Destroyed when equipped; gain <span class='blue'>1</span>/<span class='green'>2</span> random Operator(s) from the same Alliance as the equipped Operator",
       "cost": 2,
       "tier": 2
     },
     {
       "iconLink": "trap_1116_acarm116",
       "itemName": "Money-hungry Plush",
-      "effectDesc": "Destroyed when equipped and gain <span class='blue'>2</span>/<span class='green'>4</span> additional Fund(s) at the start of next round.",
+      "effectDesc": "Destroyed when equipped; grants <span class='blue'>2</span>/<span class='green'>4</span> additional Fund(s) next round.",
       "cost": 1,
       "tier": 2
     },
     {
       "iconLink": "trap_1121_acarm121",
-      "itemName": "Siracusan Formal Attire",
-      "effectDesc": "<span class='blue'>+15</span>/<span class='green'>+25</span> ATKSPD, <span class='blue'>+10</span>/<span class='green'>+15</span> to allies on the left and right of this Operator's direction",
+      "itemName": "Siracusan Formalwear",
+      "effectDesc": "ASPD <span class='blue'>+15</span>/<span class='green'>+25</span>, allied Operators to the left and right of the equipped Operator's deployment direction gain <span class='blue'>+10</span>/<span class='green'>+15</span>",
       "cost": 2,
       "tier": 3
     },
@@ -158,13 +158,13 @@
     {
       "iconLink": "trap_1064_acarm064",
       "itemName": "Raid Grenade",
-      "effectDesc": "For <span class='blue'>8</span>/<span class='green'>12</span> seconds after every deployment, attacks inflict 2 seconds of Stun",
+      "effectDesc": "For <span class='blue'>10</span>/<span class='green'>15</span> seconds after every deployment, attacks inflict 2 seconds of Stun",
       "cost": 1,
       "tier": 3
     },
     {
       "iconLink": "trap_1123_acarm123",
-      "itemName": "Knight's Donation Box",
+      "itemName": "Knight's Savings",
       "effectDesc": "Destroyed when equipped and grants <span class='blue'>1~6</span>/<span class='green'>2~12</span> Funds",
       "cost": 3,
       "tier": 3
@@ -172,7 +172,7 @@
     {
       "iconLink": "trap_1075_acarm075",
       "itemName": "Dispatch Module",
-      "effectDesc": "Destroyed when equipped and immediately refreshes shop once, offering 3 Operators from the same Alliance as the Operator equipped with it, and you may obtain 1 of them for free (Operator's tier will not exceed Dispatch Center level)",
+      "effectDesc": "Destroyed when equipped and immediately refreshes Dispatch Center once, offering three Operators from the same Alliance as the equipping Operator. Pick one for free! (Operator' Tier cannot exceed the current Dispatch Center level)",
       "cost": 4,
       "tier": 4
     },
@@ -186,14 +186,14 @@
     {
       "iconLink": "trap_1052_acarm052",
       "itemName": "Miniature Accelerator",
-      "effectDesc": "Every attack or heal gives ASPD <span class='blue'>+1</span>/<span class='green'>+2</span> for this battle, up to 60 stacks",
+      "effectDesc": "Each time this unit deals damage or heals, gains ASPD <span class='blue'>+1</span>/<span class='green'>+2</span> for this battle, up to 60 stacks",
       "cost": 2,
       "tier": 4
     },
     {
       "iconLink": "trap_1055_acarm055",
       "itemName": "Disguise Outfit",
-      "effectDesc": "When taking damage for the first time, gain Camouflage for <span class='blue'>15</span>/<span class='green'>25</span> seconds",
+      "effectDesc": "On taking damage for the first time, gain Invisibility for <span class='blue'>15</span>/<span class='green'>25</span> seconds",
       "cost": 2,
       "tier": 4
     },
@@ -213,8 +213,8 @@
     },
     {
       "iconLink": "trap_1119_acarm119",
-      "itemName": "Kazimierz Stadium Flag",
-      "effectDesc": "When deployed, increase damage dealt to <span class='blue'>135%</span>/<span class='green'>160%</span>, decaying over 15 seconds",
+      "itemName": "Kazimierz Knightclud Pennant",
+      "effectDesc": "Damage dealt for 15 seconds after deployment is increased to <span class='blue'>135%</span>/<span class='green'>160%</span>, effect gradually decays",
       "cost": 1,
       "tier": 4
     },
@@ -277,7 +277,7 @@
     {
       "iconLink": "trap_1109_acarm109",
       "itemName": "Transmitter",
-      "effectDesc": "Destroys itself along with the Operator when equipped; a special refresh occurs, offering two Operators of the same tier as the equipped Operator.\nAutomatically chooses a Teammate with the most members in the corresponding Alliance, and dispatches a same-quality copy of the equipped Operator to the Teammate during the next Rest Phase.\nIf two or more teammates have the same highest number of Operators from that Alliance, the receipient is chosen at random.\nCannot be equipped by Custom Operators",
+      "effectDesc": "Destroys itself along with the Operator when equipped; then refreshes the Dispatch Center, offering two Operators of the same tier as the equipped Operator; one can be picked for free.\n<span class='text-yellow-500'>If there are Teammates present within the Team Simulation, a copy of the original Operator will be sent to the Teammate with the most corresponding Alliance members during the next Rest Phase</span>\n<span class='text-gray-500'>If multiple Teammates fulfill this condition, the copy will be sent to a random Teammate\nCannot be equipped by Custom Operators<span>",
       "cost": 1,
       "tier": 5
     },
@@ -291,14 +291,14 @@
     {
       "iconLink": "trap_1071_acarm071",
       "itemName": "Doctor Hologram",
-      "effectDesc": "Equippable by any Operator; <span class='blue'>this is destroyed at the start of the next round</span>, and the Operator is promoted to an Elite Operator",
+      "effectDesc": "Equippable by any Operator; <span class='blue'>this is destroyed at the start of the next round, and the Operator is promoted</span>/<span class='green'>immediately promotes this Operator</span> to an Elite Operator",
       "cost": 5,
       "tier": 5
     },
     {
       "iconLink": "trap_1074_acarm074",
       "itemName": "Commercial Packaging Plan",
-      "effectDesc": "For every <span class='blue'>8</span>/<span class='green'>7</span> Operators sold, obtain a (non-Elite) Operator from the same Alliance of the Operator with this equipped (their tier will not exceed Dispatch Center level)",
+      "effectDesc": "For every <span class='blue'>8</span>/<span class='green'>7</span> Operators sold, obtain an additional copy of a non-Elite Operator from the same Alliance of the equipping Operator (Operator Tier cannot exceed Dispatch Center level)",
       "cost": 3,
       "tier": 5
     },
@@ -311,15 +311,15 @@
     },
     {
       "iconLink": "trap_1118_acarm118",
-      "itemName": "Silverlance Pegasus' Helmet",
-      "effectDesc": "<span class='blue'>+50%</span>/<span class='green'>+75%</span> HP, if the bearer has \"Silverlance Pegasus' Spear\", recovers 8% Max HP per second",
+      "itemName": "Pegasian Helm",
+      "effectDesc": "<span class='blue'>+50%</span>/<span class='green'>+75%</span> HP, if equipped alongside \"Pegasian Lance\", recovers 8% Max HP per second",
       "cost": 3,
       "tier": 5
     },
     {
       "iconLink": "trap_1117_acarm117",
-      "itemName": "Silverlance Pegasus' Helmet",
-      "effectDesc": "<span class='blue'>+40%</span>/<span class='green'>+60%</span> ATK, attacks deal an additional 30% damage as True damage",
+      "itemName": "Pegasian Lance",
+      "effectDesc": "<span class='blue'>+40%</span>/<span class='green'>+60%</span> ATK; if equipped alongside \"Pegasian Helm\", when dealing damage, deal an additional 30% as True damage",
       "cost": 5,
       "tier": 6
     },
@@ -383,14 +383,14 @@
     {
       "iconLink": "trap_1120_acarm120",
       "itemName": "Chivalric Commandments",
-      "effectDesc": "<span class='blue'>-40%</span>/<span class='green'>-60%</span> ATKSPD; If equipped by a [Kazimierz] Operator, for 20 seconds after skill activation, reduce the ATKSPD and MSPD of enemies in range by 35%\nIf the [Kazimierz] Operator is also equipped with \"Kazimierz Stadium Flag\", they gain +100% ATK while skill is active, and will not retreat when taking lethal damage. Retreats after skill ends.",
+      "effectDesc": "Redeployment Time <span class='blue'>-40%</span>/<span class='green'>-60%</span>; If equipped by a [Kazimierz] Operator, enemies within Attack Range have -35% ASPD and -35% Movement Speedfor 20s after skill activation\n<span class='text-yellow-500'>If \"Kazimierz Knightclud Pennant\" is also equipped by the [Kazimierz] Operator, while skill is active, Operator has +100% ATK, and will not retreat when receiving lethal damage, instead retreating once skill ends.</span>",
       "cost": 4,
       "tier": 6
     },
     {
       "iconLink": "trap_1122_acarm122",
-      "itemName": "Famiglia Crest",
-      "effectDesc": "Natural SP recovery <span class='blue'>+0.2</span>/<span class='green'>+0.35</span> SP/second; If equipped by a [Siracusa] Operator, their ATK gradually increases to 200% while in Camauflage, lasting until dealing damage for the first time after Camauflage ends or the Operator leaves the field\nIf the [Siracusa] Operator is also equipped with \"Siracusan Formal Attire\" they deal an additional 800% of ATK as True damage when damaging enemies for the first time after losing Camauflage.",
+      "itemName": "Famiglia Insignia",
+      "effectDesc": "SP recovery rate <span class='blue'>+0.2</span>/<span class='green'>+0.35</span> SP/second; If equipped by a [Siracusa] Operator, their ATK gradually increases to 200% when equipped Operator is Invisible, until the first instance of damage dealt after Invisibility ends or the Operator leaves the field\n<span class='text-yellow-500'>If \"Siracusan Formalwear\" is also equipped by the [Siracusa] Operator, the first instance of damage dealt after Invisibility ends deals an additional 800% of ATK as True damage</span>",
       "cost": 4,
       "tier": 6
     },
