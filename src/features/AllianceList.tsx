@@ -40,6 +40,7 @@ const AllianceList = ({ season }: AllianceListProps) => {
   const operatorData: OperatorDto[] = getOperatorsBySeason(season);
 
   const [isOpen, setIsOpen] = useState(false);
+  const [isPinned, setIsPinned] = useState(false);
 
   const { refs, floatingStyles, context } = useFloating({
     open: isOpen,
@@ -51,7 +52,12 @@ const AllianceList = ({ season }: AllianceListProps) => {
     middleware: [offset(8), flip(), shift({ padding: 8 })],
   });
 
-  const dismiss = useDismiss(context);
+  const dismiss = useDismiss(context, {
+    outsidePress: () => {
+      setIsPinned(false);
+      return true;
+    },
+  });
 
   const { getFloatingProps } = useInteractions([dismiss]);
 
@@ -104,6 +110,23 @@ const AllianceList = ({ season }: AllianceListProps) => {
                 return (
                   <div
                     className="relative mb-1 cursor-pointer"
+                    onMouseEnter={(event) => {
+                      if (isPinned) return;
+
+                      refs.setReference(event.currentTarget);
+
+                      setSelectedOperatorTooltip({
+                        operator,
+                        alliance,
+                      });
+
+                      setIsOpen(true);
+                    }}
+                    onMouseLeave={() => {
+                      if (!isPinned) {
+                        setIsOpen(false);
+                      }
+                    }}
                     onClick={(event) => {
                       refs.setReference(event.currentTarget);
 
@@ -112,6 +135,7 @@ const AllianceList = ({ season }: AllianceListProps) => {
                         alliance,
                       });
 
+                      setIsPinned(true);
                       setIsOpen(true);
                     }}
                   >
