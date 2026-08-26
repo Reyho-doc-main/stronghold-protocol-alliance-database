@@ -383,7 +383,7 @@
     {
       "iconLink": "trap_1120_acarm120",
       "itemName": "Chivalric Commandments",
-      "effectDesc": "Redeployment Time <span class='blue'>-40%</span>/<span class='green'>-60%</span>; If equipped by a [Kazimierz] Operator, enemies within Attack Range have -35% ASPD and -35% Movement Speed for 20s after skill activation\n<span class='text-yellow-500'>If \"Kazimierz Knightclub Pennant\" is also equipped by the [Kazimierz] Operator, Operator has ATK +100% ATK, and will not retreat when taking lethal damage, instead retreating once skill ends",
+      "effectDesc": "Redeployment Time <span class='blue'>-40%</span>/<span class='green'>-60%</span>; If equipped by a [Kazimierz] Operator, enemies within Attack Range have -35% ASPD and -35% Movement Speed for 20s after skill activation\n<span class='text-yellow-500'>      If \"Kazimierz Knightclub Pennant\" is also equipped by the [Kazimierz] Operator, Operator has ATK +100% ATK, and will not retreat when taking lethal damage, instead retreating once skill ends",
       "cost": 4,
       "tier": 6
     },

@@ -22,23 +22,11 @@ export default function Home() {
       <div className="flex flex-row text-2xl md:text-3xl w-full gap-10 items-center justify-center">
         <div
           onClick={() =>
-            window.open("https://github.com/anhnt20112003/stronghold-protocol-alliance-database")
+            window.open("https://github.com/Reyho-doc-main/stronghold-protocol-alliance-database")
           }
           className="cursor-pointer"
         >
           <FaGithub />
-        </div>
-        <div
-          onClick={() => window.open("https://x.com/NguynTu20532273")}
-          className="cursor-pointer"
-        >
-          <FaTwitter />
-        </div>
-        <div
-          onClick={() => window.open("https://www.facebook.com/profile.php?id=100087421415239")}
-          className="cursor-pointer"
-        >
-          <FaFacebook />
         </div>
       </div>
       <div className="text-lg md:text-xl">

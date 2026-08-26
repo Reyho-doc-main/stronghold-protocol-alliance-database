@@ -33,7 +33,7 @@ const HeaderMobile = (props: HeaderProps) => {
     <div className="w-full h-[10vh] max-h-14 bg-[#212121] fixed top-0 z-999 flex-row items-center justify-between px-4 flex md:hidden">
       <div className="flex flex-row items-baseline gap-2">
         <div className="text-white text-lg">SPA Database</div>
-        <div className="text-white text-xs">by Silverglow</div>
+        <div className="text-white text-xs">by Reyho + Silverglow (OG creator)</div>
       </div>
 
       <button
