@@ -3,21 +3,21 @@
     {
       "bondId": "yanship",
       "name": "Yan",
-      "desc": "[Yan] Operators' ATK increases by <span class='blue'>(23 + 0.9 × stacks)%</span>\n&ltWith <span class='green'>6</span> different [Yan] Operators on field&gt At the start of battle, 'Yan's Protection' is summoned with ATK and HP equal to <span class='blue'>30%</span> of the total ATK and HP of all [Yan] Operators at that moment. 'Yan's Protection' attacks 3 enemies at once, inflicts Burn damage equals to <span class='blue'>20%</span> ATK, inflicts <span class='blue'>20%</span> Elemental Fragility on nearby enemies, and periodically use 'Cleansing Flame'.\n&ltWith <span class='green'>9</span> different Yan operators on field&gt Instead summon 2 'Yan's Protections'; 'Yan's Protections' have <span class='blue'>1.5x</span> ATK, and reduce damage taken by <span class='blue'>90%</span>",
+      "desc": "[Yan] Operators' ATK gains <span class='blue'>(23 + 0.9 × stacks)%</span>\n&ltWith <span class='green'>6</span> different [Yan] Operators on field&gt At the start of battle, 'Yan's Protection' is summoned with ATK and HP equal to <span class='blue'>30%</span> of the total ATK and HP of all [Yan] Operators at that moment; can attacks 3 enemies simultaneously; can use 'Cleansing Flame'; attacks inflict a percentage of ATK as Burn and inflicts Elemental Fragility on surrounding enemies.\n&ltWith <span class='green'>9</span> different [Yan] operators on field&gt summon 2 'Yan's Protections' instead, with <span class='blue'>1.5x</span> ATK, and <span class='blue'>90%</span> damage reduction",
       "activeCount": 3,
       "core": true
     },
     {
       "bondId": "sargonship",
       "name": "Sargon",
-      "desc": "When any [Sargon] Operator activates a skill, all [Sargon] Operators temporarily gain <span class='blue'>+12</span> ASPD (up to a <span class='blue'>+300</span>) for <span class='blue'>(5 + 0.22 × stacks)</span> seconds\n&ltWith <span class='green'>6</span> different [Sargon] Operators on field&gt Skill activations will also cause all [Sargon] Operators to temporarily gain increased ATK (up to <span class='blue'>+300%</span>) for the same duration",
+      "desc": "When any [Sargon] Operator activates a skill, all [Sargon] Operators temporarily gain <span class='blue'>+12</span> ASPD (up to <span class='blue'>+300</span>) for <span class='blue'>(5 + 0.22 × stacks)</span> seconds\n&ltWith <span class='green'>6</span> different [Sargon] Operators on field&gt Skill activations will also cause all [Sargon] Operators to temporarily gain <span class='blue'>+12%</span> ATK (up to <span class='blue'>+300%</span>) for the same duration",
       "activeCount": 3,
       "core": true
     },
     {
       "bondId": "victoriaship",
       "name": "Victoria",
-      "desc": "[Victoria] Operators carrying equipment deal <span class='blue'>(120 + 0.8 × stacks)%</span> damage\n&ltEvery <span class='green'>25</span> stacks&gt Obtain 1 random Victorian Hammer\n&ltWith <span class='green'>6</span> different [Victoria] Operators on field&gt For every piece of equipment equipped, [Victoria] Operators gain <span class='blue'>+50%</span> ATK; every upgraded piece of equipment instead grants <span class='blue'>+80%</span> ATK",
+      "desc": "[Victoria] Operators carrying equipment deal <span class='blue'>(120 + 0.8 × stacks)%</span> damage\n&ltFvery <span class='green'>25</span> stacks&gt Obtain 1 random Victorian Hammer\n&ltWith <span class='green'>6</span> different [Victoria] Operators on field&gt All [Victoria] Operators gain <span class='blue'>+50%</span> ATK for each piece of equipment; or <span class='blue'>+80%</span> ATK if equipment is upgraded*\n<span class='text-red-300'>* In-game translation says 'All [Victoria] Operators carrying equipment gain +50% ATK; or +80% ATK if equipment is upgraded', which is inaccurate. Thank you Yostar.</span>",
       "activeCount": 3,
       "core": true
     },
@@ -38,21 +38,21 @@
     {
       "bondId": "egirship",
       "name": "Ægir",
-      "desc": "[Ægir] Operators' <span class='blue'>+(35 + 1 × stacks)%</span> HP\nWhen the battle begins, [Ægir] Operators will devour the Operator on the tile in front of them, dealing <span class='text-red-500'>5000</span> Physical damage to the Operator and gaining their base ATK and Block, while adding [Ægir] stacks equal to the devoured Operator's Tier\n&ltWith <span class='green'>5</span> different [Ægir] Operators on the field&gt The first <span class='blue'>3</span> defeated will immediately revive",
+      "desc": "[Ægir] Operators' <span class='blue'>+(35 + 1 × stacks)%</span> HP\nWhen the battle begins, [Ægir] Operators will devour the Operator on the tile in front of them, dealing <span class='text-red-500'>5000</span> Physical damage to the Operator and gaining their base ATK and Block, while adding [Ægir] stacks equal to the devoured Operator's Tier <span class='text-gray-500'>(among [Ægir] Operators, those positioned further up or to the left are prioritised to start a devour)</span>\n&ltWith <span class='green'>5</span> different [Ægir] Operators on the field&gt The first <span class='blue'>3</span> defeated will immediately revive",
       "activeCount": 3,
       "core": true
     },
     {
       "bondId": "kazimierzship",
       "name": "Kazimierz",
-      "desc": "Each time an Operator is deployed, [Kazimierz] Operators gain <span class='blue'>+20%</span> ATK (up to <span class='blue'>+(50 + 1 × stacks)%</span>).\n&ltWith <span class='green'>6</span> different Kazimierz Operators on the field> While blocking enemies, Kazimierz Operators deal True damage equal to <span class='blue'>120%</span> ATK and Stun nearby enemies (within a radius of 0.8) for <span class='blue'>0.1</span> seconds every <span class='blue'>2</span> seconds. While not blocking enemies, each instance of damage they deal additionally inflicts True damage equal to <span class='blue'>30%</span> ATK.",
+      "desc": "On every Operator deployment, [Kazimierz] Operators <span class='blue'>+20%</span> ATK (up to <span class='blue'>+(50 + 1 × stacks)%</span>).\n&ltWith <span class='green'>6</span> different Kazimierz Operators on the field> [Kazimierz] Operators blocking enemies deal <span class='blue'>120%</span> of ATK as True Damage and inflict <span class='blue'>0.1</span> seconds of Stun on nearby enemies every 2 seconds (within a radius of 0.8); otherwise, dealing damage also deals extra <span class='blue'>30%</span> ATK as True damage when not blocking an enemy",
       "activeCount": 3,
       "core": true
     },
     {
       "bondId": "siracusaship",
       "name": "Siracusa",
-      "desc": "[Siracusa] Operators gain <span class='blue'>+(25 + 0.8 × stacks)</span> ASPD for <span class='blue'>(32 + 0.4 × stacks)</span> seconds after deployment.\n&ltWith <span class='green'>6</span> different Siracusa Operators on the field&gtAfter deployment, Siracusa Operators also gain Invisiblity for the same duration. While Invisible, and for <span class='blue'>10</span> seconds after leaving Invisible, their attacks have a <span class='blue'>3%</span> chance to deal <span class='blue'>(5000 + 50 × stacks)</span> True damage, and Fear the target for <span class='blue'>3</span> seconds.",
+      "desc": "[Siracusa] Operators gain <span class='blue'>+(25 + 0.8 × stacks)</span> ASPD on deployment for <span class='blue'>(32 + 0.4 × stacks)</span> seconds.\n&ltWith <span class='green'>6</span> different Siracusa Operators on the field&gt [Siracusa] Operators also gain Invisibility for the same amount of time; and have a <span class='blue'>3%</span> chance to deal <span class='blue'>(5000 + 50 × stacks)</span> True damage, and Fear the target for <span class='blue'>3</span> seconds when Invisible, or <span class='blue'>10</span> seconds after losing Invisibility",
       "activeCount": 3,
       "core": true
     },
@@ -65,31 +65,31 @@
     {
       "bondId": "maniship",
       "name": "Harmony",
-      "desc": "The [Harmony] Alliance grants <span class='blue'>+1</span> Operator count to Core Alliances ([Yan], [Sargon], [Victoria], [Kjerag], [Laterano], [Ægir], [Siracusa] and [Kazimierz]); [Harmony] Operators also gain effects from said activated Alliances",
+      "desc": "When activated, <span class='blue'>+1</span> Operator count to Core Alliances ([Yan], [Sargon], [Victoria], [Kjerag], [Laterano], [Ægir], [Siracusa] and [Kazimierz]); [Harmony] Operators also gain effects from said activated Alliances",
       "activeCount": 1
     },
     {
       "bondId": "visiship",
       "name": "Foresight",
-      "desc": "&ltFor every <span class='green'>10</span> stacks added&gt Gain <span class='blue'>+2</span> Funds\n&ltAt <span class='green'>80</span> stacks (first-time only)&gt [Foresight] Operators <span class='blue'>cost 1 less Funds permanently</span>\n&ltAt <span class='green'>150</span> stacks (first-time only)&gt The above effect becomes: All Dispatch Center Operators <span class='blue'>cost 1 less Funds permanently</span>\n<span class='text-gray-500'>[Foresight] Operators on Bench can also count toward activating this Alliance</span>",
+      "desc": "&ltFor every <span class='green'>10</span> stacks added&gt Gain <span class='blue'>+2</span> Funds\n&ltAt <span class='green'>80</span> stacks (first-time only)&gt [Foresight] Operators <span class='blue'>cost 1 less Funds permanently</span>\n&ltAt <span class='green'>150</span> stacks (first-time only)&gt The above effect changes to: All Dispatch Center Operators <span class='blue'>cost 1 less Funds permanently</span>\n<span class='text-gray-500'>[Foresight] Operators on Bench can also count toward activating this Alliance</span>",
       "activeCount": 2
     },
     {
       "bondId": "preciship",
       "name": "Precision",
-      "desc": "[Precision] Operators <span class='blue'>(10 + 1.2 × stacks)%</span> ATK\n&ltWith <span class='green'>3</span> different [Precision] Operators on field&gt High Ground Operators also gain the effect, and attacks ignore <span class='blue'>30%</span> DEF and RES",
+      "desc": "[Precision] Operators <span class='blue'>(10 + 1.2 × stacks)%</span> ATK\n&ltWith <span class='green'>3</span> different [Precision] Operators on field&gt Buff affects all [Precision] and Ranged Operators, and attacks ignore <span class='blue'>30%</span> DEF and RES",
       "activeCount": 2
     },
     {
       "bondId": "steadship",
       "name": "Durable",
-      "desc": "All Operators gain <span class='blue'>+(25 + 1.2 × stacks)%</span> HP\n&ltWith <span class='green'>3</span> different [Durable] Operators on the field&gt Whenever a non-[Durable] Operator takes damage, <span class='blue'>40%</span> of that damage is split among all [Durable] Operators on field, and deal <span class='blue'>(850 + 10 × stacks)</span> Arts damage and inflict <span class='blue'>40%</span> Fragile to the attacker (once every 0.2 seconds)",
+      "desc": "All Operators gain <span class='blue'>+(25 + 1.2 × stacks)%</span> HP\n&ltWith <span class='green'>3</span> different [Durable] Operators on the field&gt Whenever a non-[Durable] Operator takes damage, <span class='blue'>40%</span> of that damage is split among all [Durable] Operators on field. Durable Operators taking damage inflicts <span class='blue'>(850 + 10 × stacks)</span> Arts damage (once every 0.2 seconds) and <span class='blue'>40%</span> Fragile to the attacker",
       "activeCount": 2
     },
     {
       "bondId": "raidship",
       "name": "Raid",
-      "desc": "If a [Raid] Operator has not attacked for 10 seconds or their skill is ready with no enemies in their attack range, they will redeploy near a ground enemy while conserving their current SP. During this, they gain <span class='blue'>+(25 + 1 × stacks)%</span> ATK and HP\n&ltAt <span class='green'>50</span> stacks&gt All Operators <span class='blue'>+50</span> ATKSPD",
+      "desc": "If a [Raid] Operator's skill is ready or has not attacked for 10 seconds, and has no enemies in their attack range, they will redeploy near a ground enemy, use their skill without losing SP, and gain <span class='blue'>+(25 + 1 × stacks)%</span> ATK and HP\n&ltAt <span class='green'>50</span> stacks&gt All Operators <span class='blue'>+50</span> ATKSPD",
       "activeCount": 2
     },
     {
@@ -119,19 +119,19 @@
     {
       "bondId": "skillfulship",
       "name": "Agile",
-      "desc": "[Agile] Operators and Operators in the 4 adjacent tiles around them gain <span class='blue'>+(10 + 1 × stacks)</span> ASPD\n&ltAt <span class='green'>40</span> stacks&gt The above effects extends to 8 adjacent tiles",
+      "desc": "[Agile] Operators and Operators in the 4 adjacent tiles around them gain <span class='blue'>+(10 + 1 × stacks)</span> ASPD\n&ltAt <span class='green'>40</span> stacks&gt Effect range increased to 8 tiles surrounding [Agile] Operators",
       "activeCount": 2
     },
     {
       "bondId": "arcaneship",
       "name": "Arcane",
-      "desc": "Whenever [Arcane] Operators deal damage, their target receive <span class='blue'>(20 + 1 × stacks)%</span> more Arts damage for 3 seconds.&ltWith <span class='green'>3</span> different [Arcane] Operators on field&gt Damage increase against enemies with <span class='blue'>50%</span> or less HP is increased to <span class='blue'>(68 + 1.4 × stacks)%</span>",
+      "desc": "When [Arcane] Operators deal damage, the target takes <span class='blue'>(20 + 1 × stacks)%</span> increased Arts damage for 3 seconds.&ltWith <span class='green'>3</span> different [Arcane] Operators on field&gt [Arcane] Operators deal <span class='blue'>(68 + 1.4 × stacks)%</span> more damage to enemies with less than <span class='blue'>50%</span> HP",
       "activeCount": 2
     },
     {
       "bondId": "soloship",
       "name": "Solo",
-      "desc": "The [Solo] Operator gains <span class='blue'>+60%</span> HP and ATK, and gains <span class='blue'>+15</span> initial SP.\n<span class='text-gray-500'>At 2 [Solo] Operators on field, this Alliance deactivates</span>",
+      "desc": "&ltWith <span class='green'>1</span> [Solo] Operator on field&gt The [Solo] Operator gains <span class='blue'>+60%</span> ATK and HP, and <span class='blue'>+15</span> SP on deployment.\n<span class='text-gray-500'>Effect disabled with 2 or more different [Solo] Operators on the field</span>",
       "activeCount": 1
     },
     {
@@ -143,7 +143,7 @@
     {
       "bondId": "suntship",
       "name": "Elite",
-      "desc": "&ltWith <span class='green'>2</span> promoted Operators on field&gt Promoted Operators <span class='blue'>+30%</span> ATK\n&ltWith <span class='green'>5</span> promoted Operators on field&gt Promoted Operators <span class='blue'>-30%</span> SP cost",
+      "desc": "&ltWith <span class='green'>2</span> Elite Operators on field&gt Elite Operators <span class='blue'>+30%</span> ATK\n&ltWith <span class='green'>5</span> Elite Operators on field&gt Elite Operators <span class='blue'>-30%</span> SP cost\n<span class='text-gray-500'>All Elite Operators can activate this Alliance</span>",
       "activeCount": 2,
       "noFilter": true
     }
