@@ -1,0 +1,34 @@
+{
+  "leaders": [
+    {
+      "name": "OpFor: Armor",
+      "image": "OpFor_Armor.webp",
+      "wikiLink": "https://arknights.wiki.gg/wiki/OpFor_Armor"
+    },
+    {
+      "name": "OpFor: Gun",
+      "image": "OpFor_Gun.webp",
+      "wikiLink": "https://arknights.wiki.gg/wiki/OpFor_Gun"
+    },
+    {
+      "name": "OpFor: Pipe",
+      "image": "OpFor_Pipe.webp",
+      "wikiLink": "https://arknights.wiki.gg/wiki/OpFor_Pipe"
+    },
+    {
+      "name": "Sal Viento Bishop Quintus",
+      "image": "Sal_Viento_Bishop_Quintus.webp",
+      "wikiLink": "https://arknights.wiki.gg/wiki/Sal_Viento_Bishop_Quintus"
+    },
+    {
+      "name": "Allstair, Final Flame if the Empire",
+      "image": "Alistair_Final_Flame_of_the_Empire.webp",
+      "wikiLink": "https://arknights.wiki.gg/wiki/Alistair_II/Enemy"
+    },
+    {
+      "name": "'Samivilinn,' the Resolution of the Very North",
+      "image": "Samivilinn_the_Resolution_of_the_Very_North.png",
+      "wikiLink": "https://arknights.wiki.gg/wiki/Samivilinn,_the_Resolution_of_the_Very_North"
+    }
+  ]
+}

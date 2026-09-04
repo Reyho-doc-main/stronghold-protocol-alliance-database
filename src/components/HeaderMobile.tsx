@@ -12,7 +12,7 @@ interface HeaderProps {
 
 const HeaderMobile = (props: HeaderProps) => {
   const { currentPage, currentSeason, switchTab, switchSeason } = props;
-  const tabs = ["Home", "Attributes", "Alliances", "Strategies", "Items"];
+  const tabs = ["Home", "Attributes", "Alliances", "Strategies", "Items", "Advanced"];
   const seasonSelectOptions = [
     {
       value: "1",
@@ -30,10 +30,10 @@ const HeaderMobile = (props: HeaderProps) => {
   const [toggleMobileMenu, setToggleMobileMenu] = useState<boolean>(false);
 
   return (
-    <div className="w-full h-[10vh] max-h-14 bg-[#212121] fixed top-0 z-999 flex-row items-center justify-between px-4 flex md:hidden">
+    <div className="w-full h-[10vh] max-h-14 bg-[#212121] fixed top-0 z-999 flex-row items-center justify-between px-4 flex lg:hidden">
       <div className="flex flex-row items-baseline gap-2">
         <div className="text-white text-lg">SPA Database</div>
-        <div className="text-white text-xs">by Reyho + Silverglow (OG creator)</div>
+        <div className="text-white text-[12px]">by Reyho + Silverglow (OG creator)</div>
       </div>
 
       <button

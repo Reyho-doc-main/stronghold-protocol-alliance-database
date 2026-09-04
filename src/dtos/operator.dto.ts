@@ -5,4 +5,5 @@ export interface OperatorDto {
   attribute: string;
   tier: number;
   alliances: string[];
+  effects?: string[];
 }

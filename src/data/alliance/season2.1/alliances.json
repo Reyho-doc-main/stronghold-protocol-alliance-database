@@ -3,21 +3,21 @@
     {
       "bondId": "yanship",
       "name": "Yan",
-      "desc": "[Yan] Operators' ATK gains <span class='blue'>(23 + 0.9 × stacks)%</span>\n&ltWith <span class='green'>6</span> different [Yan] Operators on field&gt At the start of battle, 'Yan's Protection' is summoned with ATK and HP equal to <span class='blue'>30%</span> of the total ATK and HP of all [Yan] Operators at that moment; can attacks 3 enemies simultaneously; can use 'Cleansing Flame'; attacks inflict a percentage of ATK as Burn and inflicts Elemental Fragility on surrounding enemies.\n&ltWith <span class='green'>9</span> different [Yan] operators on field&gt summon 2 'Yan's Protections' instead, with <span class='blue'>1.5x</span> ATK, and <span class='blue'>90%</span> damage reduction",
+      "desc": "[Yan] Operators' gains increased ATK: ATK x <span class='blue'>(23 + 0.9 × stacks)%</span>\n&ltWith <span class='green'>6</span> different [Yan] Operators on field&gt At the start of battle, 'Yan's Protection' is summoned with ATK and HP equal to <span class='blue'>30%</span> of the total ATK and HP of all [Yan] Operators at that moment; can attacks 3 enemies simultaneously; can use 'Cleansing Flame'; attacks inflict a percentage of ATK as Burn and inflicts Elemental Fragility on surrounding enemies.\n&ltWith <span class='green'>9</span> different [Yan] operators on field&gt summon 2 'Yan's Protections' instead, with <span class='blue'>1.5x</span> ATK, and <span class='blue'>90%</span> damage reduction",
       "activeCount": 3,
       "core": true
     },
     {
       "bondId": "sargonship",
       "name": "Sargon",
-      "desc": "When any [Sargon] Operator activates a skill, all [Sargon] Operators temporarily gain <span class='blue'>+12</span> ASPD (up to <span class='blue'>+300</span>) for <span class='blue'>(5 + 0.22 × stacks)</span> seconds\n&ltWith <span class='green'>6</span> different [Sargon] Operators on field&gt Skill activations will also cause all [Sargon] Operators to temporarily gain <span class='blue'>+12%</span> ATK (up to <span class='blue'>+300%</span>) for the same duration",
+      "desc": "When any [Sargon] Operator activates a skill, all [Sargon] Operators temporarily gain <span class='blue'>+12</span> ASPD (up to <span class='blue'>+300</span>) for <span class='blue'>(5 + 0.22 × stacks)</span> seconds\n&ltWith <span class='green'>6</span> different [Sargon] Operators on field&gt Skill activations will also cause all [Sargon] Operators to temporarily gain <span class='blue'>+12%</span> ATK (up to <span class='blue'>+300%</span>) for the same duration\n<span class='text-gray-500'>When using Narantuya's Strategy, &lt;With 6 different [Sargon] Operators on field&gt; effect changes </span>",
       "activeCount": 3,
       "core": true
     },
     {
       "bondId": "victoriaship",
       "name": "Victoria",
-      "desc": "[Victoria] Operators carrying equipment deal <span class='blue'>(120 + 0.8 × stacks)%</span> damage\n&ltFvery <span class='green'>25</span> stacks&gt Obtain 1 random Victorian Hammer\n&ltWith <span class='green'>6</span> different [Victoria] Operators on field&gt All [Victoria] Operators gain <span class='blue'>+50%</span> ATK for each piece of equipment; or <span class='blue'>+80%</span> ATK if equipment is upgraded*\n<span class='text-red-300'>* In-game translation says 'All [Victoria] Operators carrying equipment gain +50% ATK; or +80% ATK if equipment is upgraded', which is inaccurate. Thank you Yostar.</span>",
+      "desc": "[Victoria] Operators carrying equipment deal <span class='blue'>(120 + 0.8 × stacks)%</span> damage\n&ltFor every <span class='green'>25</span> stacks&gt Obtain 1 random Victorian Hammer\n&ltWith <span class='green'>6</span> different [Victoria] Operators on field&gt All [Victoria] Operators gain <span class='blue'>+50%</span> ATK for each piece of equipment; or <span class='blue'>+80%</span> ATK if equipment is upgraded",
       "activeCount": 3,
       "core": true
     },
@@ -45,7 +45,7 @@
     {
       "bondId": "kazimierzship",
       "name": "Kazimierz",
-      "desc": "On every Operator deployment, [Kazimierz] Operators <span class='blue'>+20%</span> ATK (up to <span class='blue'>+(50 + 1 × stacks)%</span>).\n&ltWith <span class='green'>6</span> different Kazimierz Operators on the field> [Kazimierz] Operators blocking enemies deal <span class='blue'>120%</span> of ATK as True Damage and inflict <span class='blue'>0.1</span> seconds of Stun on nearby enemies every 2 seconds (within a radius of 0.8); otherwise, dealing damage also deals extra <span class='blue'>30%</span> ATK as True damage when not blocking an enemy",
+      "desc": "On every Operator deployment, [Kazimierz] Operators <span class='blue'>+20%</span> ATK (up to <span class='blue'>+(50 + 1 × stacks)%</span>).\n&ltWith <span class='green'>6</span> different Kazimierz Operators on the field> [Kazimierz] Operators blocking enemies deal <span class='blue'>120%</span> of ATK as True Damage and inflict <span class='blue'>0.1</span> seconds of Stun on nearby enemies every <span class='blue'>2</span> seconds (within a radius of 0.8); otherwise, dealing damage also deals extra <span class='blue'>30%</span> ATK as True damage when not blocking an enemy",
       "activeCount": 3,
       "core": true
     },
@@ -138,7 +138,7 @@
       "bondId": "emptyship",
       "name": "Assist_Operator",
       "desc": "All Operators take <span class='blue'>-20%</span> Physical and Arts damage\n [Assist Operators] deal <span class='blue'>120%</span> more damage; Elite [Assist Operators] deal <span class='blue'>140%</span> more damage",
-      "activeCount": 3
+      "activeCount": 2
     },
     {
       "bondId": "suntship",

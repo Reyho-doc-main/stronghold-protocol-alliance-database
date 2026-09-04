@@ -1,0 +1,176 @@
+{
+  "tacticalDecisions": [
+    {
+      "name": "Equip",
+      "description": "Obtain 2 pieces of Tier 1 equipment; also affects Teammates"
+    },
+    {
+      "name": "Skadi's Pledge",
+      "description": "+8 stacks to Ægir, Raid, and Durable Alliances; also affects Teammates"
+    },
+    {
+      "name": "Swire the Elegant Wit's Pledge",
+      "description": "+10 stacks to Yan and Investor Alliances; also affects Teammates"
+    },
+    {
+      "name": "Bagpipe's Pledge",
+      "description": "+8 stacks to Victoria, Foresight, and Resilient Alliances; also affects Teammates"
+    },
+    {
+      "name": "SilverAsh's Pledge",
+      "description": "+8 stacks to Kjerag, Investor, and Marvel Alliances; also affects Teammates"
+    },
+    {
+      "name": "Executor's Pledge",
+      "description": "+10 stacks to Laterano and Precision Alliances; also affects Teammates"
+    },
+    {
+      "name": "Eunectes's Pledge",
+      "description": "+10 stacks to Sargon and Agile Alliances; also affects Teammates"
+    },
+    {
+      "name": "Ines's Pledge",
+      "description": "+10 stacks to Raid and Foresight Alliances; also affects Teammates"
+    },
+    {
+      "name": "Wealth",
+      "description": "Obtain 1 Funds; also affects Teammates"
+    },
+    {
+      "name": "Supply",
+      "description": "Next 2 refreshes are free (can stack); also affects Teammates"
+    },
+    {
+      "name": "Preparation",
+      "description": "The next equipment you buy will already be upgraded"
+    },
+    {
+      "name": "Promotion",
+      "description": "The next Operator you buy will already be promoted to Elite"
+    },
+    {
+      "name": "Yanese Support",
+      "description": "You obtain a random Yan Alliance Operator"
+    },
+    {
+      "name": "Kjeragi Support",
+      "description": "You obtain a random Kjerag Alliance Operator"
+    },
+    {
+      "name": "Sargonian Support",
+      "description": "You obtain a random Sargon Alliance Operator"
+    },
+    {
+      "name": "Investors' Support",
+      "description": "You obtain a random Investor Alliance Operator"
+    },
+    {
+      "name": "Farsighted Support",
+      "description": "You obtain a random Foresight Alliance Operator"
+    },
+    {
+      "name": "Assisting Support",
+      "description": "You obtain a random Assist Alliance Operator"
+    },
+    {
+      "name": "Victorian Support",
+      "description": "You obtain a random Victoria Alliance Operator"
+    },
+    {
+      "name": "Recovery",
+      "description": "Allied units recover 50 HP on taking damage; also affects Teammates"
+    },
+    {
+      "name": "Firepower",
+      "description": "If there are at least 3 units on the Bench when Rest Phase ends, all allied Operators ignore 20 RES; also affects Teammates"
+    },
+    {
+      "name": "Draft",
+      "description": "When the battle starts, if there are at least 3 Operators deployed in a row on the battlefield, all allied Operators -50% Redeployment Time; also affects Teammates"
+    },
+    {
+      "name": "Flawless",
+      "description": "When allied Operators have full HP, gain +30% ATK and DEF; also affects Teammates"
+    },
+    {
+      "name": "Flawless",
+      "description": "If the Bench is empty when Rest Phase ends, all allied Operators ignore 30% DEF; also affects Teammates"
+    },
+    {
+      "name": "Rejection: Weakness",
+      "description": "All enemies -5% ATK"
+    },
+    {
+      "name": "Rejection: Fragility",
+      "description": "All enemies -100 DEF"
+    },
+    {
+      "name": "Rejection: Hallucination",
+      "description": "All enemies -3 RES"
+    },
+    {
+      "name": "Punishment: Weakness",
+      "description": "Elite enemies -6% ATK"
+    },
+    {
+      "name": "Punishment: Fragility",
+      "description": "Elite enemies -150 DEF"
+    },
+    {
+      "name": "Punishment: Hallucination",
+      "description": "Elite enemies -5 RES"
+    },
+    {
+      "name": "Verdict: Weakness",
+      "description": "Leader enemies -7% ATK"
+    },
+    {
+      "name": "Verdict: Fragility",
+      "description": "Leader enemies -200 DEF"
+    },
+    {
+      "name": "Verdict: Hallucination",
+      "description": "Leader enemies -7 RES"
+    },
+    {
+      "name": "Simulation Shift/Mode 1",
+      "description": "Remove all Barricades on the battlefield"
+    },
+    {
+      "name": "Simulation Shift/Mode 2",
+      "description": "Turns all Barricades on the battlefield to Ranged Tiles"
+    },
+    {
+      "name": "Simulation Shift/Mode 3",
+      "description": "Remove all Barricades on the battlefield"
+    },
+    {
+      "name": "Simulation Shift/Mode 3",
+      "description": "Remove all Barricades on the battlefield"
+    },
+    {
+      "name": "Simulation Shift/Mode 4",
+      "description": "Remove Barricades on the left side of the battlefield"
+    },
+    {
+      "name": "Simulation Shift/Mode 5",
+      "description": "You can deploy both High Ground and Ground Operators on Ranged Tiles on the right side of the battlefield"
+    },
+    {
+      "name": "Simulation Shift/Mode 6",
+      "description": "Remove all Barricades on the battlefield"
+    },
+    {
+      "name": "Simulation Shift/Mode 8",
+      "description": "The battlefield's Sandstorm stops"
+    },
+    {
+      "name": "Simulation Shift/Mode 9",
+      "description": "All Thickets on the field will vanish"
+    },
+    {
+      "name": "Take note:",
+      "description": "Not too sure if you noticed, but some of the effects seem... very sus. If there is any evidence there are extra tactical decisions not mentioned here/this is outright wrong, please contact me: go to home -> github -> raise an issue. Thanks! (this was taken from the arknights wiki)"
+    }
+  ]
+}

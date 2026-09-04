@@ -2,6 +2,7 @@ import { FiExternalLink } from "react-icons/fi";
 // import type { AllianceDto } from "../dtos/alliance.dto";
 import type { OperatorDto } from "../dtos/operator.dto";
 import { getBondImage } from "../utils/getImageLink";
+import { isRateLimited } from "../utils/rateLimit";
 
 interface OperatorAttributeTooltipProps {
   operator: OperatorDto;
@@ -12,6 +13,7 @@ function OperatorAttributeTooltip(props: OperatorAttributeTooltipProps) {
   const { operator } = props;
 
   const navigateToTerraWiki = (opName: string) => {
+    if (isRateLimited("wiki-link", 500)) return;
     window.open(`https://arknights.wiki.gg/wiki/${opName}`, "_blank");
   };
 

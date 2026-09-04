@@ -1,5 +1,6 @@
 import type { OperatorDto } from "../dtos/operator.dto";
 import { getBondImage } from "../utils/getImageLink";
+import { isRateLimited } from "../utils/rateLimit";
 
 type OperatorCardProps = {
   operator: OperatorDto;
@@ -29,6 +30,7 @@ function OperatorCard(props: OperatorCardProps) {
   // const [displayEliteAttribute, setDisplayEliteAttribute] = useState<boolean>(false);
 
   const navigateToTerraWiki = (opName: string) => {
+    if (isRateLimited("wiki-link", 500)) return;
     window.open(`https://arknights.wiki.gg/wiki/${opName}`, "_blank");
   };
 

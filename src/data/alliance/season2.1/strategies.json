@@ -256,8 +256,8 @@
       "name": "Suzuran",
       "iconLink": "icon_lisa",
       "initialHp": 20,
-      "effectName": "'Protective Power'",
-      "effectDesc": "<span class=\"font-bold\">[Protective Power]</span> At the start of each round, trigger the &ltWhen obtained&gt effect of one Operator on field (Prioritizes Operators deployed on upper right tiles)"
+      "effectName": "'Omamori's Blessing'",
+      "effectDesc": "<span class=\"font-bold\">[Omamori's Blessing]</span> When a round begins, trigger an Operator's 'When obtained' Attribute once (prioritizes the bottom-right-most Operator on map)"
     },
     {
       "name": "Jessica",
@@ -277,8 +277,8 @@
       "name": "Fang",
       "iconLink": "icon_fang",
       "initialHp": 24,
-      "effectName": "'Teamwork'",
-      "effectDesc": "<span class=\"font-bold\">[Teamwork]</span> Upon entering Rest Phase on Rounds 8, 10, 12 and 14, obtain 1 Transmitter"
+      "effectName": "'Joint Advance'",
+      "effectDesc": "<span class=\"font-bold\">[Joint Advance]</span>Obtain 1 Transmitter on Rounds 8, 10, 12 and 14"
     }
   ]
 }

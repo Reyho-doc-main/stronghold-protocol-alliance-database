@@ -1,0 +1,24 @@
+{
+  "trophies": [
+    {
+      "range": "0~9",
+      "image": "trophy_level1.png"
+    },
+    {
+      "range": "10~29",
+      "image": "trophy_level2.png"
+    },
+    {
+      "range": "30~59",
+      "image": "trophy_level3.png"
+    },
+    {
+      "range": "60~99",
+      "image": "trophy_level4.png"
+    },
+    {
+      "range": "100+",
+      "image": "trophy_level5.png"
+    }
+  ]
+}

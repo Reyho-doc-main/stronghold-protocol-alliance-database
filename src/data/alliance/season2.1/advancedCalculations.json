@@ -1,0 +1,436 @@
+{
+  "advancedCalculations": {
+    "attackPowerBonus": {
+      "soloSimulation": [
+        {
+          "round": "01",
+          "standard": "0.7",
+          "aPerilousSituation": "1×0.7",
+          "desperateSituation": "1×0.8",
+          "Ultimate_Simulation": "1.1"
+        },
+        {
+          "round": "02",
+          "standard": "0.7",
+          "aPerilousSituation": "1×0.7",
+          "desperateSituation": "1×0.8",
+          "Ultimate_Simulation": "1.1²"
+        },
+        {
+          "round": "03",
+          "standard": "0.7",
+          "aPerilousSituation": "1×0.7",
+          "desperateSituation": "1×0.8",
+          "Ultimate_Simulation": "1.1²"
+        },
+        {
+          "round": "04",
+          "standard": "0.7",
+          "aPerilousSituation": "1.1×0.7",
+          "desperateSituation": "1×0.8",
+          "Ultimate_Simulation": "1.1²"
+        },
+        {
+          "round": "05",
+          "standard": "0.7",
+          "aPerilousSituation": "1.1×0.7",
+          "desperateSituation": "1.1×0.8",
+          "Ultimate_Simulation": "1.1²"
+        },
+        {
+          "round": "06",
+          "standard": "0.7",
+          "aPerilousSituation": "1.1×0.7",
+          "desperateSituation": "1.1×0.8",
+          "Ultimate_Simulation": "1.1³"
+        },
+        {
+          "round": "07",
+          "standard": "0.7",
+          "aPerilousSituation": "1.1×0.7",
+          "desperateSituation": "1.1×0.8",
+          "Ultimate_Simulation": "1.1³"
+        },
+        {
+          "round": "08",
+          "standard": "0.7",
+          "aPerilousSituation": "1.1²×0.7",
+          "desperateSituation": "1.1×0.8",
+          "Ultimate_Simulation": "1.1³"
+        },
+        {
+          "round": "09",
+          "standard": "0.7",
+          "aPerilousSituation": "1.1²×0.7",
+          "desperateSituation": "1.1²×0.8",
+          "Ultimate_Simulation": "1.1³"
+        },
+        {
+          "round": "10",
+          "standard": "Ø",
+          "aPerilousSituation": "1.1²×0.7",
+          "desperateSituation": "1.1²×0.8",
+          "Ultimate_Simulation": "1.1⁴"
+        },
+        {
+          "round": "11",
+          "standard": "Ø",
+          "aPerilousSituation": "1.1³×0.7",
+          "desperateSituation": "1.1³×0.8",
+          "Ultimate_Simulation": "1.1⁵"
+        },
+        {
+          "round": "12",
+          "standard": "Ø",
+          "aPerilousSituation": "1.1⁴×0.7",
+          "desperateSituation": "1.1³×0.8",
+          "Ultimate_Simulation": "1.1⁵"
+        },
+        {
+          "round": "13",
+          "standard": "Ø",
+          "aPerilousSituation": "1.1⁵×0.7",
+          "desperateSituation": "1.1⁴×0.8",
+          "Ultimate_Simulation": "1.1⁶"
+        },
+        {
+          "round": "14",
+          "standard": "Ø",
+          "aPerilousSituation": "1.1⁵×0.7",
+          "desperateSituation": "1.1⁴×0.8",
+          "Ultimate_Simulation": "1.1⁷"
+        },
+        {
+          "round": "Hidden Core",
+          "standard": "Ø",
+          "aPerilousSituation": "Ø",
+          "desperateSituation": "1.1⁴×0.8",
+          "Ultimate_Simulation": "1.1⁷"
+        }
+      ],
+      "allianceSimulation": [
+        {
+          "round": "01",
+          "standard": "1×0.8",
+          "aPerilousSituation": "1×0.8",
+          "desperateSituation": "1.1",
+          "Ultimate_Simulation": "1.1"
+        },
+        {
+          "round": "02",
+          "standard": "1×0.8",
+          "aPerilousSituation": "1.1×0.8",
+          "desperateSituation": "1.1²",
+          "Ultimate_Simulation": "1.1²"
+        },
+        {
+          "round": "03",
+          "standard": "1×0.8",
+          "aPerilousSituation": "1.1×0.8",
+          "desperateSituation": "1.1²",
+          "Ultimate_Simulation": "1.1²"
+        },
+        {
+          "round": "04",
+          "standard": "1×0.8",
+          "aPerilousSituation": "1.1²×0.8",
+          "desperateSituation": "1.1³",
+          "Ultimate_Simulation": "1.1³"
+        },
+        {
+          "round": "05",
+          "standard": "1×0.8",
+          "aPerilousSituation": "1.1²×0.8",
+          "desperateSituation": "1.1³",
+          "Ultimate_Simulation": "1.1³"
+        },
+        {
+          "round": "06",
+          "standard": "1×0.8",
+          "aPerilousSituation": "1.1²×0.8",
+          "desperateSituation": "1.1³",
+          "Ultimate_Simulation": "1.1⁴"
+        },
+        {
+          "round": "07",
+          "standard": "1×0.8",
+          "aPerilousSituation": "1.1²×0.8",
+          "desperateSituation": "1.1³",
+          "Ultimate_Simulation": "1.1⁵"
+        },
+        {
+          "round": "08",
+          "standard": "1×0.8",
+          "aPerilousSituation": "1.1³×0.8",
+          "desperateSituation": "1.1³",
+          "Ultimate_Simulation": "1.1⁵"
+        },
+        {
+          "round": "09",
+          "standard": "1×0.8",
+          "aPerilousSituation": "1.1⁴×0.8",
+          "desperateSituation": "1.1⁴",
+          "Ultimate_Simulation": "1.1⁵"
+        },
+        {
+          "round": "10",
+          "standard": "1×0.8",
+          "aPerilousSituation": "1.1⁴×0.8",
+          "desperateSituation": "1.1⁵",
+          "Ultimate_Simulation": "1.1⁵"
+        },
+        {
+          "round": "11",
+          "standard": "1×0.8",
+          "aPerilousSituation": "1.1⁵×0.8",
+          "desperateSituation": "1.1⁶",
+          "Ultimate_Simulation": "1.1⁶"
+        },
+        {
+          "round": "12",
+          "standard": "1.1×0.8",
+          "aPerilousSituation": "1.1⁶×0.8",
+          "desperateSituation": "1.1⁶",
+          "Ultimate_Simulation": "1.1⁶"
+        },
+        {
+          "round": "13",
+          "standard": "1.1×0.8",
+          "aPerilousSituation": "1.1⁷×0.8",
+          "desperateSituation": "1.1⁷",
+          "Ultimate_Simulation": "1.1⁷"
+        },
+        {
+          "round": "14",
+          "standard": "1.1×0.8",
+          "aPerilousSituation": "1.1⁷×0.8",
+          "desperateSituation": "1.1⁸",
+          "Ultimate_Simulation": "1.1⁸"
+        },
+        {
+          "round": "Hidden Core",
+          "standard": "Ø",
+          "aPerilousSituation": "Ø",
+          "desperateSituation": "1.1⁸",
+          "Ultimate_Simulation": "1.1⁸"
+        }
+      ]
+    },
+    "healthBonus": {
+      "soloSimulation": [
+        {
+          "round": "01",
+          "standard": "0.7",
+          "aPerilousSituation": "1×0.7",
+          "desperateSituation": "1×0.8",
+          "Ultimate_Simulation": "1.2"
+        },
+        {
+          "round": "02",
+          "standard": "0.7",
+          "aPerilousSituation": "1×0.7",
+          "desperateSituation": "1×0.8",
+          "Ultimate_Simulation": "1.2²"
+        },
+        {
+          "round": "03",
+          "standard": "0.7",
+          "aPerilousSituation": "1×0.7",
+          "desperateSituation": "1×0.8",
+          "Ultimate_Simulation": "1.2²"
+        },
+        {
+          "round": "04",
+          "standard": "0.7",
+          "aPerilousSituation": "1.2×0.7",
+          "desperateSituation": "1×0.8",
+          "Ultimate_Simulation": "1.2²"
+        },
+        {
+          "round": "05",
+          "standard": "0.7",
+          "aPerilousSituation": "1.2×0.7",
+          "desperateSituation": "1.2×0.8",
+          "Ultimate_Simulation": "1.2²"
+        },
+        {
+          "round": "06",
+          "standard": "0.7",
+          "aPerilousSituation": "1.2×0.7",
+          "desperateSituation": "1.2×0.8",
+          "Ultimate_Simulation": "1.2³"
+        },
+        {
+          "round": "07",
+          "standard": "0.7",
+          "aPerilousSituation": "1.2×0.7",
+          "desperateSituation": "1.2×0.8",
+          "Ultimate_Simulation": "1.2³"
+        },
+        {
+          "round": "08",
+          "standard": "0.7",
+          "aPerilousSituation": "1.2²×0.7",
+          "desperateSituation": "1.2×0.8",
+          "Ultimate_Simulation": "1.2³"
+        },
+        {
+          "round": "09",
+          "standard": "0.7",
+          "aPerilousSituation": "1.2²×0.7",
+          "desperateSituation": "1.2²×0.8",
+          "Ultimate_Simulation": "1.2³"
+        },
+        {
+          "round": "10",
+          "standard": "Ø",
+          "aPerilousSituation": "1.2²×0.7",
+          "desperateSituation": "1.2²×0.8",
+          "Ultimate_Simulation": "1.2⁴"
+        },
+        {
+          "round": "11",
+          "standard": "Ø",
+          "aPerilousSituation": "1.2³×0.7",
+          "desperateSituation": "1.2³×0.8",
+          "Ultimate_Simulation": "1.2⁵"
+        },
+        {
+          "round": "12",
+          "standard": "Ø",
+          "aPerilousSituation": "1.2⁴×0.7",
+          "desperateSituation": "1.2³×0.8",
+          "Ultimate_Simulation": "1.2⁵"
+        },
+        {
+          "round": "13",
+          "standard": "Ø",
+          "aPerilousSituation": "1.2⁵×0.7",
+          "desperateSituation": "1.2⁴×0.8",
+          "Ultimate_Simulation": "1.2⁶"
+        },
+        {
+          "round": "14",
+          "standard": "Ø",
+          "aPerilousSituation": "1.2⁵×0.7",
+          "desperateSituation": "1.2⁴×0.8",
+          "Ultimate_Simulation": "1.2⁷"
+        },
+        {
+          "round": "Hidden Core",
+          "standard": "Ø",
+          "aPerilousSituation": "Ø",
+          "desperateSituation": "1.2⁴×0.8",
+          "Ultimate_Simulation": "1.2⁷"
+        }
+      ],
+      "allianceSimulation": [
+        {
+          "round": "01",
+          "standard": "1×0.8",
+          "aPerilousSituation": "1×0.8",
+          "desperateSituation": "1.2",
+          "Ultimate_Simulation": "1.2"
+        },
+        {
+          "round": "02",
+          "standard": "1×0.8",
+          "aPerilousSituation": "1.2×0.8",
+          "desperateSituation": "1.2²",
+          "Ultimate_Simulation": "1.2²"
+        },
+        {
+          "round": "03",
+          "standard": "1×0.8",
+          "aPerilousSituation": "1.2×0.8",
+          "desperateSituation": "1.2²",
+          "Ultimate_Simulation": "1.2²"
+        },
+        {
+          "round": "04",
+          "standard": "1×0.8",
+          "aPerilousSituation": "1.2²×0.8",
+          "desperateSituation": "1.2³",
+          "Ultimate_Simulation": "1.2³"
+        },
+        {
+          "round": "05",
+          "standard": "1×0.8",
+          "aPerilousSituation": "1.2²×0.8",
+          "desperateSituation": "1.2³",
+          "Ultimate_Simulation": "1.2⁴"
+        },
+        {
+          "round": "06",
+          "standard": "1×0.8",
+          "aPerilousSituation": "1.2²×0.8",
+          "desperateSituation": "1.2³",
+          "Ultimate_Simulation": "1.2⁴×1.08"
+        },
+        {
+          "round": "07",
+          "standard": "1×0.8",
+          "aPerilousSituation": "1.2²×0.8",
+          "desperateSituation": "1.2³",
+          "Ultimate_Simulation": "1.2⁷"
+        },
+        {
+          "round": "08",
+          "standard": "1×0.8",
+          "aPerilousSituation": "1.2³×0.8",
+          "desperateSituation": "1.2³",
+          "Ultimate_Simulation": "1.2⁸"
+        },
+        {
+          "round": "09",
+          "standard": "1×0.8",
+          "aPerilousSituation": "1.2⁴×0.8",
+          "desperateSituation": "1.2⁴",
+          "Ultimate_Simulation": "1.2⁸"
+        },
+        {
+          "round": "10",
+          "standard": "1×0.8",
+          "aPerilousSituation": "1.2⁴×0.8",
+          "desperateSituation": "1.2⁵",
+          "Ultimate_Simulation": "1.2⁸"
+        },
+        {
+          "round": "11",
+          "standard": "1×0.8",
+          "aPerilousSituation": "1.2⁵×0.8",
+          "desperateSituation": "1.2⁶",
+          "Ultimate_Simulation": "1.2⁹"
+        },
+        {
+          "round": "12",
+          "standard": "1.2×0.8",
+          "aPerilousSituation": "1.2⁶×0.8",
+          "desperateSituation": "1.2⁶",
+          "Ultimate_Simulation": "1.2¹⁰"
+        },
+        {
+          "round": "13",
+          "standard": "1.2×0.8",
+          "aPerilousSituation": "1.2⁷×0.8",
+          "desperateSituation": "1.2⁷",
+          "Ultimate_Simulation": "1.2¹⁰×1.08"
+        },
+        {
+          "round": "14",
+          "standard": "1.2×0.8",
+          "aPerilousSituation": "1.2⁷×0.8",
+          "desperateSituation": "1.2⁸",
+          "Ultimate_Simulation": "1.2¹⁰×1.08"
+        },
+        {
+          "round": "Hidden Core",
+          "standard": "Ø",
+          "aPerilousSituation": "Ø",
+          "desperateSituation": "1.2⁸",
+          "Ultimate_Simulation": "1.2¹⁰×1.08"
+        }
+      ]
+    }
+  }
+}

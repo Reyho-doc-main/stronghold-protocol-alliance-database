@@ -1,0 +1,648 @@
+{
+  "tacticalTraining": [
+    {
+      "id": "tacticalTrainingSpecial",
+      "name": "Tactical Training/Special",
+      "image": "Tactical_Training_Special.webp",
+      "enemies": [
+        {
+          "name": "Hound Pro",
+          "image": "Hound_Pro.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Hound_Pro"
+        },
+        {
+          "name": "Heavy Defender Lieutenant",
+          "image": "Heavy_Defender_Lieutenant.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Heavy_Defender_Lieutenant"
+        },
+        {
+          "name": "Sarkaz Greatswordsman",
+          "image": "Sarkaz_Greatswordsman.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Sarkaz_Greatswordsman"
+        },
+        {
+          "name": "Sarkaz Greatswordsman Leader",
+          "image": "Sarkaz_Greatswordsman_Leader.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Sarkaz_Greatswordsman_Leader"
+        },
+        {
+          "name": "Possessed Soldier",
+          "image": "Possessed_Soldier.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Possessed_Soldier"
+        },
+        {
+          "name": "Defense Crusher",
+          "image": "Defense_Crusher.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Defense_Crusher"
+        },
+        {
+          "name": "Defense Crusher Leader",
+          "image": "Defense_Crusher_Leader.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Defense_Crusher_Leader"
+        },
+        {
+          "name": "Infantry",
+          "image": "Infantry.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Infantry"
+        },
+        {
+          "name": "Possessed Heavy Defender",
+          "image": "Possessed_Heavy_Defender.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Possessed_Heavy_Defender"
+        },
+        {
+          "name": "Sarkaz Swordsman",
+          "image": "Sarkaz_Swordsman.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Sarkaz_Swordsman"
+        },
+        {
+          "name": "Sarkaz Lancer",
+          "image": "Sarkaz_Lancer.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Sarkaz_Lancer"
+        },
+        {
+          "name": "Ordinary Prisoner",
+          "image": "Ordinary_Prisoner.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Ordinary_Prisoner"
+        },
+        {
+          "name": "Seasoned Prisoner",
+          "image": "Seasoned_Prisoner.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/seasoned_Prisoner"
+        },
+        {
+          "name": "Elite Pugilist Prisoner",
+          "image": "Elite_Pugilist_Prisoner.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Elite_Pugilist_Prisoner"
+        },
+        {
+          "name": "Strongman Prisoner",
+          "image": "Strongman_Prisoner.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Strongman_Prisoner"
+        },
+        {
+          "name": "Recidivist",
+          "image": "Recidivist.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Recidivist"
+        },
+        {
+          "name": "Infamous Recidivist",
+          "image": "Infamous_Recidivist.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Infamous_Recidivist"
+        },
+        {
+          "name": "Rhine Defense Senior Member",
+          "image": "Rhine_Defense_Senior_Member.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Rhine_Defense_Senior_Member"
+        },
+        {
+          "name": "Dor-1 Failure",
+          "image": "Dor-1_Failure.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Dor-1_Failure"
+        },
+        {
+          "name": "Dor-α Failure",
+          "image": "Dor-a_Failure.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Dor-%CE%B1_Failure"
+        },
+        {
+          "name": "Dor-β Replica",
+          "image": "Dor-b_Replica.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Dor-%CE%B2_Replica"
+        },
+        {
+          "name": "Test Power Armor",
+          "image": "Test_Power_Armor.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Test_Power_Armor"
+        },
+        {
+          "name": "Sarkaz Absurdist Tyrant Captain",
+          "image": "Sarkaz_Absurdist_Tyrant_Captain.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Sarkaz_Absurdist_Tyrant_Captain"
+        },
+        {
+          "name": "Military Hound",
+          "image": "Military_Hound.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Military_Hound"
+        },
+        {
+          "name": "Elite Military Hound",
+          "image": "Elite_Military_Hound.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Elite_Military_Hound"
+        },
+        {
+          "name": "Arc Frontliner",
+          "image": "Arc_Frontliner.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Arc_Frontliner"
+        },
+        {
+          "name": "Arc Screenguard",
+          "image": "Arc_Screenguard.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Arc_Screenguard"
+        },
+        {
+          "name": "Arc Screenguard Captain",
+          "image": "Arc_Screenguard_Captain.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Arc_Screenguard_Captain"
+        },
+        {
+          "name": "Delegation Recruit",
+          "image": "Delegation_Recruit.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Delegation_Recruit"
+        },
+        {
+          "name": "Delegation Veteran",
+          "image": "Delegation_Veteran.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Delegation_Veteran"
+        },
+        {
+          "name": "Delegation Shieldbearer",
+          "image": "Delegation_Shieldbearer.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Delegation_Shieldbearer"
+        },
+        {
+          "name": "Heavy Scout",
+          "image": "Heavy_Scout.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Heavy_Scout"
+        },
+        {
+          "name": "Elite Sarkaz Wither Vanguard",
+          "image": "Elite_Sarkaz_Wither_Vanguard.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Elite_Sarkaz_Wither_Vanguard"
+        },
+        {
+          "name": "Sacrilegious Chimera",
+          "image": "Sacrilegious_Chimera.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Sacrilegious_Chimera"
+        },
+        {
+          "name": "Army Veteran Shieldguard",
+          "image": "Army_Veteran_Shieldguard.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Army_Veteran_Shieldguard"
+        }
+      ]
+    },
+    {
+      "id": "tacticalTrainingFlying",
+      "name": "Tactical Training/Flying",
+      "image": "Tactical_Training_Flying.webp",
+      "enemies": [
+        {
+          "name": "Monster",
+          "image": "Monster.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Monster"
+        },
+        {
+          "name": "Monster Mk II",
+          "image": "Monster_Mk_II.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Monster_Mk_II"
+        },
+        {
+          "name": "Raptor",
+          "image": "Raptor.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Raptor"
+        },
+        {
+          "name": "Defender-4",
+          "image": "Defender-4.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Defender-4"
+        },
+        {
+          "name": "Arts Master A1",
+          "image": "Arts_Master_A1.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Arts_Master_A1"
+        },
+        {
+          "name": "Arts Master A2",
+          "image": "Arts_Master_A2.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Arts_Master_A2"
+        },
+        {
+          "name": "Frost",
+          "image": "Frost.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Frost"
+        },
+        {
+          "name": "Imperial Artillery Targeteer",
+          "image": "Imperial_Artillery_Targeteer.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Imperial_Artillery_Targeteer"
+        },
+        {
+          "name": "Blocker",
+          "image": "Blocker.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Blocker"
+        },
+        {
+          "name": "Blocker-P",
+          "image": "Blocker-P.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Blocker-P"
+        },
+        {
+          "name": "Farseer",
+          "image": "Farseer.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Farseer"
+        },
+        {
+          "name": "Wings of the Sankta",
+          "image": "Wings_of_the_Sankta.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Wings_of_the_Sankta"
+        },
+        {
+          "name": "Eyes of the Sankta",
+          "image": "Eyes_of_the_Sankta.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Eyes_of_the_Sankta"
+        },
+        {
+          "name": "OpFor BlackCloud",
+          "image": "OpFor_BlackCloud.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/OpFor_BlackCloud"
+        }
+      ]
+    },
+    {
+      "id": "tacticalTrainingFrequency",
+      "name": "Tactical Training/Frequency",
+      "image": "Tactical_Training_Frequency.webp",
+      "enemies": [
+        {
+          "name": "Grindstone",
+          "image": "Grindstone.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Grindstone"
+        },
+        {
+          "name": "Brightmirror",
+          "image": "Brightmirror.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Brightmirror"
+        },
+        {
+          "name": "Vernacularism",
+          "image": "Vernacularism.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Vernacularism"
+        },
+        {
+          "name": "Sophistication",
+          "image": "Sophistication.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Sophistication"
+        },
+        {
+          "name": "Introspection",
+          "image": "Introspection.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Introspection"
+        },
+        {
+          "name": "Sinkingsand",
+          "image": "Sinkingsand.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Sinkingsand"
+        },
+        {
+          "name": "Dublinn Flamechaser Soldier",
+          "image": "Dublinn_Flamechaser_Soldier.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Dublinn_Flamechaser_Soldier"
+        },
+        {
+          "name": "Dublinn Flamechaser Elite Soldier",
+          "image": "Dublinn_Flamechaser_Elite_Soldier.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Dublinn_Flamechaser_Elite_Soldier"
+        },
+        {
+          "name": "Dublinn Flamechaser Guard",
+          "image": "Dublinn_Flamechaser_Guard.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Dublinn_Flamechaser_Guard"
+        },
+        {
+          "name": "OpFor Rebirth",
+          "image": "OpFor_Rebirth.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/OpFor_Rebirth"
+        }
+      ]
+    },
+    {
+      "id": "tacticalTrainingElements",
+      "name": "Tactical Training/Elements",
+      "image": "Tactical_Training_Elements.webp",
+      "enemies": [
+        {
+          "name": "Deep Sea Slider",
+          "image": "Deep_Sea_Slider.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Deep_Sea_Slider"
+        },
+        {
+          "name": "Nourished Slider",
+          "image": "Nourished_Slider.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Nourished_Slider"
+        },
+        {
+          "name": "Diver",
+          "image": "Diver.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Diver"
+        },
+        {
+          "name": "Dockworker",
+          "image": "Dockworker.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Dockworker"
+        },
+        {
+          "name": "Dockworker Leader",
+          "image": "Dockworker_Leader.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Dockworker_Leader"
+        },
+        {
+          "name": "Tidal Caster",
+          "image": "Tidal_Caster.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Tidal_Caster"
+        },
+        {
+          "name": "Tidal Leader",
+          "image": "Tidal_Leader.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Tidal_Leader"
+        },
+        {
+          "name": "Sarkaz Royal Court Soldier",
+          "image": "Sarkaz_Royal_Court_Soldier.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Sarkaz_Royal_Court_Soldier"
+        },
+        {
+          "name": "Sarkaz Royal Court Elite Soldier",
+          "image": "Sarkaz_Royal_Court_Elite_Soldier.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Sarkaz_Royal_Court_Elite_Soldier"
+        },
+        {
+          "name": "Sarkaz Royal Court Elite Caster",
+          "image": "Sarkaz_Royal_Court_Elite_Caster.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Sarkaz_Royal_Court_Elite_Caster"
+        },
+        {
+          "name": "Blazing Originium Slug",
+          "image": "Blazing_Originium_Slug.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Blazing_Originium_Slug"
+        },
+        {
+          "name": "Pyric Originium Slug",
+          "image": "Pyric_Originium_Slug.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Pyric_Originium_Slug"
+        },
+        {
+          "name": "Nucleic Maleficent",
+          "image": "Nucleic_Maleficent.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Nucleic_Maleficent"
+        },
+        {
+          "name": "Cabbage Seedling",
+          "image": "Cabbage_Seedling.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Cabbage_Seedling"
+        },
+        {
+          "name": "Burning Vine",
+          "image": "Burning_Vine.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Burning_Vine"
+        },
+        {
+          "name": "Bone Sea Drifter",
+          "image": "Bone_Sea_Drifter.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Bone_Sea_Drifter"
+        },
+        {
+          "name": "Skimming Sea Drifter",
+          "image": "Skimming_Sea_Drifter.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Skimming_Sea_Drifter"
+        },
+        {
+          "name": "OpFor Quagmire",
+          "image": "OpFor_Quagmire.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/OpFor_Quagmire"
+        }
+      ]
+    },
+    {
+      "id": "tacticalTrainingContinuous",
+      "name": "Tactical Training/Continuous",
+      "image": "Tactical_Training_Continuous.webp",
+      "enemies": [
+        {
+          "name": "Sarkaz Witherer",
+          "image": "Sarkaz_Witherer.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Sarkaz_Witherer"
+        },
+        {
+          "name": "Sarkaz Witherer Captain",
+          "image": "Sarkaz_Witherer_Captain.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Sarkaz_Witherer_Captain"
+        },
+        {
+          "name": "Army Heavy Artillery",
+          "image": "Army_Heavy_Artillery.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Army_Heavy_Artillery"
+        },
+        {
+          "name": "Unicellular Predator",
+          "image": "Unicellular_Predator.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Unicellular_Predator"
+        },
+        {
+          "name": "Allotropic Predator",
+          "image": "Allotropic_Predator.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Allotropic_Predator"
+        },
+        {
+          "name": "Nethersea Swarmcaller",
+          "image": "Nethersea_Swarmcaller.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Nethersea_Swarmcaller"
+        },
+        {
+          "name": "Nourished Swarmcaller",
+          "image": "Nourished_Swarmcaller.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Nourished_Swarmcaller"
+        },
+        {
+          "name": "Rotchaser",
+          "image": "Rotchaser.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Rotchaser"
+        },
+        {
+          "name": "Rampaging Rotchaser",
+          "image": "Rampaging_Rotchaser.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Rampaging_Rotchaser"
+        },
+        {
+          "name": "Sarkaz Wither Tank",
+          "image": "Sarkaz_Wither_Tank.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Sarkaz_Wither_Tank"
+        },
+        {
+          "name": "Advanced Sarkaz Wither Tank",
+          "image": "Advanced_Sarkaz_Wither_Tank.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Advanced_Sarkaz_Wither_Tank"
+        },
+        {
+          "name": "OpFor Fissure",
+          "image": "OpFor_Fissure.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/OpFor_Fissure"
+        }
+      ]
+    },
+    {
+      "id": "tacticalTrainingInvisible",
+      "name": "Tactical Training/Invisible",
+      "image": "Tactical_Training_Invisible.webp",
+      "enemies": [
+        {
+          "name": "Lurker",
+          "image": "Lurker.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Lurker"
+        },
+        {
+          "name": "Invisible Crossbowman",
+          "image": "Invisible_Crossbowman.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Invisible_Crossbowman"
+        },
+        {
+          "name": "Invisible Crossbowman Leader",
+          "image": "Invisible_Crossbowman_Leader.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Invisible_Crossbowman_Leader"
+        },
+        {
+          "name": "Possessed Soldier",
+          "image": "Possessed_Soldier.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Possessed_Soldier"
+        },
+        {
+          "name": "Heavy Crossbowman Ambusher",
+          "image": "Heavy_Crossbowman_Ambusher.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Heavy_Crossbowman_Ambusher"
+        },
+        {
+          "name": "Elite Sarkaz Wither Vanguard",
+          "image": "Elite_Sarkaz_Wither_Vanguard.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Elite_Sarkaz_Wither_Vanguard"
+        },
+        {
+          "name": "Amateur Performer",
+          "image": "Amateur_Performer.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Amateur_Performer"
+        },
+        {
+          "name": "Bridge Builder",
+          "image": "Bridge_Builder.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Bridge_Builder"
+        },
+        {
+          "name": "Bridge Holder",
+          "image": "Bridge_Holder.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Bridge_Holder"
+        },
+        {
+          "name": "Risk-seeking Sailor",
+          "image": "Risk-seeking_Sailor.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Risk-seeking_Sailor"
+        },
+        {
+          "name": "Famiglia Silencer",
+          "image": "Famiglia_Silencer.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Famiglia_Silencer"
+        },
+        {
+          "name": "Shanhaizhong Ringleader",
+          "image": "Shanhaizhong_Ringleader.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Shanhaizhong_Ringleader"
+        },
+        {
+          "name": "Shanhaizhong Secret-Keeper",
+          "image": "Shanhaizhong_Secret-Keeper.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Shanhaizhong_Secret-Keeper"
+        },
+        {
+          "name": "Delegation Recruit",
+          "image": "Delegation_Recruit.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Delegation_Recruit"
+        },
+        {
+          "name": "Delegation Centurion Champion",
+          "image": "Delegation_Centurion_Champion.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Delegation_Centurion_Champion"
+        },
+        {
+          "name": "Festival Jazz Musician",
+          "image": "Festival_Jazz_Musician.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Festival_Jazz_Musician"
+        },
+        {
+          "name": "OpFor Bonespur",
+          "image": "OpFor_Bonespur.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/OpFor_Bonespur"
+        }
+      ]
+    },
+    {
+      "id": "tacticalTrainingRefraction",
+      "name": "Tactical Training/Refraction",
+      "image": "Tactical_Training_Refraction.webp",
+      "enemies": [
+        {
+          "name": "Dublinn Sniffer Hound",
+          "image": "Dublinn_Sniffer_Hound.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Dublinn_Sniffer_Hound"
+        },
+        {
+          "name": "Dublinn Scout",
+          "image": "Dublinn_Scout.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Dublinn_Scout"
+        },
+        {
+          "name": "Dublinn Scout Leader",
+          "image": "Dublinn_Scout_Leader.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Dublinn_Scout_Leader"
+        },
+        {
+          "name": "Dublinn Shadowcaster",
+          "image": "Dublinn_Shadowcaster.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Dublinn_Shadowcaster"
+        },
+        {
+          "name": "Dublinn Phalanx Infantry",
+          "image": "Dublinn_Phalanx_Infantry.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Dublinn_Phalanx_Infantry"
+        },
+        {
+          "name": "Dublinn Phalanx Commander",
+          "image": "Dublinn_Phalanx_Commander.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Dublinn_Phalanx_Commander"
+        },
+        {
+          "name": "Dublinn Heavy Defender",
+          "image": "Dublinn_Heavy_Defender.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Dublinn_Heavy_Defender"
+        },
+        {
+          "name": "Dublinn Heavy Defender Leader",
+          "image": "Dublinn_Heavy_Defender_Leader.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Dublinn_Heavy_Defender_Leader"
+        },
+        {
+          "name": "Tombkeeper Grotesque",
+          "image": "Tombkeeper_Grotesque.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Tombkeeper_Grotesque"
+        },
+        {
+          "name": "Dublinn Companion Guard",
+          "image": "Dublinn_Companion_Guard.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Dublinn_Companion_Guard"
+        },
+        {
+          "name": "Dublinn Elite Companion Guard",
+          "image": "Dublinn_Elite_Companion_Guard.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Dublinn_Elite_Companion_Guard"
+        },
+        {
+          "name": "Dublinn Elite Companion Shadowblade",
+          "image": "Dublinn_Elite_Companion_Shadowblade.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/Dublinn_Elite_Companion_Shadowblade"
+        },
+        {
+          "name": "OpFor Mirror",
+          "image": "OpFor_Mirror.webp",
+          "wikiLink": "https://arknights.wiki.gg/wiki/OpFor_Mirror"
+        }
+      ]
+    }
+  ]
+}

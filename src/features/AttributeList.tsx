@@ -1,5 +1,7 @@
 import AllianceButton from "../components/AllianceButton";
+import SearchInput from "../components/SearchInput";
 import TierButton from "../components/TierButton";
+import EffectFilter from "../components/EffectFilter";
 import OperatorCard from "../components/OperatorCard";
 import type { OperatorDto } from "../dtos/operator.dto";
 import { useState } from "react";
@@ -15,6 +17,17 @@ const AttributeList = ({ season }: AttributeListProps) => {
   const [activeCoreAlliances, setActiveCoreAlliances] = useState<string[]>([]);
   const [activeAddAlliances, setActiveAddAlliances] = useState<string[]>([]);
   const [activeTiers, setActiveTiers] = useState<number[]>([]);
+  const [activeEffects, setActiveEffects] = useState<string[]>([]);
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const effectOptions = [
+    "In Battle",
+    "When Obtained",
+    "When Sold",
+    "On Deployment",
+    "Rest Phase",
+    "Direct Stack Buff",
+  ];
 
   const toggleCoreAlliance = (alliance: string) => {
     if (activeCoreAlliances.includes(alliance))
@@ -33,6 +46,11 @@ const AttributeList = ({ season }: AttributeListProps) => {
     else setActiveTiers((prev) => [...prev, tier]);
   };
 
+  const toggleEffect = (effect: string) => {
+    if (activeEffects.includes(effect)) setActiveEffects((prev) => prev.filter((item) => item !== effect));
+    else setActiveEffects((prev) => [...prev, effect]);
+  };
+
   const allianceData: AllianceDto[] = getAlliancesBySeason(season);
   const coreAlliances = allianceData.filter((alliance) => alliance.core === true);
   const additionalAlliances = allianceData.filter(
@@ -44,7 +62,9 @@ const AttributeList = ({ season }: AttributeListProps) => {
     (op) =>
       activeCoreAlliances.every((a) => op.alliances.includes(a)) &&
       activeAddAlliances.every((a) => op.alliances.includes(a)) &&
-      (activeTiers.length === 0 || activeTiers.includes(op.tier)),
+      (activeTiers.length === 0 || activeTiers.includes(op.tier)) &&
+      op.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
+      activeEffects.every((e) => op.effects?.includes(e)),
   );
 
   return (
@@ -59,6 +79,12 @@ const AttributeList = ({ season }: AttributeListProps) => {
               isActive={activeTiers.includes(tier)}
             />
           ))}
+          <EffectFilter
+            options={effectOptions}
+            activeEffects={activeEffects}
+            onToggle={toggleEffect}
+          />
+          <SearchInput onSearch={setSearchTerm} placeholder="Search..." />
         </div>
         <div className="flex flex-row flex-wrap gap-3 justify-center max-w-96 md:max-w-195">
           {coreAlliances.map((alliance) => (

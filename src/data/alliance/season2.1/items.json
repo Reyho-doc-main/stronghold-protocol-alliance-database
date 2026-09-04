@@ -277,7 +277,7 @@
     {
       "iconLink": "trap_1109_acarm109",
       "itemName": "Transmitter",
-      "effectDesc": "Destroys itself along with the Operator when equipped, then refreshes the Dispatch Center, offering two Operators of the same Tier as the equipped Operator; one can be picked for free\nIf there are Teammates present within the Team Simulation, a copy of the original Operator would be sent to the Teammate with the most corresponding Alliance members during the next Rest Phase\n<span class='text-yellow-500'>If there are Teammates present within the Team Simulation, a copy of the original Operator will be sent to the Teammate with the most corresponding Alliance members during the next Rest Phase\n<span class='text-gray-500'>If multiple Teammates fulfill this condition, the copy will be sent to a random Teammate\n<span class='text-gray-500'>Cannot be equipped by Custom Operators",
+      "effectDesc": "Destroys itself along with the Operator when equipped, then refreshes the Dispatch Center, offering two Operators of the same Tier as the equipped Operator; one can be picked for free\n<span class='text-yellow-500'>If there are Teammates present within the Team Simulation, a copy of the original Operator will be sent to the Teammate with the most corresponding Alliance members during the next Rest Phase\n<span class='text-gray-500'>If multiple Teammates fulfill this condition, the copy will be sent to a random Teammate\n<span class='text-gray-500'>Cannot be equipped by Custom Operators",
       "cost": 3,
       "tier": 5
     },

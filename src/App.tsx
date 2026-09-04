@@ -4,6 +4,7 @@ import AttributeList from "./features/AttributeList";
 import AllianceList from "./features/AllianceList";
 import StrategyList from "./features/StrategyList";
 import ShopItemList from "./features/ShopItemList";
+import EnemyList from "./features/EnemyList";
 import { useSearchParams } from "react-router-dom";
 import HeaderDesktop from "./components/HeaderDesktop";
 import HeaderMobile from "./components/HeaderMobile";
@@ -16,7 +17,7 @@ function App() {
   const season = searchParams.get("season");
   const currentSeason = seasons.includes(season ?? "0") ? season! : "2.1";
 
-  const tabs = ["Home", "Attributes", "Alliances", "Strategies", "Items"];
+  const tabs = ["Home", "Attributes", "Alliances", "Strategies", "Items", "Advanced"];
   const page = searchParams.get("tab");
   const currentPage = tabs.includes(page ?? "") ? page! : "Home";
 
@@ -53,6 +54,7 @@ function App() {
         {currentPage === "Alliances" && <AllianceList season={currentSeason} />}
         {currentPage === "Strategies" && <StrategyList season={currentSeason} />}
         {currentPage === "Items" && <ShopItemList season={currentSeason} />}
+        {currentPage === "Advanced" && <EnemyList season={currentSeason} />}
       </div>
       {currentPage !== "Home" && (
         <div className="fixed bottom-5 right-5 z-10">

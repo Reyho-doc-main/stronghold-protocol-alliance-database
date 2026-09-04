@@ -1,0 +1,224 @@
+{
+  "bountyDecisions": [
+    {
+      "name": "Arts Master A2/Bounty",
+      "description": "Adds 1 Arts Master A2 to your next battle; defeat to obtain 2 Funds",
+      "image":"Arts_Master_A2.webp"
+    },
+    {
+      "name": "Nucleic Maleficent/Bounty",
+      "description": "Adds 1 Nucleic Maleficent to your next battle; defeat to obtain 3 Funds",
+      "image":"Nucleic_Maleficent.webp"
+    },
+    {
+      "name": "Shanhaizhong Ringleader/Bounty",
+      "description": "Adds 1 Shanhaizhong Ringleader to your next battle; defeat to obtain 2 Funds",
+      "image":"Shanhaizhong_Ringleader.webp"
+    },
+    {
+      "name": "\"Eyes of the Sankta\"/Bounty",
+      "description": "Adds 1 \"Eyes of the Sankta\" to your next battle; defeat to obtain 2 Funds",
+      "image":"Eyes_of_the_Sankta.webp"
+    },
+    {
+      "name": "Wraith Leader/Bounty",
+      "description": "Adds 1 Wraith Leader to your next battle; defeat to obtain 1 Funds",
+      "image":"Wraith_Leader.webp"
+    },
+    {
+      "name": "Heavy Defender/Bounty",
+      "description": "Adds 1 Heavy Defender to your next battle; defeat to obtain 1 Funds",
+      "image":"Heavy_Defender.webp"
+    },
+    {
+      "name": "Heavy Crossbowman Ambusher/Bounty",
+      "description": "Adds 1 Heavy Crossbowman Ambusher to your next battle; defeat to obtain 2 Funds",
+      "image":"Heavy_Crossbowman_Ambusher.webp"
+    },
+    {
+      "name": "Shanhaizhong Ringleader/Multi-Round Bounties",
+      "description": "Adds 1 Shanhaizhong Ringleader to the every subsequent battle; defeat to obtain 1 Funds",
+      "image":"Shanhaizhong_Ringleader.webp"
+    },
+    {
+      "name": "Originium Slug/Training",
+      "description": "Adds 1 Originium Slug to your next battle, but will not obtain extra Funds",
+      "image":"Originium_Slug.webp"
+    },
+    {
+      "name": "Duck Lord/Bounty",
+      "description": "Adds 1 Duck Lord to your next battle; defeat to obtain 3 Funds",
+      "image":"Duck_Lord.webp"
+    },
+    {
+      "name": "Gopnik/Bounty",
+      "description": "Adds 1 Gopnik to your next battle; defeat to obtain 3 Funds",
+      "image":"Gopnik.webp"
+    },
+    {
+      "name": "Crying Thief/Bounty",
+      "description": "Adds 1 Crying Thief to your next battle; defeat to obtain 3 Funds",
+      "image":"Crying_Thief.webp"
+    },
+    {
+      "name": "Fatty/Bounty",
+      "description": "Adds 1 Fatty to your next battle; defeat to obtain 3 Funds",
+      "image":"Fatty.webp"
+    },
+    {
+      "name": "Skullshatterer/Bounty",
+      "description": "Adds 1 Skullshatterer to your next battle; defeat to obtain 1 Funds",
+      "image":"Skullshatterer.webp"
+    },
+    {
+      "name": "Sarkaz Centurion/Bounty",
+      "description": "Adds 1 Sarkaz Centurion to your next battle; defeat to obtain 2 Funds",
+      "image":"Sarkaz_Centurion.webp"
+    },
+    {
+      "name": "Crownslayer/Bounty",
+      "description": "Adds 1 Crownslayer to your next battle; defeat to obtain 1 Funds",
+      "image":"Crownslayer.webp"
+    },
+    {
+      "name": "Mudrock/Bounty",
+      "description": "Adds 1 Mudrock to your next battle; defeat to obtain 4 Funds",
+      "image":"Mudrock.webp"
+    },
+    {
+      "name": "Withered Knight/Bounty",
+      "description": "Adds 1 Withered Knight to your next battle; defeat to obtain 3 Funds",
+      "image":"Withered_Knight.webp"
+    },
+    {
+      "name": "Corrupted Knight/Bounty",
+      "description": "Adds 1 Corrupted Knight to your next battle; defeat to obtain 3 Funds",
+      "image":"Corrupted_Knight.webp"
+    },
+    {
+      "name": "\"Forsaken One\"/Bounty",
+      "description": "Adds 1 \"Forsaken One\" to your next battle; defeat to obtain 4 Funds",
+      "image":"Forsaken_One.webp"
+    },
+    {
+      "name": "Jetman/Bounty",
+      "description": "Adds 1 Jetman to your next battle; defeat to obtain 3 Funds",
+      "image":"Jetman.webp"
+    },
+    {
+      "name": "Jesselton Williams/Bounty",
+      "description": "Adds 1 Jesselton Williams to your next battle; defeat to obtain 4 Funds",
+      "image":"Jesselton_Williams.webp"
+    },
+    {
+      "name": "W/Bounty",
+      "description": "Adds 1 W to your next battle; defeat to obtain 1 Funds",
+      "image":"W.webp"
+    },
+    {
+      "name": "\"Rat King\"/Bounty",
+      "description": "Adds 1 \"Rat King\" to your next battle; defeat to obtain 3 Funds",
+      "image":"Rat_King.webp"
+    },
+    {
+      "name": "\"Pompeii\"/Bounty",
+      "description": "Adds 1 \"Pompeii\" to your next battle; defeat to obtain 2 Funds",
+      "image":"Pompeii.webp"
+    },
+    {
+      "name": "Big Bob/Bounty",
+      "description": "Adds 1 Big Bob to your next battle; defeat to obtain 2 Funds",
+      "image":"Big_Bob.webp"
+    },
+    {
+      "name": "\"Free\"/Bounty",
+      "description": "Adds 1 \"Free\" to your next battle; defeat to obtain 4 Funds",
+      "image":"Free.webp"
+    },
+    {
+      "name": "Degenbrecher/Bounty",
+      "description": "Adds 1 Degenbrecher to your next battle; defeat to obtain 5 Funds",
+      "image":"Degenbrecher.webp"
+    },
+    {
+      "name": "Zaaro, Signore dei Lupi/Bounty",
+      "description": "Adds 1 Zaaro, \"Signore dei Lupi\" to your next battle; defeat to obtain 5 Funds",
+      "image":"Zaaro,_Signore_dei_Lupi.webp"
+    },
+    {
+      "name": "\"Gravestone\"/Bounty",
+      "description": "Adds 1 \"Gravestone\" to your next battle; defeat to obtain 4 Funds",
+      "image":"Gravestone.webp"
+    },
+    {
+      "name": "Lost Colossus/Bounty",
+      "description": "Adds 1 Lost Colossus to your next battle; defeat to obtain 5 Funds",
+      "image":"Lost_Colossus.webp"
+    },
+    {
+      "name": "Multi-Round Bounties/OpFor: Fissure",
+      "description": "Adds 1 OpFor: Fissure (Deals continuous damage when defeated) to every subsequent battle; grants 1 Funds to whoever defeats it",
+      "image":"OpFor_Fissure.webp"
+    },
+    {
+      "name": "Multi-Round Bounties/OpFor: Quagmire",
+      "description": "Adds 1 OpFor: Quagmire (Deals Elemental Injury) to every subsequent battle; grants 1 Funds to whoever defeats it",
+      "image":"OpFor_Quagmire.webp"
+    },
+    {
+      "name": "Multi-Round Bounties/OpFor: Bonespur",
+      "description": "Adds 1 OpFor: Bonespur (Has Invisibility) to every subsequent battle; grants 1 Funds to whoever defeats it",
+      "image":"OpFor_Bonespur.webp"
+    },
+    {
+      "name": "Multi-Round Bounties/OpFor: BlackCloud",
+      "description": "Adds 1 OpFor: BlackCloud (Aerial enemy) to every subsequent battle; grants 1 Funds to whoever defeats it",
+      "image":"OpFor_BlackCloud.webp"
+    },
+    {
+      "name": "Multi-Round Bounties/OpFor: Rebirth",
+      "description": "Adds 1 OpFor: Rebirth (Needs multiple hits to be defeated) to every subsequent battle; grants 1 Funds to whoever defeats it",
+      "image":"OpFor_Rebirth.webp"
+    },
+    {
+      "name": "Multi-Round Bounties/OpFor: Mirror",
+      "description": "Adds 1 OpFor: Mirror (Has Refraction) to every subsequent battle; grants 1 Funds to whoever defeats it",
+      "image":"OpFor_Mirror.webp"
+    },
+    {
+      "name": "Bounty/Flying I",
+      "description": "Adds 1 Monster to your next 2 battles; defeat to obtain 1 Funds",
+      "image":"Monster.webp"
+    },
+    {
+      "name": "Bounty/Flying II",
+      "description": "Adds 1 Bombtail to your next 2 battles; defeat to obtain 2 Funds",
+      "image":"Bombtail.webp"
+    },
+    {
+      "name": "Bounty/Flying III",
+      "description": "Adds 1 Arts Master A1 to your next 2 battles; defeat to obtain 3 Funds",
+      "image":"Arts_Master_A1.webp"
+    },
+    {
+      "name": "Bounty/Frequency I",
+      "description": "Adds 1 Grindstone to your next 2 battles; defeat to obtain 1 Funds",
+      "image":"Grindstone.webp"
+    },
+    {
+      "name": "Bounty/Frequency II",
+      "description": "Adds 1 Fountainboil to your next 2 battles; defeat to obtain 2 Funds",
+      "image":"Fountainboil.webp"
+    },
+    {
+      "name": "Bounty/Frequency III",
+      "description": "Adds 1 Sinkingsand to your next 2 battles; defeat to obtain 3 Funds",
+      "image":"Sinkingsand.webp"
+    },
+    {
+      "name": "Bounty/Injury I",
+      "description": "Adds 1 Deep Sea Slider to your next 2 battles; defeat to obtain 1 Funds",
+      "image":"Deep_Sea_Slider.webp"
+    }
+  ]
+}

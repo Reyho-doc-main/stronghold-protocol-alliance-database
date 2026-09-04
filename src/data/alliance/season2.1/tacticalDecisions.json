@@ -1,0 +1,144 @@
+{
+  "tacticalDecisions": [
+    {
+      "name": "Equip",
+      "description": "Obtain 2 pieces of Tier 1 equipment; also affects Teammates"
+    },
+    {
+      "name": "Acute",
+      "description": "If the Bench is empty when Rest Phase ends, all allied Operators ignore 30% DEF; also affects Teammates"
+    },
+    {
+      "name": "Draft",
+      "description": "When the battle starts, if there are at least 3 Operators deployed in a row on the battlefield, all allied Operators -50% Redeployment Time; also affects Teammates"
+    },
+    {
+      "name": "Firepower",
+      "description": "If there are at least 3 units on the Bench when Rest Phase ends, all allied Operators ignore 20 RES; also affects Teammates"
+    },
+    {
+      "name": "Flawless",
+      "description": "When allied Operators have full HP, gain +30% ATK and DEF; also affects Teammates"
+    },
+    {
+      "name": "Kazimierzian Support",
+      "description": "You obtain a random Kazimierz Alliance Operator"
+    },
+    {
+      "name": "Kjeragi Support",
+      "description": "You obtain a random Kjerag Alliance Operator"
+    },
+    {
+      "name": "Lateran Support",
+      "description": "You obtain a random Laterano Alliance Operator"
+    },
+    {
+      "name": "Skadi's Pledge",
+      "description": "+8 stacks to Ægir, Raid, and Durable Alliances; also affects Teammates"
+    },
+    {
+      "name": "Titi's Pledge",
+      "description": "+10 stacks to Sargon and Precision Alliances; also affects Teammates"
+    },
+    {
+      "name": "Texas's Pledge",
+      "description": "+10 stacks to Siracusa and Raid Alliances; also affects Teammates"
+    },
+    {
+      "name": "Swire's Pledge",
+      "description": "+10 stacks to Yan and Investor Alliances; also affects Teammates"
+    },
+    {
+      "name": "Bagpipe's Pledge",
+      "description": "+8 stacks to Victoria, Foresight, and Resilient Alliances; also affects Teammates"
+    },
+    {
+      "name": "SilverAsh's Pledge",
+      "description": "+8 stacks to Kjerag, Investor, and Swift Alliances; also affects Teammates"
+    },
+    {
+      "name": "Mostima's Pledge",
+      "description": "+10 stacks to Laterano and Arcane Alliances; also affects Teammates"
+    },
+    {
+      "name": "Mylnar's Pledge",
+      "description": "+12 stacks to Kazimierz Alliance; also affects Teammates"
+    },
+    {
+      "name": "Preparation",
+      "description": "The next equipment you buy will already be upgraded"
+    },
+    {
+      "name": "Promotion",
+      "description": "The next Operator you buy will already be promoted to Elite"
+    },
+    {
+      "name": "Punishment: Weakness",
+      "description": "Elite enemies -6% ATK"
+    },
+    {
+      "name": "Punishment: Fragility",
+      "description": "Elite enemies -150 DEF"
+    },
+    {
+      "name": "Punishment: Hallucination",
+      "description": "Elite enemies -5 RES"
+    },
+    {
+      "name": "Recovery",
+      "description": "Allied units recover 50 HP on taking damage; also affects Teammates"
+    },
+    {
+      "name": "Rejection: Weakness",
+      "description": "All enemies -5% ATK"
+    },
+    {
+      "name": "Rejection: Fragility",
+      "description": "All enemies -100 DEF"
+    },
+    {
+      "name": "Rejection: Hallucination",
+      "description": "All enemies -3 RES"
+    },
+    {
+      "name": "Sargonian Support",
+      "description": "You obtain a random Sargon Alliance Operator"
+    },
+    {
+      "name": "Siracusan Support",
+      "description": "You obtain a random Siracusa Alliance Operator"
+    },
+    {
+      "name": "Supply",
+      "description": "Next 2 refreshes are free (can stack); also affects Teammates"
+    },
+    {
+      "name": "Verdict: Weakness",
+      "description": "Leader enemies -7% ATK"
+    },
+    {
+      "name": "Verdict: Fragility",
+      "description": "Leader enemies -200 DEF"
+    },
+    {
+      "name": "Verdict: Hallucination",
+      "description": "Leader enemies -7 RES"
+    },
+    {
+      "name": "Wealth",
+      "description": "Obtain 1 Funds; also affects Teammates"
+    },
+    {
+      "name": "Victorian Support",
+      "description": "You obtain a random Victoria Alliance Operator"
+    },
+    {
+      "name": "Yanese Support",
+      "description": "You obtain a random Yan Alliance Operator"
+    },
+    {
+      "name": "Ægirian Support",
+      "description": "You obtain a random Ægir Alliance Operator"
+    }
+]
+}

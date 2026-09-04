@@ -1,4 +1,4 @@
-import { FaGithub, FaTwitter, FaFacebook } from "react-icons/fa";
+import {FaGithub} from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
         reflect the official translations.
       </div>
       <div className="text-lg md:text-xl">
-        Great thanks to PRTS and AK Terra Wiki for their work and supports.
+        Great thanks to PRTS and AK Terra Wiki for their work and supports, and thanks to all my friends on Discord (especially margaretnearl) who provided some of the important information free of charge seen on this website, really appreciate you guys
       </div>
       <div className="text-lg md:text-xl">
         If any issue arises (i.e. bugs, incorrect data, typo, etc), please contact me using methods
@@ -32,8 +32,8 @@ export default function Home() {
       <div className="text-lg md:text-xl">
         What's new:
         <ul>
-          <li>* Updated Second Season's desciptions to match the EN translation.</li>
-          <li>* Added a tooltip for Operator Attribute on the Alliance page.</li>
+          <li>* Added a bunch of new information, such as bosses, tactical decisions etc. Some are not done and finished.</li>
+          <li>* Corrected some typos, added new ways to search (which will hopefully make things better). Still have to download a lot of stuff and add a lot of CN stuff to database, will be done at a later time. Bounty decisions are currently pretty inaccurate, expect lots of bugs there.</li>
         </ul>
       </div>
     </div>

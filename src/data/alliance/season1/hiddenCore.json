@@ -1,0 +1,10 @@
+{
+  "hiddenCore": [
+    { "round": "~4", "standard": "0", "Perilous_Simulation": "0", "Dire_Simulation": "0", "Ultimate_Simulation": "0" },
+    { "round": "~8", "standard": "1", "Perilous_Simulation": "1", "Dire_Simulation": "1", "Ultimate_Simulation": "1" },
+    { "round": "~11", "standard": "2", "Perilous_Simulation": "2", "Dire_Simulation": "2", "Ultimate_Simulation": "2" },
+    { "round": "~13", "standard": "2", "Perilous_Simulation": "3", "Dire_Simulation": "3", "Ultimate_Simulation": "3" },
+    { "round": "14", "standard": "3", "Perilous_Simulation": "4", "Dire_Simulation": "5", "Ultimate_Simulation": "6" },
+    { "round": "??", "standard": "—", "Perilous_Simulation": "5", "Dire_Simulation": "7", "Ultimate_Simulation": "8" }
+  ]
+}
