@@ -156,10 +156,10 @@ const EnemyList = ({ season }: EnemyListProps) => {
               leader enemy), Hidden Core is unlocked (the details for unlocking is as follows):
             </div>
             <ul className="list-disc pl-5 flex flex-col gap-1">
-              <li>In standalone simulation: Activated Alliance total stacks &gt; 350 and remaining HP &gt; 1</li>
+              <li>In standalone simulation: Activated Alliance total stacks &gt; 350 and remaining HP &gt; 1 (In season 1, total alliance stack only needs to be 300)</li>
               <li>
                 Alliance simulation: All players have a total of &gt;1200 active covenant stacks and have &gt; 1
-                remaining HP
+                remaining HP (In season 1, total alliance stack only needs to be 1000)
               </li>
             </ul>
             <div>
