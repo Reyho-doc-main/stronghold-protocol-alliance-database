@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
 import { getItemsBySeason } from "../utils/getDataBySeason";
 import { ROMAN_NUMERALS, TIER_COLOR } from "../constants/tier";
+import CyclingIcon from "../components/CyclingIcon";
 
 type ShopItemDto = {
   iconLink: string;
@@ -60,21 +60,8 @@ type ShopItemListProps = {
 const ShopItemList = ({ season }: ShopItemListProps) => {
   const items: ShopItemDto[] = getItemsBySeason(season);
 
-  const [victorianHammerIndex, setVictorianHammerIndex] = useState(0);
-
   const mumuballCombinations =
     season !== "1" ? mumuballCombinationsSeason2 : mumuballCombinationsSeason1;
-
-  useEffect(() => {
-    const id = setInterval(() => {
-      setVictorianHammerIndex((i) => i + 1);
-    }, 1000);
-
-    return () => clearInterval(id);
-  }, [mumuballCombinations]);
-
-  const safeVictorianHammerIndex =
-    victorianHammerIndex % mumuballCombinations["victoriaship"].length;
 
   return (
     <>
@@ -165,10 +152,7 @@ const ShopItemList = ({ season }: ShopItemListProps) => {
                 ) : (
                   <div className="w-18 h-18 border-3 border-[#25be97] flex justify-center items-center">
                     <div className="w-4/5 h-4/5">
-                      <img
-                        src={`/shopitemicons/${item[safeVictorianHammerIndex]?.iconLink}.png`}
-                        className="h-full w-full object-contain"
-                      />
+                      <CyclingIcon iconLinks={item.map((i) => i.iconLink)} />
                     </div>
                   </div>
                 )}
