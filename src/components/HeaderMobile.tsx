@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import Select from "./Select";
+import { TABS, SEASON_OPTIONS } from "../constants/navigation";
 
 interface HeaderProps {
   currentPage: string;
@@ -12,21 +13,6 @@ interface HeaderProps {
 
 const HeaderMobile = (props: HeaderProps) => {
   const { currentPage, currentSeason, switchTab, switchSeason } = props;
-  const tabs = ["Home", "Attributes", "Alliances", "Strategies", "Items", "Advanced"];
-  const seasonSelectOptions = [
-    {
-      value: "1",
-      title: "First Season",
-    },
-    {
-      value: "2.1",
-      title: "Second Season",
-    },
-    {
-      value: "2",
-      title: "Second Season (CN pre-patch)",
-    },
-  ];
   const [toggleMobileMenu, setToggleMobileMenu] = useState<boolean>(false);
 
   return (
@@ -42,32 +28,6 @@ const HeaderMobile = (props: HeaderProps) => {
       >
         <AiOutlineMenu />
       </button>
-      {/* <div
-          className="absolute top-8 right-0 flex-col rounded-md"
-          style={{
-            display: toggleMobileMenu ? "flex" : "none",
-          }}
-        >
-          {tabs.map((page) => (
-            <button
-              className="
-              flex justify-center items-center
-              text-black text-lg px-2 py-1 w-full"
-              onClick={() => {
-                if (page !== currentPage) {
-                  switchTab(page);
-                  setToggleMobileMenu((prev) => !prev);
-                }
-              }}
-              style={{
-                backgroundColor: page === currentPage ? "#00ffbb" : "#17785f",
-                cursor: page === currentPage ? "default" : "pointer",
-              }}
-            >
-              {page}
-            </button>
-          ))}
-        </div> */}
       <div
         className="absolute left-0 top-0 w-screen h-screen bg-[#2225] z-11 flex-row justify-end"
         style={{ display: toggleMobileMenu ? "flex" : "none" }}
@@ -77,8 +37,9 @@ const HeaderMobile = (props: HeaderProps) => {
         className="fixed top-0 right-0 h-full w-40 z-12 bg-[#222] flex flex-col pt-5 gap-5 transition-transform duration-300"
         style={{ transform: toggleMobileMenu ? "translateX(0)" : "translateX(100%)" }}
       >
-        {tabs.map((page) => (
+        {TABS.map((page) => (
           <button
+            key={page}
             className="
 						flex justify-center items-center
 						text-md px-2 py-3 w-full"
@@ -99,7 +60,7 @@ const HeaderMobile = (props: HeaderProps) => {
         ))}
         <div className="px-3">
           <Select
-            options={seasonSelectOptions}
+            options={SEASON_OPTIONS}
             value={currentSeason}
             onChange={(season) => {
               switchSeason(season);

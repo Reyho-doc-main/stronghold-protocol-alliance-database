@@ -1,4 +1,3 @@
-import "./App.css";
 import { AiOutlineUp } from "react-icons/ai";
 import AttributeList from "./features/AttributeList";
 import AllianceList from "./features/AllianceList";
@@ -9,17 +8,18 @@ import { useSearchParams } from "react-router-dom";
 import HeaderDesktop from "./components/HeaderDesktop";
 import HeaderMobile from "./components/HeaderMobile";
 import Home from "./features/Home";
+import { TABS, SEASONS, DEFAULT_SEASON, type Tab } from "./constants/navigation";
 
 function App() {
   const [searchParams, setSearchParams] = useSearchParams();
 
-  const seasons = ["1", "2", "2.1"];
   const season = searchParams.get("season");
-  const currentSeason = seasons.includes(season ?? "0") ? season! : "2.1";
+  const currentSeason = SEASONS.includes(season ?? "") ? season! : DEFAULT_SEASON;
 
-  const tabs = ["Home", "Attributes", "Alliances", "Strategies", "Items", "Advanced"];
   const page = searchParams.get("tab");
-  const currentPage = tabs.includes(page ?? "") ? page! : "Home";
+  const currentPage: Tab = (TABS as readonly string[]).includes(page ?? "")
+    ? (page as Tab)
+    : "Home";
 
   const switchTab = (tab: string) => {
     const params = new URLSearchParams(searchParams);
@@ -30,7 +30,6 @@ function App() {
   const switchSeason = (season: string) => {
     const params = new URLSearchParams(searchParams);
     params.set("season", season);
-    // console.log(season, "season");
     setSearchParams(params, { replace: true });
   };
 

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getItemsBySeason } from "../utils/getDataBySeason";
+import { ROMAN_NUMERALS, TIER_COLOR } from "../constants/tier";
 
 type ShopItemDto = {
   iconLink: string;
@@ -7,24 +8,6 @@ type ShopItemDto = {
   effectDesc: string;
   cost: number | null;
   tier: number | null;
-};
-
-const ROMAN_NUMERALS: Record<number, string> = {
-  1: "I",
-  2: "II",
-  3: "III",
-  4: "IV",
-  5: "V",
-  6: "VI",
-};
-
-const TIER_COLOR: Record<number, string> = {
-  1: "#c4c4c4",
-  2: "#ffffff",
-  3: "#39edb5",
-  4: "#34bad3",
-  5: "#ebbd2f",
-  6: "#fd8002",
 };
 
 const mumuballCombinationsSeason1: Record<string, string[]> = {
@@ -77,25 +60,28 @@ type ShopItemListProps = {
 const ShopItemList = ({ season }: ShopItemListProps) => {
   const items: ShopItemDto[] = getItemsBySeason(season);
 
-  const [victorianHammerIndex, setvictorianHammerIndex] = useState(0);
+  const [victorianHammerIndex, setVictorianHammerIndex] = useState(0);
 
   const mumuballCombinations =
     season !== "1" ? mumuballCombinationsSeason2 : mumuballCombinationsSeason1;
 
   useEffect(() => {
     const id = setInterval(() => {
-      // console.log(mumuballCombinations["victoriaship"][victorianHammerIndex], "mumu");
-      setvictorianHammerIndex((i) => (i + 1) % mumuballCombinations["victoriaship"].length);
+      setVictorianHammerIndex((i) => i + 1);
     }, 1000);
 
     return () => clearInterval(id);
-  });
+  }, [mumuballCombinations]);
+
+  const safeVictorianHammerIndex =
+    victorianHammerIndex % mumuballCombinations["victoriaship"].length;
 
   return (
     <>
       <div className="grid grid-cols md:grid-cols-3 mx-6 mb-6 gap-6">
         {items.map((item) => (
           <div
+            key={item.itemName}
             className="
             w-full flex flex-row items-start justify-start px-4 gap-4"
           >
@@ -105,10 +91,7 @@ const ShopItemList = ({ season }: ShopItemListProps) => {
               items-center text-center text-white
               leading-4.5 text-[14px] md:text-[18px] gap-2"
             >
-              <div
-                className="w-18 h-18 border-3 border-[#25be97] relative"
-                // style={{ background: "radial-gradient(#25be97, #212121 80%)" }}
-              >
+              <div className="w-18 h-18 border-3 border-[#25be97] relative">
                 <div className="flex justify-center items-center w-full h-full">
                   <img
                     src={`/shopitemicons/${item.iconLink}.png`}
@@ -153,12 +136,14 @@ const ShopItemList = ({ season }: ShopItemListProps) => {
         <div className="text-2xl">Damazti Isomorph equipments:</div>
         <div className="grid grid-cols-1 md:grid-cols-3 mx-6 mb-6 mt-6 gap-6">
           {Object.keys(mumuballCombinations).map((key) => {
-            const item =
-              items.filter((i) =>
-                mumuballCombinations[key].find((value) => value === i.iconLink),
-              ) ?? [];
+            const item = items.filter((i) =>
+              mumuballCombinations[key].find((value) => value === i.iconLink),
+            );
             return (
-              <div className="flex flex-row justify-center items-center gap-6 text-white text-2xl">
+              <div
+                key={key}
+                className="flex flex-row justify-center items-center gap-6 text-white text-2xl"
+              >
                 <div className="w-18 h-18 border-3 border-[#25be97] flex justify-center items-center">
                   <div className="w-4/5 h-4/5">
                     <img
@@ -181,7 +166,7 @@ const ShopItemList = ({ season }: ShopItemListProps) => {
                   <div className="w-18 h-18 border-3 border-[#25be97] flex justify-center items-center">
                     <div className="w-4/5 h-4/5">
                       <img
-                        src={`/shopitemicons/${item[victorianHammerIndex]?.iconLink}.png`}
+                        src={`/shopitemicons/${item[safeVictorianHammerIndex]?.iconLink}.png`}
                         className="h-full w-full object-contain"
                       />
                     </div>

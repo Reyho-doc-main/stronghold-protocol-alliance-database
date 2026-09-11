@@ -110,7 +110,7 @@ const AttributeList = ({ season }: AttributeListProps) => {
 
       <div className="grid grid-cols-1 md:grid-cols-3 mx-6 mb-6 gap-6">
         {filteredList.map((operator) => (
-          <OperatorCard operator={operator} />
+          <OperatorCard key={operator.name} operator={operator} />
         ))}
       </div>
     </>

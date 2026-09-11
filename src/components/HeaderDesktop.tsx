@@ -1,4 +1,5 @@
 import Select from "./Select";
+import { TABS, SEASON_OPTIONS } from "../constants/navigation";
 
 interface HeaderProps {
   currentPage: string;
@@ -10,21 +11,6 @@ interface HeaderProps {
 
 const HeaderDesktop = (props: HeaderProps) => {
   const { currentPage, currentSeason, switchTab, switchSeason } = props;
-  const tabs = ["Home", "Attributes", "Alliances", "Strategies", "Items", "Advanced"];
-  const seasonSelectOptions = [
-    {
-      value: "1",
-      title: "First Season",
-    },
-    {
-      value: "2.1",
-      title: "Second Season",
-    },
-    {
-      value: "2",
-      title: "Second Season (CN pre-patch)",
-    },
-  ];
 
   return (
     <div className="w-full h-[10vh] max-h-14 bg-[#212121] fixed top-0 z-999 flex-row items-center justify-between gap-4 px-4 hidden lg:flex">
@@ -36,11 +22,11 @@ const HeaderDesktop = (props: HeaderProps) => {
       <div className="flex flex-row gap-5 h-full">
         {currentPage !== "Home" && (
           <div className="flex justify-center items-center shrink-0">
-            <Select options={seasonSelectOptions} value={currentSeason} onChange={switchSeason} />
+            <Select options={SEASON_OPTIONS} value={currentSeason} onChange={switchSeason} />
           </div>
         )}
         <div className="flex flex-row gap-5 h-full overflow-x-auto">
-          {tabs.map((tab) => (
+          {TABS.map((tab) => (
             <button
               key={tab}
               className="

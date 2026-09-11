@@ -75,7 +75,7 @@
       "attributeType": "One-time",
       "attribute": "&ltWhen obtained&gt <span class='blue'>+2</span>/<span class='green'>+4</span> stacks to own Alliance(s) (Alliance does not need to be active)",
       "tier": 1,
-      "alliances": ["Miracle", "Foresight"]
+      "alliances": ["Marvel", "Foresight"]
     },
     {
       "name": "Estelle",

@@ -18,6 +18,7 @@ const StrategyList = ({ season }: StrategyListProps) => {
     <div className="grid grid-cols md:grid-cols-3 mx-6 mb-6 gap-6">
       {strats.map((strategy) => (
         <div
+          key={strategy.name}
           className="
 					w-full flex flex-row items-start justify-start px-4 gap-4"
         >
@@ -27,16 +28,13 @@ const StrategyList = ({ season }: StrategyListProps) => {
 						items-center text-center text-white
 						leading-4.5 text-[14px] md:text-[18px] gap-2"
           >
-            <div
-              className="w-18 h-18 border-3 border-[#25be97] flex justify-center items-center"
-              // style={{ background: "radial-gradient(#25be97, #212121 80%)" }}
-            >
+            <div className="w-18 h-18 border-3 border-[#25be97] flex justify-center items-center">
               <img src={`/bandicons/${strategy.iconLink}.png`} className="w-full h-full" />
             </div>
             {strategy.name}
             <div className="flex align-baseline flex-row items-center text-white text-[16px]">
               <div className="h-4">
-                <img src="Life_Points.webp" className="h-4 object-cover mr-2" />
+                <img src="/Life_Points.webp" className="h-4 object-cover mr-2" />
               </div>
               {strategy.initialHp}
             </div>

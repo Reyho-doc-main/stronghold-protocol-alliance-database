@@ -229,7 +229,7 @@
       "iconLink": "icon_mlynar",
       "initialHp": 24,
       "effectName": "Work Quota",
-      "effectDesc": "<span class=\"font-bold\">[Work Quota]</span> Every &ltKazimierz&gt Operator purchased grants 1 extra Fund next round (Max 3 Funds per round)\n<span class=\"text-red-500\">Strategy may be flawed when some [Kazimierz] Operators are missing</span>"
+      "effectDesc": "<span class=\"font-bold\">[Work Quota]</span> Every &ltKazimierz&gt Operator purchased grants 1 extra Funds next round (Max 3 Funds per round)\n<span class=\"text-red-500\">Strategy may be flawed when some [Kazimierz] Operators are missing</span>"
     },
     {
       "name": "Chiave",
@@ -243,7 +243,7 @@
       "iconLink": "icon_narant",
       "initialHp": 26,
       "effectName": "Passing Down the Profit",
-      "effectDesc": "<span class=\"font-bold\">[Passing Down the Profit]</span> Dispatch Center will offer two equipments during even-numbered rounds, and you can pick one for free; Sargon Alliance's &ltWith 6 different Sargon Operators&gt effect changes to: After Sargon Operators use a skill, Operators in the surrounding 8 tiles will share the Operator's equipment effects (limited to tier V and below) for 60 seconds\n<span class=\"text-red-500\">Strategy may be flawed when some [Sargon] Operators are missing</span></>"
+      "effectDesc": "<span class=\"font-bold\">[Passing Down the Profit]</span> Dispatch Center will offer two equipment during even-numbered rounds, and you can pick one for free; Sargon Alliance's &ltWith 6 different Sargon Operators&gt effect changes to: After Sargon Operators use a skill, Operators in the surrounding 8 tiles will share the Operator's equipment effects (limited to tier V and below) for 60 seconds\n<span class=\"text-red-500\">Strategy may be flawed when some [Sargon] Operators are missing</span></>"
     },
     {
       "name": "Touch",

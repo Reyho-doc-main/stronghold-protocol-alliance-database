@@ -1,0 +1,86 @@
+{
+  "maps": [
+    {
+      "id": "map-1",
+      "name": "Map 1",
+      "image": "map-1.png",
+      "appearances": [
+        "This map is also a fixed map for both the [Starter Protocol] and [Standard Simulation].",
+        "This map can also appear in Perilous Simulations."
+      ]
+    },
+    {
+      "id": "map-2",
+      "name": "Map 2",
+      "image": "map-2.png"
+    },
+    {
+      "id": "map-3",
+      "name": "Map 3",
+      "image": "map-3.png"
+    },
+    {
+      "id": "map-4",
+      "name": "Map 4",
+      "image": "map-4.png",
+      "terrainEffect": {
+        "title": "Special terrain effects",
+        "description": "For 5 minutes, allies and passing enemies placed on Active Originium terrain get +20% ATK and +20 ASPD, but take 70 true damage per second."
+      }
+    },
+    {
+      "id": "map-5",
+      "name": "Map 5",
+      "image": "map-5.png",
+      "installation": {
+        "name": "Originium Flow Generator",
+        "level": 1,
+        "faction": "F.O.O",
+        "hp": 100,
+        "attackPower": 0,
+        "defense": 0,
+        "spellResistance": 0,
+        "blockCount": 0,
+        "attackRange": [true, false, false, false],
+        "skills": [
+          {
+            "name": "Airflow",
+            "type": "Passive",
+            "description": "Originium Flow Generators generates a strong airflow to several tiles ahead of it, which have positive or negative effects depending on where the units are facing:",
+            "bullets": [
+              "Friendlies facing downstream (towards the airflow) will have their ATK increased, but those facing upstream (against the airflow) will have their ATK reduced.",
+              "Enemies facing downstream will have their MSPD increased, but those facing upstream will have their MSPD reduced. The former can be particularly dangerous especially for unblockable enemies and Sarkaz Lancers, as their charge will deal massive damage."
+            ]
+          }
+        ],
+        "note": "Originium Flow Generators only affect Operators and enemies; summons are unaffected."
+      }
+    },
+    {
+      "id": "map-6",
+      "name": "Map 6",
+      "image": "map-6.png",
+      "terrainEffect": {
+        "title": "Mire effect",
+        "description": "Mires reduce the ASPD of friendly and enemy units (and MSPD for the latter as well) by 5 every 3 seconds, which stacks up to 10 times; after 30 seconds, the unit will have -50 ASPD (and -50% MSPD for enemies) which remains as long as they stay in the Mire."
+      }
+    },
+    {
+      "id": "map-7",
+      "name": "Map 7",
+      "image": "map-7.png"
+    },
+    {
+      "id": "map-8",
+      "name": "Map 8",
+      "image": "map-8.png",
+      "appearances": [
+        "Note: The boss OpFor: Gun in this map walks from the top path instead of the bottom"
+      ],
+      "terrainEffect": {
+        "title": "Deep Water Zone",
+        "description": "Enemy units take 40 True damage per second, ASPD -60%, MSPD -60%"
+      }
+    }
+  ]
+}

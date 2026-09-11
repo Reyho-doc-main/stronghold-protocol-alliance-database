@@ -1,6 +1,7 @@
 import type { OperatorDto } from "../dtos/operator.dto";
 import type { AllianceDto } from "../dtos/alliance.dto";
 import { getAlliancesBySeason, getOperatorsBySeason } from "../utils/getDataBySeason";
+import { getBondImage } from "../utils/getImageLink";
 import { useState } from "react";
 import {
   useFloating,
@@ -12,24 +13,7 @@ import {
   useInteractions,
 } from "@floating-ui/react";
 import OperatorAttributeTooltip from "../components/OperatorAttributeTooltip";
-
-const ROMAN_NUMERALS: Record<number, string> = {
-  1: "I",
-  2: "II",
-  3: "III",
-  4: "IV",
-  5: "V",
-  6: "VI",
-};
-
-const TIER_COLOR: Record<number, string> = {
-  1: "#c4c4c4",
-  2: "#ffffff",
-  3: "#39edb5",
-  4: "#34bad3",
-  5: "#ebbd2f",
-  6: "#fd8002",
-};
+import { ROMAN_NUMERALS, TIER_COLOR } from "../constants/tier";
 
 type AllianceListProps = {
   season: string;
@@ -73,7 +57,7 @@ const AllianceList = ({ season }: AllianceListProps) => {
           op.alliances.includes(alliance.name.replaceAll(" ", "_")),
         );
         return (
-          <div className="w-full flex flex-col items-center justify-start">
+          <div key={alliance.bondId} className="w-full flex flex-col items-center justify-start">
             <div
               className="
             w-full flex flex-row items-start justify-start px-4 gap-4"
@@ -88,9 +72,9 @@ const AllianceList = ({ season }: AllianceListProps) => {
                   className="w-18 h-18 border-3 border-[#25be97] flex justify-center items-center rounded-full"
                   style={{ background: "radial-gradient(#25be97, #212121 80%)" }}
                 >
-                  <img src={`/bondicons/icon_${alliance.bondId}.png`} className="w-12 h-12" />
+                  <img src={getBondImage(alliance.name)} className="w-12 h-12" />
                 </div>
-                {alliance.name.replace("_", " ")}
+                {alliance.name.replaceAll("_", " ")}
               </div>
               <div className="flex items-start flex-col">
                 <span className="text-sm text-white text-left text-[12px] md:text-[15px]">
@@ -109,6 +93,7 @@ const AllianceList = ({ season }: AllianceListProps) => {
               {ops.map((operator) => {
                 return (
                   <div
+                    key={operator.name}
                     className="relative mb-1 cursor-pointer"
                     onMouseEnter={(event) => {
                       if (isPinned) return;

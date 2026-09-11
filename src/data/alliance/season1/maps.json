@@ -1,0 +1,13 @@
+{
+  "maps": [
+    {
+      "id": "map-1",
+      "name": "Map 1",
+      "image": "map-1.png",
+      "appearances": [
+        "This map is also a fixed map for both the [Starter Protocol] and [Standard Simulation].",
+        "This map can also appear in Perilous Simulations."
+      ]
+    }
+  ]
+}

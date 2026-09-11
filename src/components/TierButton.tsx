@@ -1,4 +1,4 @@
-type AllianceButtonProps = {
+type TierButtonProps = {
   tier: number;
   isActive?: boolean;
   onClick?: () => void;
@@ -13,7 +13,7 @@ const ROMAN_NUMERALS: Record<number, string> = {
   6: "VI",
 };
 
-function TierButton(props: AllianceButtonProps) {
+function TierButton(props: TierButtonProps) {
   const { tier, isActive = false, onClick = () => {} } = props;
   return (
     <button

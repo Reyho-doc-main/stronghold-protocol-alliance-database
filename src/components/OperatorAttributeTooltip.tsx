@@ -1,12 +1,10 @@
 import { FiExternalLink } from "react-icons/fi";
-// import type { AllianceDto } from "../dtos/alliance.dto";
 import type { OperatorDto } from "../dtos/operator.dto";
-import { getBondImage } from "../utils/getImageLink";
 import { isRateLimited } from "../utils/rateLimit";
+import AllianceIconRow from "./AllianceIconRow";
 
 interface OperatorAttributeTooltipProps {
   operator: OperatorDto;
-  // alliance?: AllianceDto;
 }
 
 function OperatorAttributeTooltip(props: OperatorAttributeTooltipProps) {
@@ -28,25 +26,8 @@ function OperatorAttributeTooltip(props: OperatorAttributeTooltipProps) {
     <>
       <div className="flex flex-row justify-between items-start">
         <div>
-          <div className="flex flex-row gap-1 md:gap-2 pb-2">
-            {operator.alliances.map((alliance) => (
-              <div
-                id={alliance}
-                className={`
-                  w-7 h-7 border-[#25be97] border rounded-full
-                  flex justify-center items-center
-                `}
-                style={{ background: "radial-gradient(#25be97, #212121 80%)" }}
-              >
-                <img
-                  className="
-                    w-[60%] h-[60%]
-                    md:w-[65%] md:h-[65%]
-                  "
-                  src={getBondImage(alliance)}
-                />
-              </div>
-            ))}
+          <div className="pb-2">
+            <AllianceIconRow alliances={operator.alliances} />
           </div>
           <div className="flex flex-row gap-3 text-black text-[10px] md:text-[12px]">
             <div className="px-1.5 mb-1 rounded-sm bg-[#8a8a8a] text-white flex flex-row gap-1 items-center justify-center">

@@ -7,6 +7,7 @@ import CollapsibleSection from "../components/CollapsibleSection";
 import CalculationTable from "../components/CalculationTable";
 import TrophyCard from "../components/TrophyCard";
 import HiddenCoreTable from "../components/HiddenCoreTable";
+import MapCard from "../components/MapCard";
 import {
   getLeadersBySeason,
   getTacticalTrainingBySeason,
@@ -14,7 +15,8 @@ import {
   getTacticalDecisionsBySeason,
   getAdvancedCalculationsBySeason,
   getTrophiesBySeason,
-  getHiddenCoreBySeason
+  getHiddenCoreBySeason,
+  getMapsBySeason
 } from "../utils/getDataBySeason";
 import { isRateLimited } from "../utils/rateLimit";
 
@@ -35,6 +37,7 @@ const EnemyList = ({ season }: EnemyListProps) => {
   const advancedCalculations = getAdvancedCalculationsBySeason(season);
   const trophies = getTrophiesBySeason(season);
   const hiddenCore = getHiddenCoreBySeason(season);
+  const maps = getMapsBySeason(season);
 
   const openTraining = (id: string) => setTrainingId(id);
 
@@ -123,6 +126,16 @@ const EnemyList = ({ season }: EnemyListProps) => {
           <DecisionCategoryButton title="Tactical Decisions" onOpen={() => openDecisions("tactical")} />
         </div>
       </div>
+      <CollapsibleSection
+        title="Maps"
+        note="The game does not provide the original map assets — screenshots are for reference only."
+      >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {maps.map((map) => (
+            <MapCard key={map.id} map={map} />
+          ))}
+        </div>
+      </CollapsibleSection>
       <CollapsibleSection title="Advanced Calculations" note="All data is taken from prts.wiki.">
         <div className="flex flex-col gap-4">
           <div className="text-lg text-white font-bold">Enemy Stat Scaling Information</div>

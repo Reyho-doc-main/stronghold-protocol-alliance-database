@@ -1,33 +1,14 @@
 import type { OperatorDto } from "../dtos/operator.dto";
-import { getBondImage } from "../utils/getImageLink";
 import { isRateLimited } from "../utils/rateLimit";
+import { ROMAN_NUMERALS, TIER_COLOR } from "../constants/tier";
+import AllianceIconRow from "./AllianceIconRow";
 
 type OperatorCardProps = {
   operator: OperatorDto;
 };
 
-const ROMAN_NUMERALS: Record<number, string> = {
-  1: "I",
-  2: "II",
-  3: "III",
-  4: "IV",
-  5: "V",
-  6: "VI",
-};
-
-const TIER_COLOR: Record<number, string> = {
-  1: "#c4c4c4",
-  2: "#ffffff",
-  3: "#39edb5",
-  4: "#34bad3",
-  5: "#ebbd2f",
-  6: "#fd8002",
-};
-
 function OperatorCard(props: OperatorCardProps) {
   const { operator } = props;
-
-  // const [displayEliteAttribute, setDisplayEliteAttribute] = useState<boolean>(false);
 
   const navigateToTerraWiki = (opName: string) => {
     if (isRateLimited("wiki-link", 500)) return;
@@ -69,25 +50,8 @@ function OperatorCard(props: OperatorCardProps) {
       </div>
 
       <div className="flex flex-col justify-start items-start">
-        <div className="flex flex-row gap-1 md:gap-2 pb-1">
-          {operator.alliances.map((alliance) => (
-            <div
-              id={alliance}
-              className={`
-              w-7 h-7 border-[#25be97] border rounded-full
-              flex justify-center items-center
-            `}
-              style={{ background: "radial-gradient(#25be97, #212121 80%)" }}
-            >
-              <img
-                className="
-                w-[60%] h-[60%]
-                md:w-[65%] md:h-[65%]
-              "
-                src={getBondImage(alliance)}
-              />
-            </div>
-          ))}
+        <div className="pb-1">
+          <AllianceIconRow alliances={operator.alliances} />
         </div>
         <div className="flex flex-row gap-3 text-black text-[10px] md:text-[12px]">
           <div className="px-1.5 mb-1 rounded-sm bg-[#8a8a8a] text-white flex flex-row gap-1 items-center justify-center">
@@ -97,21 +61,6 @@ function OperatorCard(props: OperatorCardProps) {
             />
             {operator.attributeType}
           </div>
-          {/* <div
-            className={`
-            py-0.5 px-2 rounded-sm text-white
-            flex items-center gap-2
-            bg-[${displayEliteAttribute ? "#05ddae" : "#8a8a8a"}]
-          `}
-          >
-            Elite?
-            <input
-              type="checkbox"
-              className="w-4 h-4"
-              checked={displayEliteAttribute}
-              onChange={(e) => setDisplayEliteAttribute(e.target.checked)}
-            />
-          </div> */}
         </div>
         <div
           className="text-sm text-white text-left whitespace-pre-wrap text-[10px] md:text-[14px]"

@@ -13,7 +13,7 @@ import { shopitems as allianceSeason2items } from "../data/alliance/season2/item
 import { shopitems as allianceSeason21items } from "../data/alliance/season2.1/items.json";
 
 import { bandInfo as allianceSeason1bands } from "../data/alliance/season1/strategies.json";
-import { bandInfo as allianeSeason2bands } from "../data/alliance/season2/strategies.json";
+import { bandInfo as allianceSeason2bands } from "../data/alliance/season2/strategies.json";
 import { bandInfo as allianceSeason21bands } from "../data/alliance/season2.1/strategies.json";
 
 import { leaders as allianceSeason1leaders } from "../data/alliance/season1/leaders.json";
@@ -44,6 +44,10 @@ import { hiddenCore as allianceSeason1hiddenCore } from "../data/alliance/season
 import { hiddenCore as allianceSeason2hiddenCore } from "../data/alliance/season2/hiddenCore.json";
 import { hiddenCore as allianceSeason21hiddenCore } from "../data/alliance/season2.1/hiddenCore.json";
 
+import { maps as allianceSeason1maps } from "../data/alliance/season1/maps.json";
+import { maps as allianceSeason2maps } from "../data/alliance/season2/maps.json";
+import { maps as allianceSeason21maps } from "../data/alliance/season2.1/maps.json";
+
 export function getOperatorsBySeason(season: string) {
   switch (season) {
     case "1": {
@@ -56,7 +60,7 @@ export function getOperatorsBySeason(season: string) {
       return allianceSeason21operators;
     }
     default: {
-      return allianceSeason1operators;
+      return allianceSeason21operators;
     }
   }
 }
@@ -73,7 +77,7 @@ export function getAlliancesBySeason(season: string) {
       return allianceSeason21bonds;
     }
     default: {
-      return allianceSeason1bonds;
+      return allianceSeason21bonds;
     }
   }
 }
@@ -90,7 +94,7 @@ export function getItemsBySeason(season: string) {
       return allianceSeason21items;
     }
     default: {
-      return allianceSeason1items;
+      return allianceSeason21items;
     }
   }
 }
@@ -101,13 +105,13 @@ export function getStrategiesBySeason(season: string) {
       return allianceSeason1bands;
     }
     case "2": {
-      return allianeSeason2bands;
+      return allianceSeason2bands;
     }
     case "2.1": {
       return allianceSeason21bands;
     }
     default: {
-      return allianceSeason1bands;
+      return allianceSeason21bands;
     }
   }
 }
@@ -124,7 +128,7 @@ export function getLeadersBySeason(season: string) {
       return allianceSeason21leaders;
     }
     default: {
-      return allianceSeason1leaders;
+      return allianceSeason21leaders;
     }
   }
 }
@@ -141,7 +145,7 @@ export function getTacticalTrainingBySeason(season: string) {
       return allianceSeason21tacticalTraining;
     }
     default: {
-      return allianceSeason1tacticalTraining;
+      return allianceSeason21tacticalTraining;
     }
   }
 }
@@ -158,7 +162,7 @@ export function getBountyDecisionsBySeason(season: string) {
       return allianceSeason21bountyDecisions;
     }
     default: {
-      return allianceSeason1bountyDecisions;
+      return allianceSeason21bountyDecisions;
     }
   }
 }
@@ -175,7 +179,7 @@ export function getTacticalDecisionsBySeason(season: string) {
       return allianceSeason21tacticalDecisions;
     }
     default: {
-      return allianceSeason1tacticalDecisions;
+      return allianceSeason21tacticalDecisions;
     }
   }
 }
@@ -192,7 +196,7 @@ export function getAdvancedCalculationsBySeason(season: string) {
       return allianceSeason21advancedCalculations;
     }
     default: {
-      return allianceSeason1advancedCalculations;
+      return allianceSeason21advancedCalculations;
     }
   }
 }
@@ -209,7 +213,7 @@ export function getTrophiesBySeason(season: string): TrophyDto[] {
       return allianceSeason21trophies;
     }
     default: {
-      return allianceSeason1trophies;
+      return allianceSeason21trophies;
     }
   }
 }
@@ -226,7 +230,24 @@ export function getHiddenCoreBySeason(season: string) {
       return allianceSeason21hiddenCore;
     }
     default: {
-      return allianceSeason1hiddenCore;
+      return allianceSeason21hiddenCore;
+    }
+  }
+}
+
+export function getMapsBySeason(season: string) {
+  switch (season) {
+    case "1": {
+      return allianceSeason1maps;
+    }
+    case "2": {
+      return allianceSeason2maps;
+    }
+    case "2.1": {
+      return allianceSeason21maps;
+    }
+    default: {
+      return allianceSeason21maps;
     }
   }
 }
