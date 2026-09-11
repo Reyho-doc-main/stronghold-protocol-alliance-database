@@ -284,7 +284,7 @@
     {
       "iconLink": "trap_1069_acarm069",
       "itemName": "Mimic Matter",
-      "effectDesc": "Destroyed when equipped, and if you have at least two of this non-Elite Operator, obtain a third copy; otherwise obtain 1 random non-Elite Operator from the same Alliance\n<span class='text-gray-500'>Otherwise effect can give you operators of a higher tier than your Dispatch Center",
+      "effectDesc": "Destroyed when equipped, and if you have at least two of this non-Elite Operator, obtain a third copy; otherwise obtain 1 random non-Elite Operator from the same Alliance\n<span class='text-gray-500'>The otherwise effect can give you operators of a higher tier than your Dispatch Center",
       "cost": 4,
       "tier": 5
     },
