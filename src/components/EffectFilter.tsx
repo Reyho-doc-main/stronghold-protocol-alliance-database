@@ -1,20 +1,28 @@
 import { useEffect, useRef, useState } from "react";
-import { AiOutlineDown } from "react-icons/ai";
+import { AiOutlineDown, AiOutlineRight } from "react-icons/ai";
+
+export type EffectOption = {
+  value: string;
+  label: string;
+  children?: EffectOption[];
+};
 
 interface EffectFilterProps {
-  options: string[];
+  options: EffectOption[];
   activeEffects: string[];
   onToggle: (effect: string) => void;
 }
 
 export default function EffectFilter({ options, activeEffects, onToggle }: EffectFilterProps) {
   const [open, setOpen] = useState(false);
+  const [expandedOption, setExpandedOption] = useState<string | null>(null);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     function handleClick(e: MouseEvent) {
       if (!ref.current?.contains(e.target as Node)) {
         setOpen(false);
+        setExpandedOption(null);
       }
     }
 
@@ -39,24 +47,51 @@ export default function EffectFilter({ options, activeEffects, onToggle }: Effec
       </button>
 
       {open && (
-        <div
-          className="
-          absolute left-0 mt-1 w-40
-          rounded-md overflow-hidden bg-[#222]
-          shadow-2xl z-50"
-        >
+        <div className="absolute left-0 mt-1 w-40 bg-[#222] shadow-2xl z-50">
           {options.map((option) => (
-            <button
-              key={option}
-              onClick={() => onToggle(option)}
-              className={`
-                w-full text-left px-4
-                py-2 flex gap-2 transition text-white text-sm
-                ${activeEffects.includes(option) ? "bg-[#005b52]" : "hover:bg-[#333]"}
-              `}
+            <div
+              key={option.value}
+              className="relative"
+              onMouseEnter={() => option.children && setExpandedOption(option.value)}
+              onMouseLeave={() =>
+                setExpandedOption((prev) => (prev === option.value ? null : prev))
+              }
             >
-              {option}
-            </button>
+              <button
+                onClick={() => {
+                  onToggle(option.value);
+                  if (option.children) {
+                    setExpandedOption((prev) => (prev === option.value ? null : option.value));
+                  }
+                }}
+                className={`
+                  w-full text-left px-4
+                  py-2 flex items-center justify-between gap-2 transition text-white text-sm
+                  ${activeEffects.includes(option.value) ? "bg-[#005b52]" : "hover:bg-[#333]"}
+                `}
+              >
+                {option.label}
+                {option.children && <AiOutlineRight className="text-xs opacity-70 shrink-0" />}
+              </button>
+
+              {option.children && expandedOption === option.value && (
+                <div className="absolute left-0 top-full sm:left-full sm:top-0 mt-1 sm:mt-0 w-40 bg-[#222] shadow-2xl z-50">
+                  {option.children.map((child) => (
+                    <button
+                      key={child.value}
+                      onClick={() => onToggle(child.value)}
+                      className={`
+                        w-full text-left px-4
+                        py-2 flex gap-2 transition text-white text-sm
+                        ${activeEffects.includes(child.value) ? "bg-[#005b52]" : "hover:bg-[#333]"}
+                      `}
+                    >
+                      {child.label}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
           ))}
         </div>
       )}

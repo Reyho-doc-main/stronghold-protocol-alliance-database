@@ -12,14 +12,16 @@
       "attributeType": "One-time",
       "attribute": "&ltWhen obtained&gt <span class='blue'>+2</span>/<span class='green'>+4</span> stacks to own Alliance(s) (Alliance does not need to be active)",
       "tier": 1,
-      "alliances": ["Kjerag", "Resilient"]
+      "alliances": ["Kjerag", "Resilient"],
+      "effects": ["When Obtained"]
     },
     {
       "name": "Leizi",
       "attributeType": "One-time",
       "attribute": "&ltWhen obtained&gt Gain [Yan] Alliance stacks equivalent to <span class='blue'>the Dispatch Center level</span>/<span class='green'>2x Dispatch Center level</span>  (Alliance does not need to be active)",
       "tier": 1,
-      "alliances": ["Yan"]
+      "alliances": ["Yan"],
+      "effects": ["When Obtained"]
     },
     {
       "name": "Specter",
@@ -68,7 +70,8 @@
       "attributeType": "One-time",
       "attribute": "&ltWhen obtained&gt <span class='blue'>+2</span>/<span class='green'>+4</span> stacks to own Alliance(s) (Alliance does not need to be active)",
       "tier": 1,
-      "alliances": ["Victoria", "Precision"]
+      "alliances": ["Victoria", "Precision"],
+      "effects": ["When Obtained"]
     },
     {
       "name": "Manticore",
@@ -82,21 +85,24 @@
       "attributeType": "One-time",
       "attribute": "&ltWhen obtained&gt <span class='blue'>+3</span>/<span class='green'>+6</span> stacks to own Alliance(s) (Alliance does not need to be active)",
       "tier": 1,
-      "alliances": ["Agile"]
+      "alliances": ["Agile"],
+      "effects": ["When Obtained"]
     },
     {
       "name": "Cuora",
       "attributeType": "Can stack",
       "attribute": "&ltWhen Rest Phase ends&gt If there are at least 3 Operators in the same row, <span class='blue'>+3</span>/<span class='green'>+6</span> stacks to active [Durable] Alliance",
       "tier": 1,
-      "alliances": ["Durable"]
+      "alliances": ["Durable"],
+      "effects": ["Rest Phase - End"]
     },
     {
       "name": "Gitano",
       "attributeType": "One-time",
       "attribute": "&ltWhen obtained&gt <span class='blue'>+2</span>/<span class='green'>+4</span> stacks to own Alliance(s) (Alliance does not need to be active)",
       "tier": 1,
-      "alliances": ["Foresight", "Marvel"]
+      "alliances": ["Foresight", "Marvel"],
+      "effects": ["When Obtained"]
     },
     {
       "name": "Reserve Operator - Supporter",
@@ -117,14 +123,16 @@
       "attributeType": "One-time",
       "attribute": "&ltWhen obtained&gt <span class='blue'>+3</span>/<span class='green'>+6</span> stacks to own Alliance(s) (Alliance does not need to be active)",
       "tier": 2,
-      "alliances": ["Kjerag", "Durable"]
+      "alliances": ["Kjerag", "Durable"],
+      "effects": ["When Obtained"]
     },
     {
       "name": "Harold",
       "attributeType": "Prep",
       "attribute": "&ltWhen obtained&gt Obtain <span class='blue'>1</span>/<span class='green'>2</span> extra Fund(s) next Rest Phase",
       "tier": 2,
-      "alliances": ["Victoria", "Kjerag"]
+      "alliances": ["Victoria", "Kjerag"],
+      "effects": ["When Obtained"]
     },
     {
       "name": "Underflow",
@@ -152,7 +160,8 @@
       "attributeType": "Can stack",
       "attribute": "&ltWhen entering Rest Phase&gt <span class='blue'>+2</span>/<span class='green'>+4</span> stacks to own active Alliance(s)",
       "tier": 2,
-      "alliances": ["Swift", "Agile"]
+      "alliances": ["Swift", "Agile"],
+      "effects": ["Rest Phase - Start"]
     },
     {
       "name": "Arene",
@@ -166,14 +175,16 @@
       "attributeType": "Can stack",
       "attribute": "&ltWhen entering Rest Phase&gt <span class='blue'>+2</span>/<span class='green'>+4</span> stacks to own active Alliance(s)",
       "tier": 2,
-      "alliances": ["Foresight"]
+      "alliances": ["Foresight"],
+      "effects": ["Rest Phase - Start"]
     },
     {
       "name": "Wanqing",
       "attributeType": "Can stack",
       "attribute": "&ltWhen Rest Phase ends&gt <span class='blue'>+1</span>/<span class='green'>+2</span> stack(s) to active [Yan] Alliance for every Operator obtained this round",
       "tier": 2,
-      "alliances": ["Yan"]
+      "alliances": ["Yan"],
+      "effects": ["Rest Phase - End"]
     },
     {
       "name": "Papyrus",
@@ -194,7 +205,8 @@
       "attributeType": "Prep",
       "attribute": "&ltWhen obtained&gt Randomly obtain <span class='blue'>1</span>/<span class='green'>2</span> piece(s) of Rockrock's custom creations",
       "tier": 2,
-      "alliances": ["Victoria", "Agile"]
+      "alliances": ["Victoria", "Agile"],
+      "effects": ["When Obtained"]
     },
     {
       "name": "Gravel",
@@ -208,21 +220,24 @@
       "attributeType": "Can stack",
       "attribute": "&ltWhen Rest Phase ends&gt <span class='blue'>+2</span>/<span class='green'>+4</span> stacks to the most stacked active Alliance; takes effect even if the Operator is on Bench",
       "tier": 2,
-      "alliances": ["Aid"]
+      "alliances": ["Aid"],
+      "effects": ["Rest Phase - End"]
     },
     {
       "name": "Exusiai",
       "attributeType": "Prep",
       "attribute": "&ltWhen obtained&gt Obtain <span class='blue'>1</span>/<span class='green'>2</span> extra Fund(s) next Rest Phase",
       "tier": 3,
-      "alliances": ["Laterano", "Marvel"]
+      "alliances": ["Laterano", "Marvel"],
+      "effects": ["When Obtained"]
     },
     {
       "name": "Waai Fu",
       "attributeType": "One-time",
       "attribute": "&ltWhen obtained&gt <span class='blue'>+3</span>/<span class='green'>+6</span> stacks to the most stacked active Alliance",
       "tier": 3,
-      "alliances": ["Yan", "Resilient"]
+      "alliances": ["Yan", "Resilient"],
+      "effects": ["When Obtained"]
     },
     {
       "name": "Skadi",
@@ -236,21 +251,24 @@
       "attributeType": "Can stack",
       "attribute": "&ltWhen Rest Phase ends&gt <span class='blue'>+3</span>/<span class='green'>+6</span> stacks each to active Alliance(s) of self and the Operator 1 tile behind",
       "tier": 3,
-      "alliances": ["Laterano"]
+      "alliances": ["Laterano"],
+      "effects": ["Rest Phase - End"]
     },
     {
       "name": "Honeyberry",
       "attributeType": "One-time",
       "attribute": "&ltWhen obtained&gt <span class='blue'>+2</span>/<span class='green'>+4</span> stacks to a random active Alliance, repeats 2 times",
       "tier": 3,
-      "alliances": ["Assist_Operator"]
+      "alliances": ["Assist_Operator"],
+      "effects": ["When Obtained"]
     },
     {
       "name": "Snow Hunter",
       "attributeType": "One-time",
       "attribute": "&ltWhen obtained&gt <span class='blue'>+6</span>/<span class='green'>+12</span> stacks to own Alliance(s) (Alliance does not need to be active)",
       "tier": 3,
-      "alliances": ["Kjerag", "Precision"]
+      "alliances": ["Kjerag", "Precision"],
+      "effects": ["When Obtained"]
     },
     {
       "name": "Minimalist",
@@ -271,7 +289,8 @@
       "attributeType": "Prep",
       "attribute": "&ltWhen Rest Phase ends&gt Obtain <span class='blue'>1</span>/<span class='green'>2</span> extra Fund(s) in next Rest Phase (takes effect when [Yan]/[Investor] is active in bench)",
       "tier": 3,
-      "alliances": ["Yan", "Investor"]
+      "alliances": ["Yan", "Investor"],
+      "effects": ["Rest Phase - End"]
     },
     {
       "name": "Philae",
@@ -285,7 +304,8 @@
       "attributeType": "Can stack",
       "attribute": "&ltWhen Rest Phase ends&gt <span class='blue'>+2</span>/<span class='green'>+4</span> stacks to active [Victoria] Alliance for every [Victoria] Operator of a different Tier on the field",
       "tier": 3,
-      "alliances": ["Victoria", "Aid"]
+      "alliances": ["Victoria", "Aid"],
+      "effects": ["Rest Phase - End"]
     },
     {
       "name": "Andreana",
@@ -299,14 +319,16 @@
       "attributeType": "Prep",
       "attribute": "&ltWhen obtained&gt Obtain <span class='blue'>1</span>/<span class='green'>2</span> Operator(s) from the Alliance with most members in your current squad (excluding self)",
       "tier": 3,
-      "alliances": ["Assist_Operator"]
+      "alliances": ["Assist_Operator"],
+      "effects": ["When Obtained"]
     },
     {
       "name": "Kjera",
       "attributeType": "Prep",
       "attribute": "&ltWhen obtained&gt Obtain <span class='blue'>1</span>/<span class='green'>2</span> 'Kjeragi Nevermeltice'",
       "tier": 3,
-      "alliances": ["Kjerag", "Foresight"]
+      "alliances": ["Kjerag", "Foresight"],
+      "effects": ["When Obtained"]
     },
     {
       "name": "Sankta Miksaparato",
@@ -327,7 +349,8 @@
       "attributeType": "Prep",
       "attribute": "&ltWhen obtained&gt Obtain <span class='blue'>1</span>/<span class='green'>2</span> piece(s) of 'Quick Combat Rations'",
       "tier": 4,
-      "alliances": ["Sargon"]
+      "alliances": ["Sargon"],
+      "effects": ["When Obtained"]
     },
     {
       "name": "Bagpipe",
@@ -362,7 +385,8 @@
       "attributeType": "One-time",
       "attribute": "&ltWhen obtained&gt <span class='blue'>+3</span>/<span class='green'>+6</span> stacks to own Alliance(s) (Alliance does not need to be active)",
       "tier": 4,
-      "alliances": ["Yan", "Aid"]
+      "alliances": ["Yan", "Aid"],
+      "effects": ["When Obtained"]
     },
     {
       "name": "Blaze",
@@ -383,7 +407,8 @@
       "attributeType": "Can stack",
       "attribute": "&ltWhen Rest Phase ends&gt <span class='blue'>+4</span>/<span class='green'>+8</span> stacks to own Active Alliance(s)",
       "tier": 4,
-      "alliances": ["Foresight", "Raid"]
+      "alliances": ["Foresight", "Raid"],
+      "effects": ["Rest Phase - End"]
     },
     {
       "name": "Kroos the Keen Glint",
@@ -397,28 +422,32 @@
       "attributeType": "Can stack",
       "attribute": "&ltWhen Rest Phase ends&gt <span class='blue'>+1</span>/<span class='green'>+2</span> to active [Investor] Alliance for every Operator obtained this round",
       "tier": 4,
-      "alliances": ["Investor"]
+      "alliances": ["Investor"],
+      "effects": ["Rest Phase - End"]
     },
     {
       "name": "Vulpisfoglia",
       "attributeType": "One-time",
       "attribute": "&ltWhen obtained&gt <span class='blue'>+8</span>/<span class='green'>+16</span> stacks to own Alliance(s) (Alliance does not need to be active)",
       "tier": 4,
-      "alliances": ["Raid", "Swift"]
+      "alliances": ["Raid", "Swift"],
+      "effects": ["When Obtained"]
     },
     {
       "name": "Astgenne",
       "attributeType": "Prep",
       "attribute": "&ltWhen Rest Phase ends&gt Obtain <span class='blue'>1</span>/<span class='green'>2</span> extra Fund(s) in next Rest Phase",
       "tier": 4,
-      "alliances": ["Marvel"]
+      "alliances": ["Marvel"],
+      "effects": ["Rest Phase - End"]
     },
     {
       "name": "Leonhardt",
       "attributeType": "Can stack",
       "attribute": "&ltWhen Rest Phase Ends&gt <span class='blue'>+4</span>/<span class='green'>+8</span> stacks to own active Alliance(s)",
       "tier": 4,
-      "alliances": ["Precision", "Swift"]
+      "alliances": ["Precision", "Swift"],
+      "effects": ["Rest Phase - End"]
     },
     {
       "name": "Texas the Omertosa",
@@ -446,7 +475,8 @@
       "attributeType": "One-time",
       "attribute": "&ltWhen obtained&gt <span class='blue'>+3</span>/<span class='green'>+6</span> stacks to [Yan] and [Victoria] Alliances (Alliance does not need to be active)",
       "tier": 5,
-      "alliances": ["Yan", "Victoria"]
+      "alliances": ["Yan", "Victoria"],
+      "effects": ["When Obtained"]
     },
     {
       "name": "Ulpianus",
@@ -474,7 +504,8 @@
       "attributeType": "Specialized",
       "attribute": "If Operator ahead of self has a &ltWhen Rest Phase ends&gt Attribute, this Operator copies it",
       "tier": 5,
-      "alliances": ["Durable"]
+      "alliances": ["Durable"],
+      "effects": ["Rest Phase - End"]
     },
     {
       "name": "Specter the Unchained",
@@ -488,14 +519,16 @@
       "attributeType": "Can stack",
       "attribute": "&ltWhen Rest Phase ends&gt <span class='blue'>+4</span>/<span class='green'>+8</span> stacks each to active Alliance(s) of self and of the Operator 1 tile ahead",
       "tier": 5,
-      "alliances": ["Marvel", "Swift"]
+      "alliances": ["Marvel", "Swift"],
+      "effects": ["Rest Phase - End"]
     },
     {
       "name": "Rose Salt",
       "attributeType": "Specialized",
       "attribute": "&ltWhen sold&gt Triggers an Operator's &ltWhen Rest Phase ends&gt Attribute (Prioritizes Operators deployed on upper right tiles)",
       "tier": 5,
-      "alliances": ["Swift"]
+      "alliances": ["Swift"],
+      "effects": ["Rest Phase - End"]
     },
     {
       "name": "Passenger",
@@ -516,28 +549,32 @@
       "attributeType": "Prep",
       "attribute": "&ltWhen entering Rest Phase&gt If there are 3 Operators in the same row, obtain 1 Skadi, Specter, or Andreana<span class='green'>; repeats 2 times</span>",
       "tier": 5,
-      "alliances": ["Ægir"]
+      "alliances": ["Ægir"],
+      "effects": ["Rest Phase - Start"]
     },
     {
       "name": "Jessica the Liberated",
       "attributeType": "Prep",
       "attribute": "&ltWhen entering Rest Phase&gt Gain <span class='blue'>1</span>/<span class='green'>2</span> random piece(s) of equipment",
       "tier": 5,
-      "alliances": ["Victoria", "Investor"]
+      "alliances": ["Victoria", "Investor"],
+      "effects": ["Rest Phase - Start"]
     },
     {
       "name": "Suzuran",
       "attributeType": "Specialized",
       "attribute": "&ltWhen entering Rest Phase&gt Trigger the 'When obtained' Attributes of Operators <span class='blue'>in the tile ahead</span>/<span class='green'>two tiles ahead of self</span>",
       "tier": 5,
-      "alliances": ["Assist_Operator"]
+      "alliances": ["Assist_Operator"],
+      "effects": ["Rest Phase - Start"]
     },
     {
       "name": "Lin",
       "attributeType": "Can stack",
       "attribute": "&ltWhen Rest Phase ends&gt <span class='blue'>+1</span>/<span class='green'>+2</span> stack(s) to active [Yan] and [Agile] Alliance for every Operator obtained during this Rest Phase",
       "tier": 5,
-      "alliances": ["Yan", "Agile"]
+      "alliances": ["Yan", "Agile"],
+      "effects": ["Rest Phase - End"]
     },
     {
       "name": "SilverAsh",
@@ -551,7 +588,8 @@
       "attributeType": "Specialized",
       "attribute": "If Operator ahead of self has a &ltWhen entering Rest Phase&gt Attribute, this Operator copies it",
       "tier": 5,
-      "alliances": ["Aid", "Agile"]
+      "alliances": ["Aid", "Agile"],
+      "effects": ["Rest Phase - Start"]
     },
     {
       "name": "Typhon",
@@ -572,7 +610,8 @@
       "attributeType": "Prep",
       "attribute": "&ltWhen entering Rest Phase&gt <span class='blue'>If there are 3 Operators in the same row, obtain 1 random Operator</span>/<span class='green'>Obtain 1 random Operator</span> from the Alliance with the most members in your current squad",
       "tier": 6,
-      "alliances": ["Yan", "Durable"]
+      "alliances": ["Yan", "Durable"],
+      "effects": ["Rest Phase - Start"]
     },
     {
       "name": "Narantuya",
@@ -586,7 +625,8 @@
       "attributeType": "Can stack",
       "attribute": "&ltWhen Rest Phase ends&gt <span class='blue'>+2</span>/<span class='green'>+4</span> stacks to active [Victoria]/[Marvel] Alliance for every [Victoria]/[Marvel] Operator of a different Tier on the field",
       "tier": 6,
-      "alliances": ["Victoria", "Marvel"]
+      "alliances": ["Victoria", "Marvel"],
+      "effects": ["Rest Phase - End"]
     },
     {
       "name": "Eyjafjalla the Hvít Aska",
@@ -600,21 +640,24 @@
       "attributeType": "Prep",
       "attribute": "&ltWhen obtained&gt Gain <span class='blue'>1</span>/<span class='green'>2</span> piece(s) of \"Damazti Isomorph\"",
       "tier": 6,
-      "alliances": ["Harmony"]
+      "alliances": ["Harmony"],
+      "effects": ["When Obtained"]
     },
     {
       "name": "Exusiai the New Covenant",
       "attributeType": "Prep",
       "attribute": "&ltWhen obtained&gt Obtain <span class='blue'>2</span>/<span class='green'>4</span> extra Funds next Rest Phase",
       "tier": 6,
-      "alliances": ["Laterano"]
+      "alliances": ["Laterano"],
+      "effects": ["When Obtained"]
     },
     {
       "name": "Silence the Paradigmatic",
       "attributeType": "Can stack",
       "attribute": "&ltWhen Rest Phase ends&gt <span class='blue'>+1</span>/<span class='green'>+2</span> stack(s) to active [Agile] Alliance for every 1 Funds spent this round",
       "tier": 6,
-      "alliances": ["Agile", "Assist_Operator"]
+      "alliances": ["Agile", "Assist_Operator"],
+      "effects": ["Rest Phase - End"]
     },
     {
       "name": "Degenbrecher",
@@ -635,7 +678,8 @@
       "attributeType": "Prep",
       "attribute": "&ltWhen entering Rest Phase&gt Obtain 1 Lucky Coin or Sargon Teapresso; <span class='green'>repeats twice</span> with a chance to find Desert Compass",
       "tier": 6,
-      "alliances": ["Sargon", "Resilient"]
+      "alliances": ["Sargon", "Resilient"],
+      "effects": ["Rest Phase - Start"]
     },
     {
       "name": "Goldenglow",
@@ -649,21 +693,24 @@
       "attributeType": "Can stack",
       "attribute": "&ltWhen Rest Phase ends&gt <span class='blue'>+1</span>/<span class='green'>+2</span> stack(s) to active [Swift] Alliance for every Operator on Bench",
       "tier": 6,
-      "alliances": ["Swift"]
+      "alliances": ["Swift"],
+      "effects": ["Rest Phase - End"]
     },
     {
       "name": "Ifrit",
       "attributeType": "Can stack",
       "attribute": "&ltWhen Rest Phase ends&gt <span class='blue'>+2</span>/<span class='green'>+4</span> stacks each to active Alliance(s) of every Operator directly ahead of self",
       "tier": 6,
-      "alliances": ["Precision"]
+      "alliances": ["Precision"],
+      "effects": ["Rest Phase - End"]
     },
     {
       "name": "Lumen",
       "attributeType": "Can stack",
       "attribute": "&ltWhen Rest Phase ends&gt <span class='blue'>+2</span>/<span class='green'>+4</span> stacks to active Alliances of all Operators on Bench",
       "tier": 6,
-      "alliances": ["Aid", "Assist_Operator"]
+      "alliances": ["Aid", "Assist_Operator"],
+      "effects": ["Rest Phase - End"]
     },
     {
       "name": "Mudrock",

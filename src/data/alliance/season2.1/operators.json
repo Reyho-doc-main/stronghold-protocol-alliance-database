@@ -37,7 +37,7 @@
       "attribute": "&ltWhen Rest Phase ends&gt Obtain <span class='blue'>+1</span>/<span class='green'>+2</span> stacks to active [Victoria] Alliance",
       "tier": 1,
       "alliances": ["Victoria", "Aid"],
-      "effects": ["Rest Phase"]
+      "effects": ["Rest Phase - End"]
     },
     {
       "name": "Provence",
@@ -83,7 +83,7 @@
       "attribute": "&ltWhen Rest Phase ends&gt <span class='blue'>+1</span>/<span class='green'>+2</span> stack(s) to the most stacked active Alliance; takes effect even if the Operator is on Bench",
       "tier": 1,
       "alliances": ["Aid"],
-      "effects": ["Rest Phase"]
+      "effects": ["Rest Phase - End"]
     },
     {
       "name": "Greyy",
@@ -129,7 +129,7 @@
       "attribute": "&ltWhen Rest Phase ends&gt <span class='blue'>+1</span>/<span class='green'>+2</span> stacks to active [Resilient] Alliance",
       "tier": 1,
       "alliances": ["Resilient"],
-      "effects": ["Rest Phase"]
+      "effects": ["Rest Phase - End"]
     },
     {
       "name": "Executor",
@@ -145,7 +145,7 @@
       "attribute": "&ltWhen entering Rest Phase&gt <span class='blue'>+2</span>/<span class='green'>+4</span> stacks to own active Alliance(s)",
       "tier": 2,
       "alliances": ["Foresight"],
-      "effects": ["Rest Phase"]
+      "effects": ["Rest Phase - Start"]
     },
     {
       "name": "Grain Buds",
@@ -153,7 +153,7 @@
       "attribute": "&ltWhen Rest Phase ends&gt <span class='blue'>+1</span>/<span class='green'>+2</span> stack to active [Yan] Alliance for every Operator obtained this round",
       "tier": 2,
       "alliances": ["Yan", "Agile"],
-      "effects": ["Rest Phase"]
+      "effects": ["Rest Phase - End"]
     },
     {
       "name": "Harold",
@@ -224,7 +224,7 @@
       "attribute": "&ltWhen entering Rest Phase&gt <span class='blue'>+2</span>/<span class='green'>+4</span> stacks to own active Alliance(s)",
       "tier": 2,
       "alliances": ["Swift", "Agile"],
-      "effects": ["Rest Phase"]
+      "effects": ["Rest Phase - Start"]
     },
     {
       "name": "Perfumer",
@@ -232,7 +232,7 @@
       "attribute": "&ltWhen Rest Phase ends&gt <span class='blue'>+2</span>/<span class='green'>+4</span> stacks to the most stacked active Alliance; takes effect even if the Operator is on Bench",
       "tier": 2,
       "alliances": ["Aid", "Assist_Operator"],
-      "effects": ["Rest Phase"]
+      "effects": ["Rest Phase - End"]
     },
     {
       "name": "Lappland",
@@ -247,7 +247,7 @@
       "attribute": "&ltWhen Rest Phase ends&gt <span class='blue'>+4</span>/<span class='green'>+8</span> stacks to active [Durable] Alliance",
       "tier": 2,
       "alliances": ["Durable", "Solo"],
-      "effects": ["Rest Phase"]
+      "effects": ["Rest Phase - End"]
     },
     {
       "name": "Ashlock",
@@ -279,7 +279,7 @@
       "attribute": "&ltWhen Rest Phase ends&gt <span class='blue'>+3</span>/<span class='green'>+6</span> stacks each to active Alliance(s) of self and the Operator 1 tile behind",
       "tier": 3,
       "alliances": ["Agile"],
-      "effects": ["Rest Phase"]
+      "effects": ["Rest Phase - End"]
     },
     {
       "name": "Swire",
@@ -295,7 +295,7 @@
       "attribute": "&ltWhen Rest Phase ends&gt Obtain <span class='blue'>1</span>/<span class='green'>2</span> extra Fund(s) in next Rest Phase (takes effect when [Yan]/[Investor] is active in bench)",
       "tier": 3,
       "alliances": ["Yan", "Investor"],
-      "effects": ["Rest Phase"]
+      "effects": ["Rest Phase - End"]
     },
     {
       "name": "Skadi",
@@ -319,7 +319,7 @@
       "attribute": "&ltWhen Rest Phase ends&gt <span class='blue'>+2</span>/<span class='green'>+4</span> stacks to active [Victoria] Alliance for every [Victoria] Operator of a different Tier on the field",
       "tier": 3,
       "alliances": ["Victoria"],
-      "effects": ["Rest Phase"]
+      "effects": ["Rest Phase - End"]
     },
     {
       "name": "Lucilla",
@@ -374,7 +374,7 @@
       "attribute": "&ltWhen Rest Phase ends&gt <span class='blue'>+1</span>/<span class='green'>+2</span> stack(s) to active [Durable] Alliance for every Operator in the same row",
       "tier": 3,
       "alliances": ["Durable", "Resilient"],
-      "effects": ["Rest Phase"]
+      "effects": ["Rest Phase - End"]
     },
     {
       "name": "Meteor",
@@ -413,7 +413,7 @@
       "attribute": "&ltWhen entering Rest Phase&gt <span class='blue'>+3</span>/<span class='green'>+6</span> stacks each to active Alliance(s) of self and of the Operator 1 tile ahead",
       "tier": 3,
       "alliances": ["Laterano", "Agile"],
-      "effects": ["Rest Phase"]
+      "effects": ["Rest Phase - Start"]
     },
     {
       "name": "Sankta Miksaparato",
@@ -438,7 +438,7 @@
       "attribute": "&ltWhen Rest Phase ends&gt <span class='blue'>+5</span>/<span class='green'>+10</span> stacks to own Active Alliance(s)",
       "tier": 4,
       "alliances": ["Foresight", "Raid"],
-      "effects": ["Rest Phase"]
+      "effects": ["Rest Phase - End"]
     },
     {
       "name": "Kroos the Keen Glint",
@@ -470,7 +470,7 @@
       "attribute": "&ltWhen Rest Phase Ends&gt <span class='blue'>+2</span>/<span class='green'>+4</span> stacks to active [Siracusa] and [Arcane] Alliance for every refresh done this round (Can stack up to <span class='blue'>6x</span>/<span class='green'>12x</span> per round)",
       "tier": 4,
       "alliances": ["Siracusa", "Arcane"],
-      "effects": ["Rest Phase"]
+      "effects": ["Rest Phase - End"]
     },
     {
       "name": "Catherine",
@@ -478,7 +478,7 @@
       "attribute": "&ltWhen entering Rest Phase&gt On odd-numbered rounds, gain <span class='blue'>1</span>/<span class='green'>2</span> random piece(s) of equipment",
       "tier": 4,
       "alliances": ["Victoria", "Agile"],
-      "effects": ["Rest Phase"]
+      "effects": ["Rest Phase - Start"]
     },
     {
       "name": "Gladiia",
@@ -486,7 +486,7 @@
       "attribute": "&ltWhen entering Rest Phase&gt If there are 3 Operators in the same row, obtain 1 Skadi, Specter, or Underflow<span class='green'>; repeats 2 times</span>",
       "tier": 4,
       "alliances": ["Ægir"],
-      "effects": ["Rest Phase"]
+      "effects": ["Rest Phase - Start"]
     },
     {
       "name": "Gnosis",
@@ -502,7 +502,7 @@
       "attribute": "&ltWhen Rest Phase Ends&gt <span class='blue'>+5</span>/<span class='green'>+10</span> stacks to own active Alliance(s)",
       "tier": 4,
       "alliances": ["Swift", "Precision"],
-      "effects": ["Rest Phase"]
+      "effects": ["Rest Phase - End"]
     },
 
     {
@@ -511,7 +511,7 @@
       "attribute": "&ltWhen entering Rest Phase&gt Obtain <span class='blue'>1</span>/<span class='green'>2</span> free refresh(es)",
       "tier": 4,
       "alliances": ["Siracusa", "Raid"],
-      "effects": ["Rest Phase"]
+      "effects": ["Rest Phase - Start"]
     },
     {
       "name": "Hoshiguma",
@@ -551,7 +551,7 @@
       "attribute": "If Operator ahead of self has a &ltWhen entering Rest Phase&gt Attribute, this Operator copies it",
       "tier": 4,
       "alliances": ["Aid", "Agile"],
-      "effects": ["Rest Phase"]
+      "effects": ["Rest Phase - Start"]
     },
     {
       "name": "SilverAsh",
@@ -599,7 +599,7 @@
       "attribute": "&ltWhen Rest Phase ends&gt <span class='blue'>+2</span>/<span class='green'>+4</span> stacks to active [Swift] Alliance for every Operator on Bench",
       "tier": 5,
       "alliances": ["Swift"],
-      "effects": ["Rest Phase"]
+      "effects": ["Rest Phase - End"]
     },
     {
       "name": "Executor the Ex Foedere",
@@ -656,7 +656,7 @@
       "attribute": "&ltWhen Rest Phase ends&gt <span class='blue'>+2</span>/<span class='green'>+4</span> stacks to the most stacked active Alliance for every Operator of a different Tier on the field",
       "tier": 5,
       "alliances": ["Victoria"],
-      "effects": ["Rest Phase"]
+      "effects": ["Rest Phase - End"]
     },
     {
       "name": "Suzuran",
@@ -664,7 +664,7 @@
       "attribute": "&ltWhen entering Rest Phase&gt Trigger the 'When obtained' Attributes of Operators <span class='blue'>in the tile ahead</span>/<span class='green'>two tiles ahead of self</span>",
       "tier": 5,
       "alliances": ["Siracusa", "Assist_Operator"],
-      "effects": ["Rest Phase"]
+      "effects": ["Rest Phase - Start"]
     },
     {
       "name": "Saria",
@@ -672,7 +672,7 @@
       "attribute": "If Operator ahead of self has a &ltWhen Rest Phase ends&gt Attribute, this Operator copies it",
       "tier": 5,
       "alliances": ["Durable", "Solo"],
-      "effects": ["Rest Phase"]
+      "effects": ["Rest Phase - End"]
     },
     {
       "name": "Dusk",
@@ -680,7 +680,7 @@
       "attribute": "&ltWhen Rest Phase ends&gt <span class='blue'>+2</span>/<span class='green'>+4</span> stacks to active [Yan] and [Arcane] Alliance for every Operator obtained during this Rest Phase",
       "tier": 5,
       "alliances": ["Yan", "Arcane"],
-      "effects": ["Rest Phase"]
+      "effects": ["Rest Phase - End"]
     },
     {
       "name": "Specter the Unchained",
@@ -704,7 +704,7 @@
       "attribute": "&ltWhen Rest Phase ends&gt <span class='blue'>+4</span>/<span class='green'>+8</span> stacks each to active Alliance(s) of self and of the Operator 1 tile ahead",
       "tier": 5,
       "alliances": ["Swift", "Marvel"],
-      "effects": ["Rest Phase"]
+      "effects": ["Rest Phase - End"]
     },
 
     {
@@ -713,7 +713,7 @@
       "attribute": "&ltWhen Rest Phase ends&gt <span class='blue'>+1</span>/<span class='green'>+2</span> to active [Investor] Alliance for every Operator obtained this round",
       "tier": 5,
       "alliances": ["Investor"],
-      "effects": ["Rest Phase"]
+      "effects": ["Rest Phase - End"]
     },
 
     {
@@ -730,7 +730,7 @@
       "attribute": "&ltWhen Rest Phase Ends&gt <span class='blue'>+4</span>/<span class='green'>+8</span> stacks to active [Siracusa] Alliance for every refresh this round (Can stack up to <span class='blue'>12x</span>/<span class='green'>24x</span> each round)",
       "tier": 5,
       "alliances": ["Siracusa", "Marvel"],
-      "effects": ["Rest Phase"]
+      "effects": ["Rest Phase - End"]
     },
     {
       "name": "Santalla",
@@ -738,7 +738,7 @@
       "attribute": "&ltWhen entering Rest Phase&gt &ltwhen Rest Phase ends&gt <span class='blue'>+4</span>/<span class='green'>+8</span> stacks to active [Foresight] Alliance",
       "tier": 5,
       "alliances": ["Foresight"],
-      "effects": ["Rest Phase"]
+      "effects": ["Rest Phase - End", "Rest Phase - Start"]
     },
     {
       "name": "Record Keeper",
@@ -770,7 +770,7 @@
       "attribute": "&ltWhen entering Rest Phase&gt <span class='blue'>If there are 3 Operators in the same row, obtain 1 random Operator</span>/<span class='green'>Obtain 1 random Operator</span> from the Alliance with most members in your current squad",
       "tier": 6,
       "alliances": ["Yan", "Durable"],
-      "effects": ["Rest Phase"]
+      "effects": ["Rest Phase - Start"]
     },
     {
       "name": "Skadi the Corrupting Heart",
@@ -794,7 +794,7 @@
       "attribute": "&ltWhen entering Rest Phase&gt Obtain 1 Lucky Coin or Sargon Teapresso; <span class='green'>repeats twice</span> with a chance to find Desert Compass",
       "tier": 6,
       "alliances": ["Sargon", "Resilient"],
-      "effects": ["Rest Phase"]
+      "effects": ["Rest Phase - Start"]
     },
     {
       "name": "Vina Victoria",
@@ -802,7 +802,7 @@
       "attribute": "&ltWhen Rest Phase ends&gt <span class='blue'>+3</span>/<span class='green'>+6</span>|<span class='blue'>+2</span>/<span class='green'>+4</span> stacks respectively to active [Victoria]|[Marvel] Alliance for every [Victoria]|[Marvel] Operator of a different Tier on the field",
       "tier": 6,
       "alliances": ["Victoria", "Marvel"],
-      "effects": ["Rest Phase"]
+      "effects": ["Rest Phase - End"]
     },
     {
       "name": "Reed the Flame Shadow",
@@ -851,7 +851,7 @@
       "attribute": "&ltWhen Rest Phase ends&gt <span class='blue'>+2</span>/<span class='green'>+4</span> stacks to active Alliances of all Operators on Bench",
       "tier": 6,
       "alliances": ["Aid"],
-      "effects": ["Rest Phase"]
+      "effects": ["Rest Phase - End"]
     },
     {
       "name": "Qiubai",
@@ -867,7 +867,7 @@
       "attribute": "&ltWhen Rest Phase ends&gt <span class='blue'>+2</span>/<span class='green'>+4</span> stacks to active [Agile] and [Arcane] Alliances for every 3 Funds spent this round",
       "tier": 6,
       "alliances": ["Agile", "Arcane"],
-      "effects": ["Rest Phase"]
+      "effects": ["Rest Phase - End"]
     },
     {
       "name": "Nearl the Radiant Knight",

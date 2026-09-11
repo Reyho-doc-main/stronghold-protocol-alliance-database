@@ -1,7 +1,7 @@
 import AllianceButton from "../components/AllianceButton";
 import SearchInput from "../components/SearchInput";
 import TierButton from "../components/TierButton";
-import EffectFilter from "../components/EffectFilter";
+import EffectFilter, { type EffectOption } from "../components/EffectFilter";
 import OperatorCard from "../components/OperatorCard";
 import type { OperatorDto } from "../dtos/operator.dto";
 import { useState } from "react";
@@ -20,13 +20,20 @@ const AttributeList = ({ season }: AttributeListProps) => {
   const [activeEffects, setActiveEffects] = useState<string[]>([]);
   const [searchTerm, setSearchTerm] = useState("");
 
-  const effectOptions = [
-    "In Battle",
-    "When Obtained",
-    "When Sold",
-    "On Deployment",
-    "Rest Phase",
-    "Direct Stack Buff",
+  const effectOptions: EffectOption[] = [
+    { value: "In Battle", label: "In Battle" },
+    { value: "When Obtained", label: "When Obtained" },
+    { value: "When Sold", label: "When Sold" },
+    { value: "On Deployment", label: "On Deployment" },
+    {
+      value: "Rest Phase",
+      label: "Rest Phase",
+      children: [
+        { value: "Rest Phase - Start", label: "Start" },
+        { value: "Rest Phase - End", label: "End" },
+      ],
+    },
+    { value: "Direct Stack Buff", label: "Direct Stack Buff" },
   ];
 
   const toggleCoreAlliance = (alliance: string) => {
