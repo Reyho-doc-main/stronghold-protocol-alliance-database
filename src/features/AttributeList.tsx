@@ -100,8 +100,14 @@ const AttributeList = ({ season }: AttributeListProps) => {
     return option ? [option.value, ...(option.children?.map((c) => c.value) ?? [])] : [value];
   };
 
+  const maxCoreBans = season === "1" ? 2 : 3;
+  const maxAddonBans = season === "1" ? 2 : 4;
+
+  const clampedBannedCore = bannedCore.slice(0, maxCoreBans);
+  const clampedBannedAddon = bannedAddon.slice(0, maxAddonBans);
+
   const bannedAllianceTags = new Set(
-    [...bannedCore, ...bannedAddon].map((name) => name.replaceAll(" ", "_")),
+    [...clampedBannedCore, ...clampedBannedAddon].map((name) => name.replaceAll(" ", "_")),
   );
 
   const isOperatorBanned = (op: OperatorDto) => {
@@ -111,7 +117,7 @@ const AttributeList = ({ season }: AttributeListProps) => {
     return op.alliances.every((tag) => bannedAllianceTags.has(tag));
   };
 
-  const activeBanCount = bannedCore.length + bannedAddon.length;
+  const activeBanCount = clampedBannedCore.length + clampedBannedAddon.length;
 
   const filteredList = operatorData.filter(
     (op) =>
@@ -186,10 +192,12 @@ const AttributeList = ({ season }: AttributeListProps) => {
           <BanSelector
             coreAlliances={coreAlliances}
             addonAlliances={additionalAlliances}
-            bannedCore={bannedCore}
-            bannedAddon={bannedAddon}
+            bannedCore={clampedBannedCore}
+            bannedAddon={clampedBannedAddon}
             onToggleCoreBan={toggleCoreBan}
             onToggleAddonBan={toggleAddonBan}
+            maxCoreBans={maxCoreBans}
+            maxAddonBans={maxAddonBans}
           />
         )}
       </div>
