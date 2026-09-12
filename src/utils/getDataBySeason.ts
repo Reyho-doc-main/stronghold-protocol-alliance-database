@@ -1,8 +1,11 @@
 import type { TrophyDto } from "../dtos/trophy.dto";
+import type { DispatchModuleSectionDto } from "../dtos/dispatchModule.dto";
 
 import { operators as allianceSeason1operators } from "../data/alliance/season1/operators.json";
 import { operators as allianceSeason2operators } from "../data/alliance/season2/operators.json";
 import { operators as allianceSeason21operators } from "../data/alliance/season2.1/operators.json";
+
+import dispatchModuleSeason21 from "../data/alliance/season2.1/dispatchModule.json";
 
 import { bondInfo as allianceSeason1bonds } from "../data/alliance/season1/alliances.json";
 import { bondInfo as allianceSeason2bonds } from "../data/alliance/season2/alliances.json";
@@ -250,4 +253,9 @@ export function getMapsBySeason(season: string) {
       return allianceSeason21maps;
     }
   }
+}
+
+export function getDispatchModuleBySeason(season: string): DispatchModuleSectionDto | null {
+  if (season === "2.1") return dispatchModuleSeason21 as DispatchModuleSectionDto;
+  return null;
 }

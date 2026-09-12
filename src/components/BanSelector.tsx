@@ -27,8 +27,7 @@ function BanSelector({
   return (
     <div className="flex flex-col gap-3 border-2 border-[#ef4444] bg-[#2b1414] rounded-xl p-3 max-w-96 md:max-w-195">
       <div className="text-white text-sm">
-        Select this session's bans: up to {maxCoreBans} Core Alliances and {maxAddonBans} Add-on
-        Alliances.
+        Select your bans: up to {maxCoreBans} Core Alliances and {maxAddonBans} Add-on Alliances.
       </div>
 
       <div className="flex flex-col gap-1">

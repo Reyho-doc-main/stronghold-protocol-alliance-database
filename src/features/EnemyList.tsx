@@ -8,6 +8,7 @@ import CalculationTable from "../components/CalculationTable";
 import TrophyCard from "../components/TrophyCard";
 import HiddenCoreTable from "../components/HiddenCoreTable";
 import MapCard from "../components/MapCard";
+import DispatchModuleSection from "../components/DispatchModuleSection";
 import {
   getLeadersBySeason,
   getTacticalTrainingBySeason,
@@ -16,7 +17,8 @@ import {
   getAdvancedCalculationsBySeason,
   getTrophiesBySeason,
   getHiddenCoreBySeason,
-  getMapsBySeason
+  getMapsBySeason,
+  getDispatchModuleBySeason
 } from "../utils/getDataBySeason";
 import { isRateLimited } from "../utils/rateLimit";
 
@@ -38,6 +40,7 @@ const EnemyList = ({ season }: EnemyListProps) => {
   const trophies = getTrophiesBySeason(season);
   const hiddenCore = getHiddenCoreBySeason(season);
   const maps = getMapsBySeason(season);
+  const dispatchModule = getDispatchModuleBySeason(season);
 
   const openTraining = (id: string) => setTrainingId(id);
 
@@ -181,6 +184,14 @@ const EnemyList = ({ season }: EnemyListProps) => {
           </div>
         </div>
       </CollapsibleSection>
+      {dispatchModule && (
+        <CollapsibleSection
+          title="Dispatch Module Usage"
+          note="Sky's recommendation list (Slightly edited)"
+        >
+          <DispatchModuleSection data={dispatchModule} />
+        </CollapsibleSection>
+      )}
     </div>
   );
 };

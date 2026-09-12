@@ -1,0 +1,96 @@
+{
+  "early": [
+    {
+      "sources": [{ "type": "operator", "name": "Greyy" }],
+      "targets": [
+        { "type": "operator", "name": "Archetto" },
+        { "type": "operator", "name": "Ayerscarpe" }
+      ],
+      "odds": "2 in 6"
+    },
+    {
+      "sources": [{ "type": "operator", "name": "Leizi" }],
+      "targets": [{ "type": "operator", "name": "Swire the Elegant Wit" }],
+      "odds": "1 in 4"
+    },
+    {
+      "sources": [{ "type": "operator", "name": "Grain Buds" }],
+      "targets": [
+        { "type": "operator", "name": "Archetto" },
+        { "type": "operator", "name": "Ayerscarpe" },
+        { "type": "operator", "name": "Swire the Elegant Wit" }
+      ],
+      "odds": "3 in 10",
+      "note": "Combined pool of Greyy's and Leizi's dispatch options"
+    },
+    {
+      "sources": [
+        { "type": "operator", "name": "Utage" },
+        { "type": "operator", "name": "Humus" }
+      ],
+      "targets": [{ "type": "operator", "name": "Blemishine" }],
+      "odds": "1 in 4"
+    },
+    {
+      "sources": [{ "type": "operator", "name": "Kazemaru" }],
+      "targets": [{ "type": "operator", "name": "Kazemaru" }],
+      "odds": "1 in 3, guarantees"
+    }
+  ],
+  "noChoice": [
+    {
+      "sources": [
+        { "type": "operator", "name": "Provence" },
+        { "type": "operator", "name": "Lappland" }
+      ],
+      "targets": [{ "type": "alliance", "name": "Siracusa" }]
+    },
+    {
+      "sources": [{ "type": "operator", "name": "Silence" }],
+      "targets": [{ "type": "operator", "name": "Pramanix" }],
+      "odds": "1 in 3, guarantees"
+    },
+    {
+      "sources": [{ "type": "operator", "name": "Liskarm" }],
+      "targets": [{ "type": "operator", "name": "Gravel" }],
+      "odds": "1 in 3, guarantees"
+    },
+    {
+      "sources": [{ "type": "operator", "name": "Gummy" }],
+      "targets": [{ "type": "alliance", "name": "Durable" }]
+    },
+    {
+      "sources": [{ "type": "operator", "name": "Podenco" }],
+      "targets": [{ "type": "operator", "name": "Kjera" }],
+      "odds": "1 in 4"
+    }
+  ],
+  "midLate": [
+    {
+      "sources": [{ "type": "operator", "name": "Mountain" }],
+      "targets": [{ "type": "alliance", "name": "Investor" }]
+    },
+    {
+      "sources": [{ "type": "operator", "name": "Silence" }],
+      "targets": [{ "type": "alliance", "name": "Foresight" }]
+    },
+    {
+      "sources": [
+        { "type": "operator", "name": "Kazemaru" },
+        { "type": "operator", "name": "Warfarin" }
+      ],
+      "targets": [{ "type": "alliance", "name": "Marvel" }],
+      "note": "Kazemaru is no longer guaranteed at this stage"
+    },
+    {
+      "sources": [{ "type": "operator", "name": "Civilight Eterna" }],
+      "targets": [{ "type": "alliance", "name": "Assist_Operator" }],
+      "note": "Guarantees Civilight Eterna at Tier 4 shop"
+    },
+    {
+      "sources": [{ "type": "operator", "name": "Muelsyse" }],
+      "targets": [{ "type": "operator", "name": "Muelsyse" }],
+      "note": "Must be Tier 6 shop"
+    }
+  ]
+}
