@@ -4,10 +4,11 @@ type AllianceButtonProps = {
   allianceName: string;
   isActive?: boolean;
   onClick?: () => void;
+  activeColor?: string;
 };
 
 function AllianceButton(props: AllianceButtonProps) {
-  const { allianceName, isActive = false, onClick = () => {} } = props;
+  const { allianceName, isActive = false, onClick = () => {}, activeColor = "#00ffbb" } = props;
   return (
     <button
       className="
@@ -16,8 +17,8 @@ function AllianceButton(props: AllianceButtonProps) {
         border-2 rounded-xl text-[10px] md:text-[14px]
       "
       style={{
-        borderColor: isActive ? "#00ffbb" : "#25be97",
-        backgroundColor: isActive ? "#00ffbb" : "transparent",
+        borderColor: isActive ? activeColor : "#25be97",
+        backgroundColor: isActive ? activeColor : "transparent",
         color: isActive ? "black" : "white",
       }}
       onClick={onClick}

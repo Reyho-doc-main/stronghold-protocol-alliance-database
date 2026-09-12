@@ -3,22 +3,30 @@ import SearchInput from "../components/SearchInput";
 import TierButton from "../components/TierButton";
 import EffectFilter, { type EffectOption } from "../components/EffectFilter";
 import OperatorCard from "../components/OperatorCard";
+import BanSelector from "../components/BanSelector";
 import type { OperatorDto } from "../dtos/operator.dto";
 import { useState } from "react";
 import type { AllianceDto } from "../dtos/alliance.dto";
 import { getAlliancesBySeason, getOperatorsBySeason } from "../utils/getDataBySeason";
+
+const EXEMPT_FROM_BANS = "Reserve Operator - Supporter";
 
 type AttributeListProps = {
   season: string;
 };
 
 const AttributeList = ({ season }: AttributeListProps) => {
-  // console.log(season, "season list");
   const [activeCoreAlliances, setActiveCoreAlliances] = useState<string[]>([]);
   const [activeAddAlliances, setActiveAddAlliances] = useState<string[]>([]);
   const [activeTiers, setActiveTiers] = useState<number[]>([]);
   const [activeEffects, setActiveEffects] = useState<string[]>([]);
   const [searchTerm, setSearchTerm] = useState("");
+
+  const [showBanSelector, setShowBanSelector] = useState(false);
+  const [bannedCore, setBannedCore] = useState<string[]>([]);
+  const [bannedAddon, setBannedAddon] = useState<string[]>([]);
+  const [manuallyUnbanned, setManuallyUnbanned] = useState<string[]>([]);
+  const [hideBanned, setHideBanned] = useState(false);
 
   const effectOptions: EffectOption[] = [
     { value: "In Battle", label: "In Battle" },
@@ -54,8 +62,29 @@ const AttributeList = ({ season }: AttributeListProps) => {
   };
 
   const toggleEffect = (effect: string) => {
-    if (activeEffects.includes(effect)) setActiveEffects((prev) => prev.filter((item) => item !== effect));
+    if (activeEffects.includes(effect))
+      setActiveEffects((prev) => prev.filter((item) => item !== effect));
     else setActiveEffects((prev) => [...prev, effect]);
+  };
+
+  const toggleCoreBan = (alliance: string) => {
+    setBannedCore((prev) =>
+      prev.includes(alliance) ? prev.filter((a) => a !== alliance) : [...prev, alliance],
+    );
+  };
+
+  const toggleAddonBan = (alliance: string) => {
+    setBannedAddon((prev) =>
+      prev.includes(alliance) ? prev.filter((a) => a !== alliance) : [...prev, alliance],
+    );
+  };
+
+  const toggleManualUnban = (operatorName: string) => {
+    setManuallyUnbanned((prev) =>
+      prev.includes(operatorName)
+        ? prev.filter((name) => name !== operatorName)
+        : [...prev, operatorName],
+    );
   };
 
   const allianceData: AllianceDto[] = getAlliancesBySeason(season);
@@ -65,19 +94,39 @@ const AttributeList = ({ season }: AttributeListProps) => {
   );
   const operatorData: OperatorDto[] = getOperatorsBySeason(season);
 
+  // Making rest phase - start and end also be part of parent Rest Phase
+  const getEffectMatchTags = (value: string): string[] => {
+    const option = effectOptions.find((o) => o.value === value);
+    return option ? [option.value, ...(option.children?.map((c) => c.value) ?? [])] : [value];
+  };
+
+  const bannedAllianceTags = new Set(
+    [...bannedCore, ...bannedAddon].map((name) => name.replaceAll(" ", "_")),
+  );
+
+  const isOperatorBanned = (op: OperatorDto) => {
+    if (op.name === EXEMPT_FROM_BANS) return false;
+    if (manuallyUnbanned.includes(op.name)) return false;
+    if (op.alliances.length === 0) return false;
+    return op.alliances.every((tag) => bannedAllianceTags.has(tag));
+  };
+
+  const activeBanCount = bannedCore.length + bannedAddon.length;
+
   const filteredList = operatorData.filter(
     (op) =>
       activeCoreAlliances.every((a) => op.alliances.includes(a)) &&
       activeAddAlliances.every((a) => op.alliances.includes(a)) &&
       (activeTiers.length === 0 || activeTiers.includes(op.tier)) &&
       op.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
-      activeEffects.every((e) => op.effects?.includes(e)),
+      activeEffects.every((e) => getEffectMatchTags(e).some((tag) => op.effects?.includes(tag))) &&
+      (!hideBanned || !isOperatorBanned(op)),
   );
 
   return (
     <>
       <div className="flex flex-col my-3 mx-4 gap-3 items-center">
-        <div className="flex flex-row flex-wrap gap-3 justify-center">
+        <div className="flex flex-row flex-wrap gap-3 justify-center items-center">
           {[1, 2, 3, 4, 5, 6].map((tier) => (
             <TierButton
               key={tier}
@@ -92,7 +141,26 @@ const AttributeList = ({ season }: AttributeListProps) => {
             onToggle={toggleEffect}
           />
           <SearchInput onSearch={setSearchTerm} placeholder="Search..." />
+          <button
+            className="h-10 px-3 flex flex-row justify-center items-center gap-2 border-2 rounded-xl border-gray-600 text-sm"
+            style={{
+              backgroundColor: activeBanCount > 0 ? "#ef4444" : "transparent",
+              color: "white",
+            }}
+            onClick={() => setShowBanSelector((prev) => !prev)}
+          >
+            {activeBanCount > 0 ? `Bans (${activeBanCount})` : "Bans"}
+          </button>
+          <label className="flex flex-row items-center gap-2 text-white text-sm cursor-pointer">
+            <input
+              type="checkbox"
+              checked={hideBanned}
+              onChange={(event) => setHideBanned(event.target.checked)}
+            />
+            Hide banned operators
+          </label>
         </div>
+
         <div className="flex flex-row flex-wrap gap-3 justify-center max-w-96 md:max-w-195">
           {coreAlliances.map((alliance) => (
             <AllianceButton
@@ -113,11 +181,27 @@ const AttributeList = ({ season }: AttributeListProps) => {
             />
           ))}
         </div>
+
+        {showBanSelector && (
+          <BanSelector
+            coreAlliances={coreAlliances}
+            addonAlliances={additionalAlliances}
+            bannedCore={bannedCore}
+            bannedAddon={bannedAddon}
+            onToggleCoreBan={toggleCoreBan}
+            onToggleAddonBan={toggleAddonBan}
+          />
+        )}
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 mx-6 mb-6 gap-6">
         {filteredList.map((operator) => (
-          <OperatorCard key={operator.name} operator={operator} />
+          <OperatorCard
+            key={operator.name}
+            operator={operator}
+            isBanned={isOperatorBanned(operator)}
+            onToggleBan={() => toggleManualUnban(operator.name)}
+          />
         ))}
       </div>
     </>

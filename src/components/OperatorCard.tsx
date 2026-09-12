@@ -5,10 +5,11 @@ import AllianceIconRow from "./AllianceIconRow";
 
 type OperatorCardProps = {
   operator: OperatorDto;
+  isBanned?: boolean;
+  onToggleBan?: () => void;
 };
 
-function OperatorCard(props: OperatorCardProps) {
-  const { operator } = props;
+function OperatorCard({ operator, isBanned = false, onToggleBan }: OperatorCardProps) {
 
   const navigateToTerraWiki = (opName: string) => {
     if (isRateLimited("wiki-link", 500)) return;
@@ -33,6 +34,9 @@ function OperatorCard(props: OperatorCardProps) {
             src={`/operatoricons/90px-${operator.name.replace(/\s+/g, "_")}_icon.webp`}
             className="w-16 h-16"
           />
+          {isBanned && (
+            <div className="absolute inset-0 bg-red-600/60 pointer-events-none" />
+          )}
           <div
             className={`
           absolute w-6 h-6 right-0 top-0 
@@ -47,6 +51,14 @@ function OperatorCard(props: OperatorCardProps) {
           </div>
         </button>
         {operator.name}
+        {isBanned && (
+          <button
+            className="mt-1 px-1.5 py-0.5 rounded-sm bg-red-600 text-white text-[10px] cursor-pointer"
+            onClick={onToggleBan}
+          >
+            Unban
+          </button>
+        )}
       </div>
 
       <div className="flex flex-col justify-start items-start">

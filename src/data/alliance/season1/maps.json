@@ -8,6 +8,49 @@
         "This map is also a fixed map for both the [Starter Protocol] and [Standard Simulation].",
         "This map can also appear in Perilous Simulations."
       ]
+    },
+    {
+      "id": "map-2-1",
+      "name": "Map 2",
+      "image": "map-2-1.png"
+    },
+    {
+      "id": "map-3",
+      "name": "Map 3",
+      "image": "map-3.png"
+    },
+    {
+      "id": "map-4",
+      "name": "Map 4",
+      "image": "map-4.png",
+      "terrainEffect": {
+        "title": "Special terrain effects",
+        "description": "For 5 minutes, allies and passing enemies placed on Active Originium terrain get +20% ATK and +20 ASPD, but take 70 true damage per second."
+      }
+    },
+    {
+      "id": "map-5",
+      "name": "Map 5",
+      "image": "map-5-1.png",
+      "appearances": [
+        "This map only appears at a low rate in Dire Simulation."
+      ]
+    },
+    {
+      "id": "map-6",
+      "name": "Map 6",
+      "image": "map-6-1.png",
+      "appearances": [
+        "This map only appears at a lower rate in Perilous and Dire Simulation."
+      ]
+    },
+    {
+      "id": "map-7",
+      "name": "Map 7",
+      "image": "map-7-1.png",
+      "appearances": [
+        "This map only appears at a lower rate in Perilous and Dire Simulation."
+      ]
     }
   ]
 }
