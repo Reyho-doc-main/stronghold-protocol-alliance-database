@@ -12,6 +12,8 @@ type BanSelectorProps = {
   onToggleAddonBan: (alliance: string) => void;
   maxCoreBans?: number;
   maxAddonBans?: number;
+  onShare: () => void;
+  shareCopied: boolean;
 };
 
 function BanSelector({
@@ -23,6 +25,8 @@ function BanSelector({
   onToggleAddonBan,
   maxCoreBans = 3,
   maxAddonBans = 4,
+  onShare,
+  shareCopied,
 }: BanSelectorProps) {
   return (
     <div className="flex flex-col gap-3 border-2 border-[#ef4444] bg-[#2b1414] rounded-xl p-3 max-w-96 md:max-w-195">
@@ -76,6 +80,19 @@ function BanSelector({
             );
           })}
         </div>
+      </div>
+
+      <div className="flex flex-row justify-end">
+        <button
+          className="h-9 px-3 flex flex-row justify-center items-center gap-2 border-2 rounded-xl border-[#ef4444] text-white text-sm cursor-pointer hover:bg-[#ef4444]/20"
+          onClick={onShare}
+        >
+          {shareCopied ? (
+            "Link copied!"
+          ) : (
+            <img src="/share.png" alt="Share" width={20} height={20} />
+          )}
+        </button>
       </div>
     </div>
   );

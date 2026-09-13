@@ -6,17 +6,22 @@ type DispatchModuleRowProps = {
   entry: DispatchModuleEntryDto;
 };
 
-function interleaveOr(entities: DispatchEntity[]): ReactNode[] {
+function interleaveOr(entities: DispatchEntity[], group: "source" | "target"): ReactNode[] {
   return entities.flatMap((entity, index) => {
     const nodes: ReactNode[] = [];
     if (index > 0) {
       nodes.push(
-        <span key={`or-${entity.type}-${entity.name}`} className="text-[#888888] text-xs shrink-0">
+        <span
+          key={`${group}-or-${entity.type}-${entity.name}`}
+          className="text-[#888888] text-xs shrink-0"
+        >
           or
         </span>,
       );
     }
-    nodes.push(<DispatchEntityChip key={`${entity.type}-${entity.name}`} entity={entity} />);
+    nodes.push(
+      <DispatchEntityChip key={`${group}-${entity.type}-${entity.name}`} entity={entity} />,
+    );
     return nodes;
   });
 }
@@ -25,9 +30,9 @@ function DispatchModuleRow({ entry }: DispatchModuleRowProps) {
   return (
     <div className="flex flex-col gap-2 border-b border-[#3a3a3a] py-3 px-3 last:border-b-0">
       <div className="flex flex-row flex-wrap items-center gap-2">
-        {interleaveOr(entry.sources)}
+        {interleaveOr(entry.sources, "source")}
         <span className="text-[#25be97] text-xl shrink-0 mx-1">→</span>
-        {interleaveOr(entry.targets)}
+        {interleaveOr(entry.targets, "target")}
       </div>
       {(entry.odds || entry.note) && (
         <div className="flex flex-row flex-wrap gap-4 text-xs">

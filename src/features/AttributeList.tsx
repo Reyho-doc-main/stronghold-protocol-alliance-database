@@ -4,8 +4,10 @@ import TierButton from "../components/TierButton";
 import EffectFilter, { type EffectOption } from "../components/EffectFilter";
 import OperatorCard from "../components/OperatorCard";
 import BanSelector from "../components/BanSelector";
+import BannedOperatorsPreview from "../components/BannedOperatorsPreview";
 import type { OperatorDto } from "../dtos/operator.dto";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import type { AllianceDto } from "../dtos/alliance.dto";
 import { getAlliancesBySeason, getOperatorsBySeason } from "../utils/getDataBySeason";
 
@@ -15,7 +17,17 @@ type AttributeListProps = {
   season: string;
 };
 
+const readListParam = (searchParams: URLSearchParams, key: string): string[] => {
+  const raw = searchParams.get(key);
+  return raw ? raw.split(",").filter(Boolean) : [];
+};
+
+const readBoolParam = (searchParams: URLSearchParams, key: string): boolean =>
+  searchParams.get(key) === "1";
+
 const AttributeList = ({ season }: AttributeListProps) => {
+  const [searchParams, setSearchParams] = useSearchParams();
+
   const [activeCoreAlliances, setActiveCoreAlliances] = useState<string[]>([]);
   const [activeAddAlliances, setActiveAddAlliances] = useState<string[]>([]);
   const [activeTiers, setActiveTiers] = useState<number[]>([]);
@@ -23,10 +35,20 @@ const AttributeList = ({ season }: AttributeListProps) => {
   const [searchTerm, setSearchTerm] = useState("");
 
   const [showBanSelector, setShowBanSelector] = useState(false);
-  const [bannedCore, setBannedCore] = useState<string[]>([]);
-  const [bannedAddon, setBannedAddon] = useState<string[]>([]);
-  const [manuallyUnbanned, setManuallyUnbanned] = useState<string[]>([]);
-  const [hideBanned, setHideBanned] = useState(false);
+  const [bannedCore, setBannedCore] = useState<string[]>(() =>
+    readListParam(searchParams, "bannedCore"),
+  );
+  const [bannedAddon, setBannedAddon] = useState<string[]>(() =>
+    readListParam(searchParams, "bannedAddon"),
+  );
+  const [manuallyUnbanned, setManuallyUnbanned] = useState<string[]>(() =>
+    readListParam(searchParams, "unbanned"),
+  );
+  const [hideBanned, setHideBanned] = useState<boolean>(() => readBoolParam(searchParams, "hideBanned"));
+  const [displayBannedIcons, setDisplayBannedIcons] = useState<boolean>(() =>
+    readBoolParam(searchParams, "showBannedIcons"),
+  );
+  const [shareCopied, setShareCopied] = useState(false);
 
   const effectOptions: EffectOption[] = [
     { value: "In Battle", label: "In Battle" },
@@ -37,8 +59,8 @@ const AttributeList = ({ season }: AttributeListProps) => {
       value: "Rest Phase",
       label: "Rest Phase",
       children: [
-        { value: "Rest Phase - Start", label: "Start" },
-        { value: "Rest Phase - End", label: "End" },
+        { value: "Rest Phase - Start", label: "Starts" },
+        { value: "Rest Phase - End", label: "Ends" },
       ],
     },
     { value: "Direct Stack Buff", label: "Direct Stack Buff" },
@@ -87,6 +109,34 @@ const AttributeList = ({ season }: AttributeListProps) => {
     );
   };
 
+  // Making URL sync with ban state
+  useEffect(() => {
+    setSearchParams(
+      (prev) => {
+        const params = new URLSearchParams(prev);
+        if (bannedCore.length > 0) params.set("bannedCore", bannedCore.join(","));
+        else params.delete("bannedCore");
+        if (bannedAddon.length > 0) params.set("bannedAddon", bannedAddon.join(","));
+        else params.delete("bannedAddon");
+        if (manuallyUnbanned.length > 0) params.set("unbanned", manuallyUnbanned.join(","));
+        else params.delete("unbanned");
+        if (hideBanned) params.set("hideBanned", "1");
+        else params.delete("hideBanned");
+        if (displayBannedIcons) params.set("showBannedIcons", "1");
+        else params.delete("showBannedIcons");
+        return params;
+      },
+      { replace: true },
+    );
+  }, [
+    bannedCore,
+    bannedAddon,
+    manuallyUnbanned,
+    hideBanned,
+    displayBannedIcons,
+    setSearchParams,
+  ]);
+
   const allianceData: AllianceDto[] = getAlliancesBySeason(season);
   const coreAlliances = allianceData.filter((alliance) => alliance.core === true);
   const additionalAlliances = allianceData.filter(
@@ -117,7 +167,22 @@ const AttributeList = ({ season }: AttributeListProps) => {
     return op.alliances.every((tag) => bannedAllianceTags.has(tag));
   };
 
+  const bannedOperators = operatorData.filter(isOperatorBanned);
   const activeBanCount = clampedBannedCore.length + clampedBannedAddon.length;
+
+  const handleShare = async () => {
+    const shareUrl = window.location.href;
+
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+    } catch {
+      window.prompt("Copy this link:", shareUrl);
+      return;
+    }
+
+    setShareCopied(true);
+    setTimeout(() => setShareCopied(false), 2000);
+  };
 
   const filteredList = operatorData.filter(
     (op) =>
@@ -157,14 +222,24 @@ const AttributeList = ({ season }: AttributeListProps) => {
           >
             {activeBanCount > 0 ? `Bans (${activeBanCount})` : "Bans"}
           </button>
-          <label className="flex flex-row items-center gap-2 text-white text-sm cursor-pointer">
-            <input
-              type="checkbox"
-              checked={hideBanned}
-              onChange={(event) => setHideBanned(event.target.checked)}
-            />
-            Hide banned operators
-          </label>
+          <div className="flex flex-col gap-1">
+            <label className="flex flex-row items-center gap-2 text-white text-sm cursor-pointer">
+              <input
+                type="checkbox"
+                checked={displayBannedIcons}
+                onChange={(event) => setDisplayBannedIcons(event.target.checked)}
+              />
+              Display banned operator icons
+            </label>
+            <label className="flex flex-row items-center gap-2 text-white text-sm cursor-pointer">
+              <input
+                type="checkbox"
+                checked={hideBanned}
+                onChange={(event) => setHideBanned(event.target.checked)}
+              />
+              Hide banned operator icons
+            </label>
+          </div>
         </div>
 
         <div className="flex flex-row flex-wrap gap-3 justify-center max-w-96 md:max-w-195">
@@ -198,8 +273,12 @@ const AttributeList = ({ season }: AttributeListProps) => {
             onToggleAddonBan={toggleAddonBan}
             maxCoreBans={maxCoreBans}
             maxAddonBans={maxAddonBans}
+            onShare={handleShare}
+            shareCopied={shareCopied}
           />
         )}
+
+        {displayBannedIcons && <BannedOperatorsPreview operators={bannedOperators} />}
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 mx-6 mb-6 gap-6">
