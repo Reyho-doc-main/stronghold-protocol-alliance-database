@@ -21,6 +21,9 @@ import {
   getDispatchModuleBySeason
 } from "../utils/getDataBySeason";
 import { isRateLimited } from "../utils/rateLimit";
+import { filterAdvancedTabData } from "../utils/searchEnemyList";
+import { useSearchHotkey } from "../hooks/useSearchHotkey";
+import SearchInput from "../components/SearchInput";
 
 type EnemyListProps = {
   season: string;
@@ -31,6 +34,8 @@ type DecisionCategory = "bounty" | "tactical";
 const EnemyList = ({ season }: EnemyListProps) => {
   const [trainingId, setTrainingId] = useState<string | null>(null);
   const [decisionCategory, setDecisionCategory] = useState<DecisionCategory | null>(null);
+  const [searchTerm, setSearchTerm] = useState("");
+  const { isVisible: isSearchVisible, inputRef: searchInputRef, hide: hideSearch } = useSearchHotkey(false);
 
   const leaders = getLeadersBySeason(season);
   const tacticalTraining = getTacticalTrainingBySeason(season);
@@ -56,6 +61,13 @@ const EnemyList = ({ season }: EnemyListProps) => {
   };
 
   const activeTraining = tacticalTraining.find((training) => training.id === trainingId);
+
+  const {
+    leaders: visibleLeaders,
+    training: visibleTraining,
+    matchedEnemy,
+  } = filterAdvancedTabData(leaders, tacticalTraining, searchTerm);
+  const isSearching = searchTerm.trim().length > 0;
 
   if (activeTraining) {
     return (
@@ -106,21 +118,45 @@ const EnemyList = ({ season }: EnemyListProps) => {
 
   return (
     <div className="flex flex-col mx-6 mb-6 gap-6">
+      <div className="flex justify-center">
+        {isSearchVisible && (
+          <SearchInput
+            ref={searchInputRef}
+            onSearch={setSearchTerm}
+            onClose={hideSearch}
+            placeholder="Search leaders & training..."
+          />
+        )}
+      </div>
       <div>
         <div className="text-2xl text-white mb-3">Leaders</div>
-        <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
-          {leaders.map((leader) => (
-            <LeaderCard key={leader.name} leader={leader} />
-          ))}
-        </div>
+        {isSearching && visibleLeaders.length === 0 ? (
+          <div className="text-[#888888] text-sm">No leaders match "{searchTerm}".</div>
+        ) : (
+          <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
+            {visibleLeaders.map((leader) => (
+              <LeaderCard key={leader.name} leader={leader} searchTerm={searchTerm} />
+            ))}
+          </div>
+        )}
       </div>
       <div>
         <div className="text-2xl text-white mb-3">Tactical Training Enemies</div>
-        <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
-          {tacticalTraining.map((training) => (
-            <TacticalTrainingCard key={training.id} training={training} onOpen={openTraining} />
-          ))}
-        </div>
+        {isSearching && visibleTraining.length === 0 ? (
+          <div className="text-[#888888] text-sm">No tactical training enemies match "{searchTerm}".</div>
+        ) : (
+          <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
+            {visibleTraining.map((training) => (
+              <TacticalTrainingCard
+                key={training.id}
+                training={training}
+                onOpen={openTraining}
+                searchTerm={searchTerm}
+                matchedEnemy={matchedEnemy[training.id]}
+              />
+            ))}
+          </div>
+        )}
       </div>
       <div>
         <div className="text-2xl text-white mb-3">Decisions</div>
@@ -179,7 +215,7 @@ const EnemyList = ({ season }: EnemyListProps) => {
               </li>
             </ul>
             <div>
-              The enemies in the Secret Core are all Originium Creations, and failing to pass the Secret Core will not affect your clear status (still considered a simulation clearance) or the reward amount for garrison certifications (It will affect trophy gain though). If successful, a special completion prompt will appear and be displayed on the checkout screen.
+              The enemies in the Hidden Core are all Originium Creations, and failing to pass the Hidden Core will not affect your clear status (still considered a simulation clearance) or the reward amount for garrison certifications (It will affect trophy gain though). If successful, a special completion prompt will appear and be displayed on the checkout screen.
             </div>
           </div>
         </div>

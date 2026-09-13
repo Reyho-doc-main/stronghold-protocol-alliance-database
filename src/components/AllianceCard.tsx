@@ -12,14 +12,17 @@ import type { OperatorDto } from "../dtos/operator.dto";
 import type { AllianceDto } from "../dtos/alliance.dto";
 import { getBondImage } from "../utils/getImageLink";
 import { ROMAN_NUMERALS, TIER_COLOR } from "../constants/tier";
+import { highlightHtml, highlightPlainText } from "../utils/highlightMatch";
 import OperatorAttributeTooltip from "./OperatorAttributeTooltip";
 
 type AllianceCardProps = {
   alliance: AllianceDto;
   operators: OperatorDto[];
+  searchTerm?: string;
+  matchedOperator?: string;
 };
 
-function AllianceCard({ alliance, operators }: AllianceCardProps) {
+function AllianceCard({ alliance, operators, searchTerm = "", matchedOperator }: AllianceCardProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isPinned, setIsPinned] = useState(false);
   const [selectedOperator, setSelectedOperator] = useState<OperatorDto | null>(null);
@@ -58,7 +61,7 @@ function AllianceCard({ alliance, operators }: AllianceCardProps) {
           >
             <img src={getBondImage(alliance.name)} className="w-12 h-12" />
           </div>
-          {alliance.name.replaceAll("_", " ")}
+          {highlightPlainText(alliance.name.replaceAll("_", " "), searchTerm)}
         </div>
         <div className="flex items-start flex-col">
           <span className="text-sm text-white text-left text-[12px] md:text-[15px]">
@@ -68,9 +71,14 @@ function AllianceCard({ alliance, operators }: AllianceCardProps) {
           <div
             className="text-sm text-white text-left whitespace-pre-wrap text-[12px] md:text-[15px]"
             dangerouslySetInnerHTML={{
-              __html: alliance.desc,
+              __html: highlightHtml(alliance.desc, searchTerm),
             }}
           />
+          {matchedOperator && (
+            <div className="text-[10px] text-gray-400 mt-1">
+              Operator match: {highlightPlainText(matchedOperator, searchTerm)}
+            </div>
+          )}
         </div>
       </div>
       <div className="flex flex-row flex-wrap justify-center">

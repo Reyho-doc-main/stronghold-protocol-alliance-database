@@ -15,9 +15,9 @@ function PhaseGroup({
   if (entries.length === 0) return null;
 
   return (
-    <div className="flex flex-col gap-1">
+    <div className="flex flex-col gap-2">
       <div className="text-[#25be97] font-bold text-sm">{title}</div>
-      <div className="flex flex-col border border-[#3a3a3a]">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
         {entries.map((entry, index) => (
           <DispatchModuleRow key={index} entry={entry} />
         ))}

@@ -10,6 +10,8 @@ import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import type { AllianceDto } from "../dtos/alliance.dto";
 import { getAlliancesBySeason, getOperatorsBySeason } from "../utils/getDataBySeason";
+import { groupOperatorsBySearch } from "../utils/searchOperators";
+import { useSearchHotkey } from "../hooks/useSearchHotkey";
 
 const EXEMPT_FROM_BANS = "Reserve Operator - Supporter";
 
@@ -33,6 +35,7 @@ const AttributeList = ({ season }: AttributeListProps) => {
   const [activeTiers, setActiveTiers] = useState<number[]>([]);
   const [activeEffects, setActiveEffects] = useState<string[]>([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const { inputRef: searchInputRef } = useSearchHotkey(true);
 
   const [showBanSelector, setShowBanSelector] = useState(false);
   const [bannedCore, setBannedCore] = useState<string[]>(() =>
@@ -184,15 +187,16 @@ const AttributeList = ({ season }: AttributeListProps) => {
     setTimeout(() => setShareCopied(false), 2000);
   };
 
-  const filteredList = operatorData.filter(
+  const preSearchList = operatorData.filter(
     (op) =>
       activeCoreAlliances.every((a) => op.alliances.includes(a)) &&
       activeAddAlliances.every((a) => op.alliances.includes(a)) &&
       (activeTiers.length === 0 || activeTiers.includes(op.tier)) &&
-      op.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
       activeEffects.every((e) => getEffectMatchTags(e).some((tag) => op.effects?.includes(tag))) &&
       (!hideBanned || !isOperatorBanned(op)),
   );
+
+  const searchGroups = groupOperatorsBySearch(preSearchList, searchTerm);
 
   return (
     <>
@@ -211,7 +215,7 @@ const AttributeList = ({ season }: AttributeListProps) => {
             activeEffects={activeEffects}
             onToggle={toggleEffect}
           />
-          <SearchInput onSearch={setSearchTerm} placeholder="Search..." />
+          <SearchInput ref={searchInputRef} onSearch={setSearchTerm} placeholder="Search..." />
           <button
             className="h-10 px-3 flex flex-row justify-center items-center gap-2 border-2 rounded-xl border-gray-600 text-sm"
             style={{
@@ -281,16 +285,44 @@ const AttributeList = ({ season }: AttributeListProps) => {
         {displayBannedIcons && <BannedOperatorsPreview operators={bannedOperators} />}
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 mx-6 mb-6 gap-6">
-        {filteredList.map((operator) => (
-          <OperatorCard
-            key={operator.name}
-            operator={operator}
-            isBanned={isOperatorBanned(operator)}
-            onToggleBan={() => toggleManualUnban(operator.name)}
-          />
-        ))}
-      </div>
+      {searchGroups === null && (
+        <div className="grid grid-cols-1 md:grid-cols-3 mx-6 mb-6 gap-6">
+          {preSearchList.map((operator) => (
+            <OperatorCard
+              key={operator.name}
+              operator={operator}
+              isBanned={isOperatorBanned(operator)}
+              onToggleBan={() => toggleManualUnban(operator.name)}
+            />
+          ))}
+        </div>
+      )}
+
+      {searchGroups?.length === 0 && (
+        <p className="text-center text-gray-400 mb-6">No operators match "{searchTerm}".</p>
+      )}
+
+      {searchGroups?.map((group) => (
+        <div key={group.category} className="mx-6 mb-8">
+          <div className="flex flex-row items-center gap-3 mb-3">
+            <h3 className="text-white text-sm font-semibold uppercase tracking-wide">{group.label}</h3>
+            <div className="flex-1 h-px bg-gray-600" />
+            <span className="text-gray-400 text-xs">{group.operators.length}</span>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {group.operators.map((operator) => (
+              <OperatorCard
+                key={operator.name}
+                operator={operator}
+                isBanned={isOperatorBanned(operator)}
+                onToggleBan={() => toggleManualUnban(operator.name)}
+                searchTerm={searchTerm}
+                matchedAlliance={group.matchedAlliance[operator.name]}
+              />
+            ))}
+          </div>
+        </div>
+      ))}
     </>
   );
 };

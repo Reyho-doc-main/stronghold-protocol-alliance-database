@@ -1,15 +1,24 @@
 import type { OperatorDto } from "../dtos/operator.dto";
 import { isRateLimited } from "../utils/rateLimit";
 import { ROMAN_NUMERALS, TIER_COLOR } from "../constants/tier";
+import { highlightHtml, highlightPlainText } from "../utils/highlightMatch";
 import AllianceIconRow from "./AllianceIconRow";
 
 type OperatorCardProps = {
   operator: OperatorDto;
   isBanned?: boolean;
   onToggleBan?: () => void;
+  searchTerm?: string;
+  matchedAlliance?: string;
 };
 
-function OperatorCard({ operator, isBanned = false, onToggleBan }: OperatorCardProps) {
+function OperatorCard({
+  operator,
+  isBanned = false,
+  onToggleBan,
+  searchTerm = "",
+  matchedAlliance,
+}: OperatorCardProps) {
 
   const navigateToTerraWiki = (opName: string) => {
     if (isRateLimited("wiki-link", 500)) return;
@@ -50,7 +59,7 @@ function OperatorCard({ operator, isBanned = false, onToggleBan }: OperatorCardP
             {ROMAN_NUMERALS[operator.tier]}
           </div>
         </button>
-        {operator.name}
+        {highlightPlainText(operator.name, searchTerm)}
         {isBanned && (
           <button
             className="mt-1 px-1.5 py-0.5 rounded-sm bg-red-600 text-white text-[10px] cursor-pointer"
@@ -65,19 +74,24 @@ function OperatorCard({ operator, isBanned = false, onToggleBan }: OperatorCardP
         <div className="pb-1">
           <AllianceIconRow alliances={operator.alliances} />
         </div>
+        {matchedAlliance && (
+          <div className="text-[10px] text-gray-400 mb-1">
+            Alliance match: {highlightPlainText(matchedAlliance, searchTerm)}
+          </div>
+        )}
         <div className="flex flex-row gap-3 text-black text-[10px] md:text-[12px]">
           <div className="px-1.5 mb-1 rounded-sm bg-[#8a8a8a] text-white flex flex-row gap-1 items-center justify-center">
             <img
               src={getAttributeTypeImgLink(operator.attributeType)}
               className="h-4 w-4 object-contain"
             />
-            {operator.attributeType}
+            {highlightPlainText(operator.attributeType, searchTerm)}
           </div>
         </div>
         <div
           className="text-sm text-white text-left whitespace-pre-wrap text-[10px] md:text-[14px]"
           dangerouslySetInnerHTML={{
-            __html: operator.attribute,
+            __html: highlightHtml(operator.attribute, searchTerm),
           }}
         ></div>
       </div>

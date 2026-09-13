@@ -1,11 +1,13 @@
 import type { LeaderDto } from "../dtos/leader.dto";
 import { isRateLimited } from "../utils/rateLimit";
+import { highlightPlainText } from "../utils/highlightMatch";
 
 type LeaderCardProps = {
   leader: LeaderDto;
+  searchTerm?: string;
 };
 
-function LeaderCard({ leader }: LeaderCardProps) {
+function LeaderCard({ leader, searchTerm = "" }: LeaderCardProps) {
   const navigateToTerraWiki = () => {
     if (isRateLimited("wiki-link", 500)) return;
     window.open(leader.wikiLink, "_blank");
@@ -18,7 +20,7 @@ function LeaderCard({ leader }: LeaderCardProps) {
     >
       <img src={`/leadericons/${leader.image}`} className="w-full h-full object-cover" />
       <div className="absolute bottom-0 left-0 w-full bg-[#212121]/70 text-white text-[12px] md:text-[14px] py-1 px-1 text-center">
-        {leader.name}
+        {highlightPlainText(leader.name, searchTerm)}
       </div>
     </button>
   );
