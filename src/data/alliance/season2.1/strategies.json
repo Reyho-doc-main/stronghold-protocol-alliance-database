@@ -82,7 +82,7 @@
       "iconLink": "icon_sciurus",
       "initialHp": 24,
       "effectName": "Snowfield's Gift",
-      "effectDesc": "<span class=\"font-bold\">[Snowfield's Gift]</span> The first <Kjerag> Operator purchased every round costs 1 Funds\n<span class=\"text-red-500\">Strategy may be flawed when some [Kjerag] Operators are missing</span></>"
+      "effectDesc": "<span class=\"font-bold\">[Snowfield's Gift]</span> The first &ltKjerag&gt Operator purchased every round costs 1 Funds\n<span class=\"text-red-500\">Strategy may be flawed when some [Kjerag] Operators are missing</span>"
     },
     {
       "name": "Panganini",
@@ -173,7 +173,7 @@
       "iconLink": "icon_damaztic",
       "initialHp": 29,
       "effectName": "Damazti Isomorphism",
-      "effectDesc": "<span class=\"font-bold\">[Damazti Isomorphism]</span> In Round 5, obtain Damazti Isomorph: When equipped together with certain other equipment, the equipped Operator is treated as a member of a specific Alliance"
+      "effectDesc": "<span class=\"font-bold\">[Damazti Isomorphism]</span> Obtain 1 special equipment Damazti Isomorph every 5 rounds\n<span class='text-gray-500'>&ltDamazti Isomorph&gt When equipped together with certain other equipment, the equipped Operator is treated as a member of a specific Alliance</span>"
     },
     {
       "name": "Pith",

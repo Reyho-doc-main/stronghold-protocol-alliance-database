@@ -68,7 +68,7 @@
       "iconLink": "icon_pepe",
       "initialHp": 23,
       "effectName": "Erudite and Versatile",
-      "effectDesc": "<span class=\"font-bold\">[Erudite and Versatile]</span> When Dispatch Center reaches Lv. 2, 4, and 6, obtain 1 special refresh: this refresh will prioritize offering <Sargon> Operators\n<span class=\"text-red-500\">Strategy may be flawed when some [Sargon] Operators are missing</span></>"
+      "effectDesc": "<span class=\"font-bold\">[Erudite and Versatile]</span> When Dispatch Center reaches Lv. 2, 4, and 6, obtain 1 special refresh: this refresh will prioritize offering &ltSargon&gt Operators\n<span class=\"text-red-500\">Strategy may be flawed when some [Sargon] Operators are missing</span>"
     },
     {
       "name": "Harold",
@@ -82,7 +82,7 @@
       "iconLink": "icon_sciurus",
       "initialHp": 24,
       "effectName": "Snowfield's Gift",
-      "effectDesc": "<span class=\"font-bold\">[Snowfield's Gift]</span> The first <Kjerag> Operator purchased every round costs 1 Funds\n<span class=\"text-red-500\">Strategy may be flawed when some [Kjerag] Operators are missing</span></>"
+      "effectDesc": "<span class=\"font-bold\">[Snowfield's Gift]</span> The first &ltKjerag&gt Operator purchased every round costs 1 Funds\n<span class=\"text-red-500\">Strategy may be flawed when some [Kjerag] Operators are missing</span>"
     },
     {
       "name": "Panganini",

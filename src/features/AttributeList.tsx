@@ -159,9 +159,7 @@ const AttributeList = ({ season }: AttributeListProps) => {
   const clampedBannedCore = bannedCore.slice(0, maxCoreBans);
   const clampedBannedAddon = bannedAddon.slice(0, maxAddonBans);
 
-  const bannedAllianceTags = new Set(
-    [...clampedBannedCore, ...clampedBannedAddon].map((name) => name.replaceAll(" ", "_")),
-  );
+  const bannedAllianceTags = new Set([...clampedBannedCore, ...clampedBannedAddon]);
 
   const isOperatorBanned = (op: OperatorDto) => {
     if (op.name === EXEMPT_FROM_BANS) return false;

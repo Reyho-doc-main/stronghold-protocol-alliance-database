@@ -241,7 +241,7 @@
     {
       "name": "Lappland",
       "attributeType": "Can stack",
-      "attribute": "<When Refreshing the Shop> If this is the first active refresh of the round, <span class='blue'>+3</span>/<span class='green'>+6</span> stacks to active [Siracusa] Alliiance; takes effect even if the Operator is on Bench",
+      "attribute": "&ltWhen Refreshing the Shop&gt If this is the first active refresh of the round, <span class='blue'>+3</span>/<span class='green'>+6</span> stacks to active [Siracusa] Alliiance; takes effect even if the Operator is on Bench",
       "tier": 2,
       "alliances": ["Siracusa"]
     },

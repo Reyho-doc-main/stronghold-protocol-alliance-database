@@ -21,7 +21,7 @@ const AllianceList = ({ season }: AllianceListProps) => {
   const operatorsByAlliance = new Map<string, OperatorDto[]>(
     allianceData.map((alliance) => [
       alliance.bondId,
-      operatorData.filter((op) => op.alliances.includes(alliance.name.replaceAll(" ", "_"))),
+      operatorData.filter((op) => op.alliances.includes(alliance.name)),
     ]),
   );
 

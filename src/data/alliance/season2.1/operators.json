@@ -237,7 +237,7 @@
     {
       "name": "Lappland",
       "attributeType": "Can stack",
-      "attribute": "<On refresh> <span class='blue'>+4</span>/<span class='green'>+8</span> stacks to active [Siracusa] Alliiance on first active refresh; takes effect even if the Operator is on Bench",
+      "attribute": "&ltOn refresh&gt <span class='blue'>+4</span>/<span class='green'>+8</span> stacks to active [Siracusa] Alliiance on first active refresh; takes effect even if the Operator is on Bench",
       "tier": 2,
       "alliances": ["Siracusa"]
     },
