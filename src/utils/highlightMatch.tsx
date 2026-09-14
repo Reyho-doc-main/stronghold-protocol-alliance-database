@@ -9,14 +9,18 @@ export function highlightPlainText(text: string, term: string): ReactNode {
   if (!trimmed) return text;
 
   const parts = text.split(new RegExp(`(${escapeRegExp(trimmed)})`, "gi"));
-  return parts.map((part, index) =>
-    part.toLowerCase() === trimmed.toLowerCase() ? (
-      <mark key={`${index}-${part}`} className={MARK_CLASSES}>
-        {part}
-      </mark>
-    ) : (
-      part
-    ),
+  return (
+    <span>
+      {parts.map((part, index) =>
+        part.toLowerCase() === trimmed.toLowerCase() ? (
+          <mark key={`${index}-${part}`} className={MARK_CLASSES}>
+            {part}
+          </mark>
+        ) : (
+          part
+        ),
+      )}
+    </span>
   );
 }
 
@@ -26,9 +30,11 @@ export function highlightHtml(html: string, term: string): string {
 
   const pattern = new RegExp(`(${escapeRegExp(trimmed)})`, "gi");
   return html
-    .split(/(<[^>]+>)/g)
+    .split(/(<[^>]+>|&(?:lt|gt);?)/gi)
     .map((segment) =>
-      segment.startsWith("<") ? segment : segment.replace(pattern, `<mark class="${MARK_CLASSES}">$1</mark>`),
+      segment.startsWith("<") || segment.startsWith("&")
+        ? segment
+        : segment.replace(pattern, `<mark class="${MARK_CLASSES}">$1</mark>`),
     )
     .join("");
 }
