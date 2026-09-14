@@ -9,7 +9,7 @@
 }
 
 html {
-  scrollbar-width: thin;
+  scrollbar-width: auto;
   scrollbar-color: #4b5563 transparent;
 }
 

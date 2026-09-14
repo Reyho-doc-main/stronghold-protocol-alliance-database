@@ -1,259 +1,118 @@
 import type { TrophyDto } from "../dtos/trophy.dto";
+import type { OperatorDto } from "../dtos/operator.dto";
+import type { AllianceDto } from "../dtos/alliance.dto";
+import type { ShopItemDto } from "../dtos/shopItem.dto";
+import type { StrategyDto } from "../dtos/strategy.dto";
+import type { LeaderDto } from "../dtos/leader.dto";
+import type { TacticalTrainingDto } from "../dtos/tacticalTraining.dto";
+import type { DecisionDto } from "../dtos/decision.dto";
+import type { AdvancedCalculationsDto } from "../dtos/calculation.dto";
+import type { HiddenCoreRoundDto } from "../dtos/hiddenCore.dto";
+import type { MapDto } from "../dtos/map.dto";
 import type { DispatchModuleSectionDto } from "../dtos/dispatchModule.dto";
 
-import { operators as allianceSeason1operators } from "../data/alliance/season1/operators.json";
-import { operators as allianceSeason2operators } from "../data/alliance/season2/operators.json";
-import { operators as allianceSeason21operators } from "../data/alliance/season2.1/operators.json";
+import { operators as season1Operators } from "../data/alliance/season1/operators.json";
+import { operators as season2Operators } from "../data/alliance/season2/operators.json";
+import { operators as season21Operators } from "../data/alliance/season2.1/operators.json";
+
+import { bondInfo as season1Bonds } from "../data/alliance/season1/alliances.json";
+import { bondInfo as season2Bonds } from "../data/alliance/season2/alliances.json";
+import { bondInfo as season21Bonds } from "../data/alliance/season2.1/alliances.json";
+
+import { shopitems as season1Items } from "../data/alliance/season1/items.json";
+import { shopitems as season2Items } from "../data/alliance/season2/items.json";
+import { shopitems as season21Items } from "../data/alliance/season2.1/items.json";
+
+import { bandInfo as season1Bands } from "../data/alliance/season1/strategies.json";
+import { bandInfo as season2Bands } from "../data/alliance/season2/strategies.json";
+import { bandInfo as season21Bands } from "../data/alliance/season2.1/strategies.json";
+
+import { leaders as season1Leaders } from "../data/alliance/season1/leaders.json";
+import { leaders as season2Leaders } from "../data/alliance/season2/leaders.json";
+import { leaders as season21Leaders } from "../data/alliance/season2.1/leaders.json";
+
+import { tacticalTraining as season1TacticalTraining } from "../data/alliance/season1/tacticalTraining.json";
+import { tacticalTraining as season2TacticalTraining } from "../data/alliance/season2/tacticalTraining.json";
+import { tacticalTraining as season21TacticalTraining } from "../data/alliance/season2.1/tacticalTraining.json";
+
+import { bountyDecisions as season1BountyDecisions } from "../data/alliance/season1/bountyDecisions.json";
+import { bountyDecisions as season2BountyDecisions } from "../data/alliance/season2/bountyDecisions.json";
+import { bountyDecisions as season21BountyDecisions } from "../data/alliance/season2.1/bountyDecisions.json";
+
+import { tacticalDecisions as season1TacticalDecisions } from "../data/alliance/season1/tacticalDecisions.json";
+import { tacticalDecisions as season2TacticalDecisions } from "../data/alliance/season2/tacticalDecisions.json";
+import { tacticalDecisions as season21TacticalDecisions } from "../data/alliance/season2.1/tacticalDecisions.json";
+
+import { advancedCalculations as season1AdvancedCalculations } from "../data/alliance/season1/advancedCalculations.json";
+import { advancedCalculations as season2AdvancedCalculations } from "../data/alliance/season2/advancedCalculations.json";
+import { advancedCalculations as season21AdvancedCalculations } from "../data/alliance/season2.1/advancedCalculations.json";
+
+import { trophies as season1Trophies } from "../data/alliance/season1/trophies.json";
+import { trophies as season2Trophies } from "../data/alliance/season2/trophies.json";
+import { trophies as season21Trophies } from "../data/alliance/season2.1/trophies.json";
+
+import { hiddenCore as season1HiddenCore } from "../data/alliance/season1/hiddenCore.json";
+import { hiddenCore as season2HiddenCore } from "../data/alliance/season2/hiddenCore.json";
+import { hiddenCore as season21HiddenCore } from "../data/alliance/season2.1/hiddenCore.json";
+
+import { maps as season1Maps } from "../data/alliance/season1/maps.json";
+import { maps as season2Maps } from "../data/alliance/season2/maps.json";
+import { maps as season21Maps } from "../data/alliance/season2.1/maps.json";
 
 import dispatchModuleSeason21 from "../data/alliance/season2.1/dispatchModule.json";
 
-import { bondInfo as allianceSeason1bonds } from "../data/alliance/season1/alliances.json";
-import { bondInfo as allianceSeason2bonds } from "../data/alliance/season2/alliances.json";
-import { bondInfo as allianceSeason21bonds } from "../data/alliance/season2.1/alliances.json";
+type Season = "1" | "2" | "2.1";
 
-import { shopitems as allianceSeason1items } from "../data/alliance/season1/items.json";
-import { shopitems as allianceSeason2items } from "../data/alliance/season2/items.json";
-import { shopitems as allianceSeason21items } from "../data/alliance/season2.1/items.json";
-
-import { bandInfo as allianceSeason1bands } from "../data/alliance/season1/strategies.json";
-import { bandInfo as allianceSeason2bands } from "../data/alliance/season2/strategies.json";
-import { bandInfo as allianceSeason21bands } from "../data/alliance/season2.1/strategies.json";
-
-import { leaders as allianceSeason1leaders } from "../data/alliance/season1/leaders.json";
-import { leaders as allianceSeason2leaders } from "../data/alliance/season2/leaders.json";
-import { leaders as allianceSeason21leaders } from "../data/alliance/season2.1/leaders.json";
-
-import { tacticalTraining as allianceSeason1tacticalTraining } from "../data/alliance/season1/tacticalTraining.json";
-import { tacticalTraining as allianceSeason2tacticalTraining } from "../data/alliance/season2/tacticalTraining.json";
-import { tacticalTraining as allianceSeason21tacticalTraining } from "../data/alliance/season2.1/tacticalTraining.json";
-
-import { bountyDecisions as allianceSeason1bountyDecisions } from "../data/alliance/season1/bountyDecisions.json";
-import { bountyDecisions as allianceSeason2bountyDecisions } from "../data/alliance/season2/bountyDecisions.json";
-import { bountyDecisions as allianceSeason21bountyDecisions } from "../data/alliance/season2.1/bountyDecisions.json";
-
-import { tacticalDecisions as allianceSeason1tacticalDecisions } from "../data/alliance/season1/tacticalDecisions.json";
-import { tacticalDecisions as allianceSeason2tacticalDecisions } from "../data/alliance/season2/tacticalDecisions.json";
-import { tacticalDecisions as allianceSeason21tacticalDecisions } from "../data/alliance/season2.1/tacticalDecisions.json";
-
-import { advancedCalculations as allianceSeason1advancedCalculations } from "../data/alliance/season1/advancedCalculations.json";
-import { advancedCalculations as allianceSeason2advancedCalculations } from "../data/alliance/season2/advancedCalculations.json";
-import { advancedCalculations as allianceSeason21advancedCalculations } from "../data/alliance/season2.1/advancedCalculations.json";
-
-import { trophies as allianceSeason1trophies } from "../data/alliance/season1/trophies.json";
-import { trophies as allianceSeason2trophies } from "../data/alliance/season2/trophies.json";
-import { trophies as allianceSeason21trophies } from "../data/alliance/season2.1/trophies.json";
-
-import { hiddenCore as allianceSeason1hiddenCore } from "../data/alliance/season1/hiddenCore.json";
-import { hiddenCore as allianceSeason2hiddenCore } from "../data/alliance/season2/hiddenCore.json";
-import { hiddenCore as allianceSeason21hiddenCore } from "../data/alliance/season2.1/hiddenCore.json";
-
-import { maps as allianceSeason1maps } from "../data/alliance/season1/maps.json";
-import { maps as allianceSeason2maps } from "../data/alliance/season2/maps.json";
-import { maps as allianceSeason21maps } from "../data/alliance/season2.1/maps.json";
-
-export function getOperatorsBySeason(season: string) {
-  switch (season) {
-    case "1": {
-      return allianceSeason1operators;
-    }
-    case "2": {
-      return allianceSeason2operators;
-    }
-    case "2.1": {
-      return allianceSeason21operators;
-    }
-    default: {
-      return allianceSeason21operators;
-    }
-  }
+function bySeason<T>(data: Record<Season, T>, season: string): T {
+  return data[season as Season] ?? data["2.1"];
 }
 
-export function getAlliancesBySeason(season: string) {
-  switch (season) {
-    case "1": {
-      return allianceSeason1bonds;
-    }
-    case "2": {
-      return allianceSeason2bonds;
-    }
-    case "2.1": {
-      return allianceSeason21bonds;
-    }
-    default: {
-      return allianceSeason21bonds;
-    }
-  }
-}
+const operatorsBySeason = { "1": season1Operators, "2": season2Operators, "2.1": season21Operators };
+const alliancesBySeason = { "1": season1Bonds, "2": season2Bonds, "2.1": season21Bonds };
+const itemsBySeason = { "1": season1Items, "2": season2Items, "2.1": season21Items };
+const strategiesBySeason = { "1": season1Bands, "2": season2Bands, "2.1": season21Bands };
+const leadersBySeason = { "1": season1Leaders, "2": season2Leaders, "2.1": season21Leaders };
+const tacticalTrainingBySeason = {
+  "1": season1TacticalTraining,
+  "2": season2TacticalTraining,
+  "2.1": season21TacticalTraining,
+};
+const bountyDecisionsBySeason = {
+  "1": season1BountyDecisions,
+  "2": season2BountyDecisions,
+  "2.1": season21BountyDecisions,
+};
+const tacticalDecisionsBySeason = {
+  "1": season1TacticalDecisions,
+  "2": season2TacticalDecisions,
+  "2.1": season21TacticalDecisions,
+};
+const advancedCalculationsBySeason = {
+  "1": season1AdvancedCalculations,
+  "2": season2AdvancedCalculations,
+  "2.1": season21AdvancedCalculations,
+};
+const trophiesBySeason = { "1": season1Trophies, "2": season2Trophies, "2.1": season21Trophies };
+const hiddenCoreBySeason = { "1": season1HiddenCore, "2": season2HiddenCore, "2.1": season21HiddenCore };
+const mapsBySeason: Record<Season, MapDto[]> = { "1": season1Maps, "2": season2Maps, "2.1": season21Maps };
 
-export function getItemsBySeason(season: string) {
-  switch (season) {
-    case "1": {
-      return allianceSeason1items;
-    }
-    case "2": {
-      return allianceSeason2items;
-    }
-    case "2.1": {
-      return allianceSeason21items;
-    }
-    default: {
-      return allianceSeason21items;
-    }
-  }
-}
-
-export function getStrategiesBySeason(season: string) {
-  switch (season) {
-    case "1": {
-      return allianceSeason1bands;
-    }
-    case "2": {
-      return allianceSeason2bands;
-    }
-    case "2.1": {
-      return allianceSeason21bands;
-    }
-    default: {
-      return allianceSeason21bands;
-    }
-  }
-}
-
-export function getLeadersBySeason(season: string) {
-  switch (season) {
-    case "1": {
-      return allianceSeason1leaders;
-    }
-    case "2": {
-      return allianceSeason2leaders;
-    }
-    case "2.1": {
-      return allianceSeason21leaders;
-    }
-    default: {
-      return allianceSeason21leaders;
-    }
-  }
-}
-
-export function getTacticalTrainingBySeason(season: string) {
-  switch (season) {
-    case "1": {
-      return allianceSeason1tacticalTraining;
-    }
-    case "2": {
-      return allianceSeason2tacticalTraining;
-    }
-    case "2.1": {
-      return allianceSeason21tacticalTraining;
-    }
-    default: {
-      return allianceSeason21tacticalTraining;
-    }
-  }
-}
-
-export function getBountyDecisionsBySeason(season: string) {
-  switch (season) {
-    case "1": {
-      return allianceSeason1bountyDecisions;
-    }
-    case "2": {
-      return allianceSeason2bountyDecisions;
-    }
-    case "2.1": {
-      return allianceSeason21bountyDecisions;
-    }
-    default: {
-      return allianceSeason21bountyDecisions;
-    }
-  }
-}
-
-export function getTacticalDecisionsBySeason(season: string) {
-  switch (season) {
-    case "1": {
-      return allianceSeason1tacticalDecisions;
-    }
-    case "2": {
-      return allianceSeason2tacticalDecisions;
-    }
-    case "2.1": {
-      return allianceSeason21tacticalDecisions;
-    }
-    default: {
-      return allianceSeason21tacticalDecisions;
-    }
-  }
-}
-
-export function getAdvancedCalculationsBySeason(season: string) {
-  switch (season) {
-    case "1": {
-      return allianceSeason1advancedCalculations;
-    }
-    case "2": {
-      return allianceSeason2advancedCalculations;
-    }
-    case "2.1": {
-      return allianceSeason21advancedCalculations;
-    }
-    default: {
-      return allianceSeason21advancedCalculations;
-    }
-  }
-}
-
-export function getTrophiesBySeason(season: string): TrophyDto[] {
-  switch (season) {
-    case "1": {
-      return allianceSeason1trophies;
-    }
-    case "2": {
-      return allianceSeason2trophies;
-    }
-    case "2.1": {
-      return allianceSeason21trophies;
-    }
-    default: {
-      return allianceSeason21trophies;
-    }
-  }
-}
-
-export function getHiddenCoreBySeason(season: string) {
-  switch (season) {
-    case "1": {
-      return allianceSeason1hiddenCore;
-    }
-    case "2": {
-      return allianceSeason2hiddenCore;
-    }
-    case "2.1": {
-      return allianceSeason21hiddenCore;
-    }
-    default: {
-      return allianceSeason21hiddenCore;
-    }
-  }
-}
-
-export function getMapsBySeason(season: string) {
-  switch (season) {
-    case "1": {
-      return allianceSeason1maps;
-    }
-    case "2": {
-      return allianceSeason2maps;
-    }
-    case "2.1": {
-      return allianceSeason21maps;
-    }
-    default: {
-      return allianceSeason21maps;
-    }
-  }
-}
+export const getOperatorsBySeason = (season: string): OperatorDto[] =>
+  bySeason(operatorsBySeason, season) as OperatorDto[];
+export const getAlliancesBySeason = (season: string): AllianceDto[] => bySeason(alliancesBySeason, season);
+export const getItemsBySeason = (season: string): ShopItemDto[] => bySeason(itemsBySeason, season);
+export const getStrategiesBySeason = (season: string): StrategyDto[] => bySeason(strategiesBySeason, season);
+export const getLeadersBySeason = (season: string): LeaderDto[] => bySeason(leadersBySeason, season);
+export const getTacticalTrainingBySeason = (season: string): TacticalTrainingDto[] =>
+  bySeason(tacticalTrainingBySeason, season);
+export const getBountyDecisionsBySeason = (season: string): DecisionDto[] =>
+  bySeason(bountyDecisionsBySeason, season);
+export const getTacticalDecisionsBySeason = (season: string): DecisionDto[] =>
+  bySeason(tacticalDecisionsBySeason, season);
+export const getAdvancedCalculationsBySeason = (season: string): AdvancedCalculationsDto =>
+  bySeason(advancedCalculationsBySeason, season);
+export const getTrophiesBySeason = (season: string): TrophyDto[] => bySeason(trophiesBySeason, season);
+export const getHiddenCoreBySeason = (season: string): HiddenCoreRoundDto[] => bySeason(hiddenCoreBySeason, season);
+export const getMapsBySeason = (season: string): MapDto[] => bySeason(mapsBySeason, season);
 
 export function getDispatchModuleBySeason(season: string): DispatchModuleSectionDto | null {
   if (season === "2.1") return dispatchModuleSeason21 as DispatchModuleSectionDto;

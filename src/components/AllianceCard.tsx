@@ -66,7 +66,7 @@ function AllianceCard({ alliance, operators, searchTerm = "", matchedOperator }:
         <div className="flex items-start flex-col">
           <span className="text-sm text-white text-left text-[12px] md:text-[15px]">
             Requires <span className="green">{alliance.activeCount}</span>{" "}
-            {alliance.activeCount == 1 ? "Operator" : "Operators"} to activate
+            {alliance.activeCount === 1 ? "Operator" : "Operators"} to activate
           </span>
           <div
             className="text-sm text-white text-left whitespace-pre-wrap text-[12px] md:text-[15px]"
