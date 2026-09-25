@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, Link } from "react-router-dom";
 import { AiOutlineSearch } from "react-icons/ai";
 import type { OperatorDto } from "../dtos/operator.dto";
 import type { DispatchEntity, DispatchModuleEntryDto } from "../dtos/dispatchModule.dto";
@@ -54,7 +54,7 @@ function mergeSourcesByAlliances(rawSources: DispatchSource[]): DispatchSource[]
     const key = allianceSetKey(source.equippingAlliances);
     const existing = merged.get(key);
     if (existing) existing.entities.push(...source.entities);
-    else merged.set(key, { ...source, entities: [...source.entities] });
+    else merged.set(key, { ...source, key: `pool:${key}`, entities: [...source.entities] });
   }
   return [...merged.values()];
 }
@@ -213,13 +213,15 @@ function DispatchCalculator() {
   };
 
   const hasExplicitTargets = targetOperators.length > 0 || targetAlliances.length > 0;
-
-  const isTargetOperator = (op: OperatorDto) =>
-    !hasExplicitTargets ||
-    curatedImportant.includes(op.name) ||
-    selectedOperators.includes(op.name) ||
-    targetOperators.includes(op.name) ||
-    op.alliances.some((a) => targetAlliances.includes(a));
+  const isTargetOperator = (op: OperatorDto) => {
+    if (hasExplicitTargets) {
+      return (
+        targetOperators.includes(op.name) || 
+        op.alliances.some((a) => targetAlliances.includes(a))
+      );
+    }
+    return curatedImportant.includes(op.name);
+  };
   const maxEquipTier = selectedTier !== null ? selectedTier + 1 : null;
 
   const operatorSources: DispatchSource[] = selectedOperators
@@ -239,7 +241,6 @@ function DispatchCalculator() {
       ? []
       : operatorData.filter(
           (op) =>
-            !selectedOperators.includes(op.name) &&
             !bannedOperatorNames.has(op.name) &&
             op.tier <= maxEquipTier &&
             op.alliances.some((a) => selectedAlliances.includes(a)),
@@ -329,8 +330,8 @@ function DispatchCalculator() {
   return (
     <div className="min-h-screen bg-[#212121]">
       <div className="w-full h-[10vh] max-h-14 bg-[#212121] fixed top-0 z-50 flex items-center justify-between gap-2 px-4">
-        <a
-          href={`/?season=${season}`}
+        <Link
+          to={`/?season=${season}`}
           className="flex flex-row items-baseline gap-2 min-w-0 shrink whitespace-nowrap overflow-hidden"
         >
           <span className="text-white text-lg md:text-2xl hover:underline truncate">
@@ -340,7 +341,7 @@ function DispatchCalculator() {
           <span className="text-white text-[10px] md:text-xs hidden sm:inline">
             by Reyho + Silverglow (OG creator)
           </span>
-        </a>
+        </Link>
 
         <div className="flex items-center gap-2 shrink-0">
           <span className="text-white text-[10px] md:text-sm text-right">
@@ -541,6 +542,22 @@ function DispatchCalculator() {
           </>
         )}
       </div>
+      {helpOpen && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm px-4">
+          <div className="bg-[#2b2b2b] border-2 border-gray-600 p-6 rounded-xl text-white max-w-sm w-full text-center shadow-xl">
+            <h2 className="text-xl font-bold mb-2">Help</h2>
+            <p className="text-[#888888] mb-6">
+              Sorry, this page is temporarily not available.
+            </p>
+            <button 
+              onClick={() => setHelpOpen(false)} 
+              className="bg-[#25be97] text-black font-semibold my-3 py-2 px-4 rounded-lg border-gray-600 hover:bg-[#1da582] transition-colors"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
