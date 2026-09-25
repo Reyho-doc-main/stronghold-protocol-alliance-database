@@ -18,7 +18,7 @@ function AllianceButton(props: AllianceButtonProps) {
   } = props;
   return (
     <button
-      title={isImplied ? `${allianceName} is included because you selected` : undefined}
+      title={isImplied ? `${allianceName}` : undefined}
       className="
         flex flex-row justify-start items-center w-24 md:w-30
         gap-1 md:gap-3 px-2 py-1 md:px-3 md:py-1.5 shrink-0

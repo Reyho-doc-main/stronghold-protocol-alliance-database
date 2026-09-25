@@ -31,7 +31,7 @@ export default function Home() {
       <div className="text-lg md:text-xl">
         What's new:
         <ul>
-          <li>* Fixed some useEffect bugs, and added a dispatch module calculator (currently the features are quite incomplete) </li>
+          <li>* Fixed some useEffect bugs, and added a dispatch module calculator (currently the features are quite incomplete, do note the help button does nothing. Haven't had time to add that in.) </li>
           <li>* Corrected some typos and incorrect info</li>
         </ul>
       </div>

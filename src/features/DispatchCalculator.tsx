@@ -144,6 +144,7 @@ function SearchField({
 
 function DispatchCalculator() {
   const [searchParams] = useSearchParams();
+  const [helpOpen, setHelpOpen] = useState(false);
   const [selectedTier, setSelectedTier] = useState<number | null>(null);
   const [selectedAlliances, setSelectedAlliances] = useState<string[]>([]);
   const [selectedOperators, setSelectedOperators] = useState<string[]>([]);
@@ -332,10 +333,28 @@ function DispatchCalculator() {
           href={`/?season=${season}`}
           className="flex flex-row items-baseline gap-2 min-w-0 shrink whitespace-nowrap overflow-hidden"
         >
-          <span className="text-white text-lg md:text-2xl hover:underline truncate">SPA Database</span>
-          <span className="text-white text-[10px] md:text-xs hidden sm:inline">by Reyho + Silverglow (OG creator)</span>
+          <span className="text-white text-lg md:text-2xl hover:underline truncate">
+            SPA Database
+          </span>
+
+          <span className="text-white text-[10px] md:text-xs hidden sm:inline">
+            by Reyho + Silverglow (OG creator)
+          </span>
         </a>
-        <span className="text-white text-[10px] md:text-sm shrink-0 text-right">Dispatch Guarantee Calculator</span>
+
+        <div className="flex items-center gap-2 shrink-0">
+          <span className="text-white text-[10px] md:text-sm text-right">
+            Dispatch Guarantee Calculator
+          </span>
+
+        <button
+          type="button"
+          onClick={() => setHelpOpen(true)}
+          className="h-full px-4 flex items-center text-white text-sm hover:text-[#25be97] transition-colors cursor-pointer"
+        >
+          Help
+        </button>
+        </div>
       </div>
 
       <div className="w-full flex flex-col mt-14 px-4 md:px-6 py-6 gap-4 text-left">
