@@ -61,6 +61,10 @@ import { maps as season21Maps } from "../data/alliance/season2.1/maps.json";
 
 import dispatchModuleSeason21 from "../data/alliance/season2.1/dispatchModule.json";
 
+import { importantOperators as season1Important } from "../data/alliance/season1/importantOperators.json";
+import { importantOperators as season2Important } from "../data/alliance/season2/importantOperators.json";
+import { importantOperators as season21Important } from "../data/alliance/season2.1/importantOperators.json";
+
 type Season = "1" | "2" | "2.1";
 
 function bySeason<T>(data: Record<Season, T>, season: string): T {
@@ -95,6 +99,7 @@ const advancedCalculationsBySeason = {
 const trophiesBySeason = { "1": season1Trophies, "2": season2Trophies, "2.1": season21Trophies };
 const hiddenCoreBySeason = { "1": season1HiddenCore, "2": season2HiddenCore, "2.1": season21HiddenCore };
 const mapsBySeason: Record<Season, MapDto[]> = { "1": season1Maps, "2": season2Maps, "2.1": season21Maps };
+const importantOperatorsBySeason = { "1": season1Important, "2": season2Important, "2.1": season21Important };
 
 export const getOperatorsBySeason = (season: string): OperatorDto[] =>
   bySeason(operatorsBySeason, season) as OperatorDto[];
@@ -113,6 +118,7 @@ export const getAdvancedCalculationsBySeason = (season: string): AdvancedCalcula
 export const getTrophiesBySeason = (season: string): TrophyDto[] => bySeason(trophiesBySeason, season);
 export const getHiddenCoreBySeason = (season: string): HiddenCoreRoundDto[] => bySeason(hiddenCoreBySeason, season);
 export const getMapsBySeason = (season: string): MapDto[] => bySeason(mapsBySeason, season);
+export const getImportantOperatorsBySeason = (season: string): string[] => bySeason(importantOperatorsBySeason, season);
 
 export function getDispatchModuleBySeason(season: string): DispatchModuleSectionDto | null {
   if (season === "2.1") return dispatchModuleSeason21 as DispatchModuleSectionDto;

@@ -12,8 +12,7 @@ import type { AllianceDto } from "../dtos/alliance.dto";
 import { getAlliancesBySeason, getOperatorsBySeason } from "../utils/getDataBySeason";
 import { groupOperatorsBySearch } from "../utils/searchOperators";
 import { useSearchHotkey } from "../hooks/useSearchHotkey";
-
-const EXEMPT_FROM_BANS = "Reserve Operator - Supporter";
+import { getMaxBanCounts, getBannedAllianceTags, isOperatorBanned as checkOperatorBanned } from "../utils/banLogic";
 
 type AttributeListProps = {
   season: string;
@@ -153,20 +152,15 @@ const AttributeList = ({ season }: AttributeListProps) => {
     return option ? [option.value, ...(option.children?.map((c) => c.value) ?? [])] : [value];
   };
 
-  const maxCoreBans = season === "1" ? 2 : 3;
-  const maxAddonBans = season === "1" ? 2 : 4;
+  const { core: maxCoreBans, addon: maxAddonBans } = getMaxBanCounts(season);
 
   const clampedBannedCore = bannedCore.slice(0, maxCoreBans);
   const clampedBannedAddon = bannedAddon.slice(0, maxAddonBans);
 
-  const bannedAllianceTags = new Set([...clampedBannedCore, ...clampedBannedAddon]);
+  const bannedAllianceTags = getBannedAllianceTags(bannedCore, bannedAddon, season);
 
-  const isOperatorBanned = (op: OperatorDto) => {
-    if (op.name === EXEMPT_FROM_BANS) return false;
-    if (manuallyUnbanned.includes(op.name)) return false;
-    if (op.alliances.length === 0) return false;
-    return op.alliances.every((tag) => bannedAllianceTags.has(tag));
-  };
+  const isOperatorBanned = (op: OperatorDto) =>
+    checkOperatorBanned(op, bannedAllianceTags, manuallyUnbanned);
 
   const bannedOperators = operatorData.filter(isOperatorBanned);
   const activeBanCount = clampedBannedCore.length + clampedBannedAddon.length;

@@ -1,5 +1,6 @@
 import type { DispatchModuleSectionDto } from "../dtos/dispatchModule.dto";
 import DispatchModuleRow from "./DispatchModuleRow";
+import DispatchCalculatorLink from "./DispatchCalculatorLink";
 
 type DispatchModuleSectionProps = {
   data: DispatchModuleSectionDto;
@@ -29,6 +30,9 @@ function PhaseGroup({
 function DispatchModuleSection({ data }: DispatchModuleSectionProps) {
   return (
     <div className="flex flex-col gap-4">
+      <div className="flex justify-end">
+        <DispatchCalculatorLink />
+      </div>
       <PhaseGroup title="Early game" entries={data.early} />
       <PhaseGroup title="If you have no choice" entries={data.noChoice} />
       <PhaseGroup title="Mid/late game" entries={data.midLate} />

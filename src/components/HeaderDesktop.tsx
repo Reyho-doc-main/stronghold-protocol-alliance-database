@@ -22,7 +22,12 @@ const HeaderDesktop = (props: HeaderProps) => {
       <div className="flex flex-row gap-5 h-full">
         {currentPage !== "Home" && (
           <div className="flex justify-center items-center shrink-0">
-            <Select options={SEASON_OPTIONS} value={currentSeason} onChange={switchSeason} />
+            <Select
+              options={SEASON_OPTIONS}
+              value={currentSeason}
+              onChange={switchSeason}
+              className="max-w-[225px]"
+            />
           </div>
         )}
         <div className="flex flex-row gap-5 h-full overflow-x-auto">

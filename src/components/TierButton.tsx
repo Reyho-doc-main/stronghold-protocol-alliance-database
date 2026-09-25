@@ -1,16 +1,9 @@
+import { ROMAN_NUMERALS } from "../constants/tier";
+
 type TierButtonProps = {
   tier: number;
   isActive?: boolean;
   onClick?: () => void;
-};
-
-const ROMAN_NUMERALS: Record<number, string> = {
-  1: "I",
-  2: "II",
-  3: "III",
-  4: "IV",
-  5: "V",
-  6: "VI",
 };
 
 function TierButton(props: TierButtonProps) {

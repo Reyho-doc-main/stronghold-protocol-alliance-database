@@ -19,7 +19,7 @@ function LeaderCard({ leader, searchTerm = "" }: LeaderCardProps) {
       className="relative w-full aspect-square border-3 border-[#25be97] overflow-hidden cursor-pointer hover:-translate-y-1 transition-transform duration-300"
     >
       <img src={`/leadericons/${leader.image}`} className="w-full h-full object-cover" />
-      <div className="absolute bottom-0 left-0 w-full bg-[#212121]/70 text-white text-[12px] md:text-[14px] py-1 px-1 text-center">
+      <div className="absolute bottom-0 left-0 w-full bg-[#212121]/70 text-white text-[12px] md:text-[14px] py-1 px-1 text-center break-words">
         {highlightPlainText(leader.name, searchTerm)}
       </div>
     </button>

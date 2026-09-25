@@ -132,7 +132,7 @@ const ShopItemList = ({ season }: ShopItemListProps) => {
       </div>
 
       {searchGroups === null && (
-        <div className="grid grid-cols md:grid-cols-3 mx-6 mb-6 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 mx-6 mb-6 gap-6">
           {items.map((item) => (
             <ShopItemEntry key={item.itemName} item={item} searchTerm="" />
           ))}
@@ -150,7 +150,7 @@ const ShopItemList = ({ season }: ShopItemListProps) => {
             <div className="flex-1 h-px bg-gray-600" />
             <span className="text-gray-400 text-xs">{group.items.length}</span>
           </div>
-          <div className="grid grid-cols md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {group.items.map((item) => (
               <ShopItemEntry key={item.itemName} item={item} searchTerm={searchTerm} />
             ))}

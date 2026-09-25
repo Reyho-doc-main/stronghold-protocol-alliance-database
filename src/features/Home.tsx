@@ -31,8 +31,8 @@ export default function Home() {
       <div className="text-lg md:text-xl">
         What's new:
         <ul>
-          <li>* Added a new way to filter through bans (there is a checkbox to not reveal banned ops if you prefer).</li>
-          <li>* Corrected some typos, added new ways to search (which will hopefully make things better). Still have to download a lot of stuff and add a lot of CN stuff to database, will be done at a later time.</li>
+          <li>* Fixed some useEffect bugs, and added a dispatch module calculator (currently the features are quite incomplete) </li>
+          <li>* Corrected some typos and incorrect info</li>
         </ul>
       </div>
     </div>

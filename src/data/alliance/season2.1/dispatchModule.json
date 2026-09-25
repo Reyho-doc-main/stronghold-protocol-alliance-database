@@ -20,7 +20,7 @@
         { "type": "operator", "name": "Ayerscarpe" },
         { "type": "operator", "name": "Swire the Elegant Wit" }
       ],
-      "odds": "3 in 10",
+      "odds": "3 in 9",
       "note": "Combined pool of Greyy's and Leizi's dispatch options"
     },
     {
@@ -80,7 +80,7 @@
         { "type": "operator", "name": "Warfarin" }
       ],
       "targets": [{ "type": "alliance", "name": "Marvel" }],
-      "note": "Kazemaru is no longer guaranteed at this stage"
+      "note": "Kazemaru is no longer guaranteed at dispatch center lvl 4"
     },
     {
       "sources": [{ "type": "operator", "name": "Civilight Eterna" }],

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import LeaderCard from "../components/LeaderCard";
 import TacticalTrainingCard from "../components/TacticalTrainingCard";
 import DecisionCategoryButton from "../components/DecisionCategoryButton";
@@ -9,6 +9,7 @@ import TrophyCard from "../components/TrophyCard";
 import HiddenCoreTable from "../components/HiddenCoreTable";
 import MapCard from "../components/MapCard";
 import DispatchModuleSection from "../components/DispatchModuleSection";
+import DispatchCalculatorLink from "../components/DispatchCalculatorLink";
 import {
   getLeadersBySeason,
   getTacticalTrainingBySeason,
@@ -21,7 +22,7 @@ import {
   getDispatchModuleBySeason
 } from "../utils/getDataBySeason";
 import { isRateLimited } from "../utils/rateLimit";
-import { filterAdvancedTabData } from "../utils/searchEnemyList";
+import { filterAdvancedTabData, filterTrainingEnemies, filterDecisions } from "../utils/searchEnemyList";
 import { useSearchHotkey } from "../hooks/useSearchHotkey";
 import SearchInput from "../components/SearchInput";
 
@@ -47,6 +48,10 @@ const EnemyList = ({ season }: EnemyListProps) => {
   const maps = getMapsBySeason(season);
   const dispatchModule = getDispatchModuleBySeason(season);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [trainingId, decisionCategory]);
+
   const openTraining = (id: string) => setTrainingId(id);
 
   const closeTraining = () => setTrainingId(null);
@@ -70,14 +75,28 @@ const EnemyList = ({ season }: EnemyListProps) => {
   const isSearching = searchTerm.trim().length > 0;
 
   if (activeTraining) {
+    const visibleEnemies = filterTrainingEnemies(activeTraining.enemies, searchTerm);
     return (
       <div className="flex flex-col mx-6 mb-6 gap-3">
         <button className="text-white text-left w-fit cursor-pointer" onClick={closeTraining}>
           {"< Back"}
         </button>
         <div className="text-2xl text-white">{activeTraining.name}</div>
+        {isSearchVisible && (
+          <div className="flex justify-center">
+            <SearchInput
+              ref={searchInputRef}
+              onSearch={setSearchTerm}
+              onClose={hideSearch}
+              placeholder="Search enemies..."
+            />
+          </div>
+        )}
+        {isSearching && visibleEnemies.length === 0 && (
+          <div className="text-[#888888] text-sm">No enemies match "{searchTerm}".</div>
+        )}
         <div className="grid grid-cols-[repeat(auto-fill,minmax(90px,1fr))] sm:grid-cols-[repeat(auto-fill,minmax(120px,1fr))] lg:grid-cols-[repeat(auto-fill,minmax(150px,1fr))] gap-3">
-          {activeTraining.enemies.map((enemy) => (
+          {visibleEnemies.map((enemy) => (
             <button
               key={enemy.name}
               onClick={() => navigateToTerraWiki(enemy.wikiLink)}
@@ -99,6 +118,7 @@ const EnemyList = ({ season }: EnemyListProps) => {
   if (decisionCategory) {
     const decisions = decisionCategory === "bounty" ? bountyDecisions : tacticalDecisions;
     const title = decisionCategory === "bounty" ? "Bounty Decisions" : "Tactical Decisions";
+    const visibleDecisions = filterDecisions(decisions, searchTerm);
 
     return (
       <div className="flex flex-col mx-6 mb-6 gap-3">
@@ -106,9 +126,22 @@ const EnemyList = ({ season }: EnemyListProps) => {
           {"< Back"}
         </button>
         <div className="text-2xl text-white">{title}</div>
+        {isSearchVisible && (
+          <div className="flex justify-center">
+            <SearchInput
+              ref={searchInputRef}
+              onSearch={setSearchTerm}
+              onClose={hideSearch}
+              placeholder="Search decisions..."
+            />
+          </div>
+        )}
         <div className="flex flex-col gap-3">
           {decisions.length === 0 && <div className="text-[#888888] text-sm">No decisions added yet.</div>}
-          {decisions.map((decision, index) => (
+          {decisions.length > 0 && isSearching && visibleDecisions.length === 0 && (
+            <div className="text-[#888888] text-sm">No decisions match "{searchTerm}".</div>
+          )}
+          {visibleDecisions.map((decision, index) => (
             <DecisionCard key={`${decision.name}-${index}`} decision={decision} />
           ))}
         </div>
@@ -220,12 +253,23 @@ const EnemyList = ({ season }: EnemyListProps) => {
           </div>
         </div>
       </CollapsibleSection>
-      {dispatchModule && (
+      {dispatchModule ? (
         <CollapsibleSection
           title="Dispatch Module Usage"
           note="Sky's recommendation list (Slightly edited)"
         >
           <DispatchModuleSection data={dispatchModule} />
+        </CollapsibleSection>
+      ) : (
+        <CollapsibleSection title="Dispatch Module Usage">
+          <div className="flex flex-col gap-3">
+            <div className="text-[#bbbbbb] text-sm">
+              A curated recommendation list isn't available for this season yet unfortunately.
+            </div>
+            <div className="flex justify-end">
+              <DispatchCalculatorLink />
+            </div>
+          </div>
         </CollapsibleSection>
       )}
     </div>

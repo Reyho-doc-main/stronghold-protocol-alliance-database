@@ -14,63 +14,70 @@ interface Props {
   className?: string;
 }
 
-export default function Select({ value, options, onChange, className }: Props) {
+export default function Select({
+  value,
+  options,
+  onChange,
+  className,
+}: Props) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
-  const selected = options.find((o) => o.value === value);
+  const selected = options.find((option) => option.value === value);
 
   useEffect(() => {
-    function handleClick(e: MouseEvent) {
-      if (!ref.current?.contains(e.target as Node)) {
+    const handlePointerDown = (event: PointerEvent) => {
+      if (!ref.current?.contains(event.target as Node)) {
         setOpen(false);
       }
-    }
+    };
 
-    window.addEventListener("mousedown", handleClick);
+    document.addEventListener("pointerdown", handlePointerDown);
 
-    return () => window.removeEventListener("mousedown", handleClick);
+    return () => {
+      document.removeEventListener("pointerdown", handlePointerDown);
+    };
   }, []);
 
   return (
-    <div ref={ref} className="relative">
-      {/* Trigger */}
+    <div ref={ref} className="relative w-48 shrink-0">
       <button
-        onClick={() => setOpen(!open)}
+        type="button"
+        onClick={() => setOpen((prev) => !prev)}
         className={twMerge(
-          "w-full bg-[#3d7b70] rounded-md px-3 py-1 flex justify-between items-center text-white tracking-wider text-lg",
-          className,
+          "flex w-full items-center justify-between rounded-md bg-[#3d7b70] px-3 py-1 text-lg tracking-wider text-white",
+          className
         )}
       >
-        <div className="flex items-center mr-4">{selected?.title}</div>
+        <span className="min-w-0 flex-1 truncate">
+          {selected?.title ?? ""}
+        </span>
 
-        <AiOutlineDown className={`transition ${open ? "rotate-180" : ""}`} />
+        <AiOutlineDown
+          className={`ml-2 shrink-0 transition-transform ${
+            open ? "rotate-180" : ""
+          }`}
+        />
       </button>
-      {/* Dropdown */}
 
       {open && (
-        <div
-          className="
-          absolute left-0 right-0 mt-1
-          rounded-md overflow-hidden bg-[#222]
-          shadow-2xl z-50"
-        >
+        <div className="absolute left-0 right-0 z-50 mt-1 overflow-hidden rounded-md bg-[#222] shadow-2xl">
           {options.map((option) => (
             <button
               key={option.value}
+              type="button"
               onClick={() => {
                 onChange(option.value);
                 setOpen(false);
               }}
-              className={`
-								w-full text-left px-6
-              	py-4 flex gap-4 transition
-              ${option.value === value ? "bg-[#005b52]" : "hover:bg-[#333]"}
-              `}
+              className={twMerge(
+                "w-full px-6 py-4 text-left text-white transition-colors",
+                option.value === value
+                  ? "bg-[#005b52]"
+                  : "hover:bg-[#333]"
+              )}
             >
-              <div>
-                <div className="text-white text-md">{option.title}</div>
-              </div>
+              {option.title}
             </button>
           ))}
         </div>

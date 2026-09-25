@@ -68,7 +68,7 @@ const StrategyList = ({ season }: StrategyListProps) => {
       </div>
 
       {searchGroups === null && (
-        <div className="grid grid-cols md:grid-cols-3 mx-6 mb-6 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 mx-6 mb-6 gap-6">
           {strats.map((strategy) => (
             <StrategyEntry key={strategy.name} strategy={strategy} searchTerm="" />
           ))}
@@ -86,7 +86,7 @@ const StrategyList = ({ season }: StrategyListProps) => {
             <div className="flex-1 h-px bg-gray-600" />
             <span className="text-gray-400 text-xs">{group.strategies.length}</span>
           </div>
-          <div className="grid grid-cols md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {group.strategies.map((strategy) => (
               <StrategyEntry key={strategy.name} strategy={strategy} searchTerm={searchTerm} />
             ))}
